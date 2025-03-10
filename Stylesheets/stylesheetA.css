@@ -1,0 +1,803 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.jura > {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+}
+.body {
+  overflow: hidden;
+  font-family: "Jura";
+  font-weight: 400;
+  font-style: normal;
+  background-color: #63378d;
+  color: white;
+  height: 100vh;
+  width: 100%;
+}
+/* START -Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: yellow;
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--Purple900);
+}
+/* END - Scrollbar Styling */
+/* --Start of NavBar styling */
+.Nav-Link {
+  text-decoration: none;
+}
+.NavBar {
+  /*NavBar nav div*/
+  position: sticky;
+  top: 0;
+  height: 80px;
+  width: 100%;
+  background-color: var(--Purple900);
+  font-size: 32px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 3rem;
+  margin: 0;
+  opacity: 100;
+  z-index: 10;
+  overflow: hidden;
+}
+
+/* Logo ofc */
+.logo {
+  padding-left: 3rem;
+  padding-top: 0.5rem;
+  width: 180px;
+  height: fit-content;
+  background-color: var(--Purple900);
+  overflow: visible;
+}
+.SCM-FullLogo-Header {
+  width: 180px;
+  overflow: hidden;
+  height: 100px;
+  padding-top: 0.5rem;
+}
+
+.NavBarNav {
+  /*NavButtons container*/
+  background-color: var(--Purple900);
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  position: sticky;
+  width: 100%;
+  gap: 1rem;
+  z-index: 10;
+}
+.NavBtn {
+  background-color: var(--Purple900);
+
+  text-align: center;
+  height: fit-content;
+  width: max-content;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 0px white;
+
+  color: white;
+
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  transition: border 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+/* Open and close btn styling for navbar */
+#open-sidebar-btn {
+  display: none;
+  background: #ffecc0;
+  border: none;
+  padding: 1em;
+  margin-left: auto;
+  cursor: pointer;
+}
+#close-sidebar-btn {
+  display: none;
+  background: #ffecc0;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+}
+
+/* NavBar Button animations */
+
+.NavBtn:hover {
+  transition: 0.4s;
+  border: white;
+  color: #1c0a43;
+  border-color: white;
+  border-bottom: 2px white;
+  border-width: 2px;
+}
+
+.NavBtn:focus,
+.NavBtn:focus-within {
+  /*
+  Focus=within stops C700 being applied to whole navbar. 
+  ---TO DO
+  =fix pressed state*/
+  background-color: white; /* Cream 700 */
+  color: #1c0a43;
+
+  border: 2px white;
+  border-width: 2px;
+}
+
+.Nav-Link {
+  padding: 10px;
+  text-align: center;
+
+  font-size: 1.5em;
+  color: white;
+  transition: color 0.1s;
+}
+.Nav-Link:hover {
+  color: #ffd364;
+  border: 2px white;
+}
+
+/* --END of NavBar styling */
+
+@media (max-width: 700px) {
+  #open-sidebar-btn,
+  #close-sidebar-btn {
+    display: block;
+  }
+  #open-sidebar-btn {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+    margin: 0;
+    z-index: 10;
+    border-radius: 8px;
+  }
+  .NavBar {
+    position: fixed;
+    top: 0%;
+    right: -100%;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    z-index: 19;
+    border-radius: 16px;
+  }
+  .NavBarNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    gap: 0.05rem;
+    height: fit-content;
+  }
+  .NavItem {
+    width: fit-content;
+    margin: 0%;
+  }
+  .logo {
+    display: none;
+  }
+
+  .NavBtn {
+    font-size: 1em;
+    padding: auto;
+    height: fit-content;
+    width: min-content;
+    margin: 0%;
+  }
+
+  /* To change sizing of navbtn container when screen gets smaller */
+  .Nav-Link {
+    font-size: 0.5em;
+    text-align: center;
+    padding: 0;
+  }
+}
+.PageWrapper {
+  background-color: #63378d;
+  background-image: url(../Assets/BackgroundGradient.png);
+  background-repeat: repeat-y;
+  display: flex;
+  flex-direction: column;
+}
+
+.HeroSection {
+  display: flex;
+  flex-direction: column;
+}
+.HeroContent {
+  display: flex;
+  flex-direction: column;
+}
+.HeroTitle {
+  margin: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+  text-align: center;
+  font-family: "Jura";
+  font-weight: 900;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  position: relative;
+}
+.HeroTitle > p {
+  max-width: 30rem;
+  margin-top: 2rem;
+  text-align: left;
+  font-size: clamp(1rem, 1.5vw, 2rem);
+}
+.CTA-Container-Hero {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 2rem;
+  gap: 1rem;
+}
+.CTA-GetStarted {
+  max-height: max-content;
+  display: inline-flex;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-color: #ddd;
+
+  background-color: #ea5195;
+}
+.CTA-GetStarted-Link {
+  text-decoration: none;
+  color: white;
+}
+.CTA-Packages {
+  max-height: max-content;
+  display: inline-flex;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border-color: #ddd;
+
+  background-color: #c93b88;
+}
+.CTA-Packages-Link {
+  text-decoration: none;
+  color: white;
+}
+/* Revolving Text 
+
+Heading*/
+.OuterHeading {
+  font-family: "Jura";
+  color: #ffffff;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding-right: 30rem;
+}
+/* Rotating text */
+.InnerHeading {
+  font-family: "Jura";
+  border: 0px solid #ddd;
+  height: 50px;
+  line-height: 50px;
+  font-size: 45px;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.InnerHeading span {
+  position: relative;
+  color: #ffd364;
+  overflow: hidden;
+  animation: animation 15s ease-in infinite;
+}
+
+/* Rotating Text animation
+ increments of 12% for smoothness
+  and consistent time on each string */
+@keyframes animation {
+  0%,
+  100% {
+    top: 0;
+  }
+  12% {
+    top: -50px;
+  }
+  24% {
+    top: -100px;
+  }
+  36% {
+    top: -150px;
+  }
+  48% {
+    top: -200px;
+  }
+  60% {
+    top: -250px;
+  }
+  72% {
+    top: -300px;
+  }
+  84% {
+    top: -350px;
+  }
+  96% {
+    top: -400px;
+  }
+}
+
+/* Section2 Styling */
+.Section-2-HomePage {
+  color: #ffffff;
+}
+.Section2Title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  font-family: "Jura";
+  font-weight: 900;
+}
+.Sec2Text {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  gap: 1.5rem;
+  max-width: inherit;
+}
+.Section2-Text-Container {
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  justify-content: center;
+  padding-top: 1rem;
+  gap: 1rem;
+  font-family: "Jura";
+}
+.TextBoxRow1 {
+}
+.TextBoxRow2 {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+}
+
+.LineItem1,
+.LineItem2 {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.LineItem-Text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+/* Banner Animation and Styling */
+.BannerContainer {
+  font-family: "Jura";
+  margin-top: 10rem;
+
+  height: 10rem;
+
+  overflow-y: hidden;
+  width: 100vw;
+}
+.BannerContainer div {
+  overflow: visible;
+  position: relative;
+  animation: banner-slide 20s ease-in-out infinite;
+}
+.Slide1,
+.Slide2,
+.Slide3,
+.Slide4 {
+  padding: 3rem;
+  width: 100dvw;
+  overflow: visible;
+}
+.Slide1 {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #2f847d;
+  color: #85dac3;
+}
+.Slide2 {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2f847d;
+  color: #85dac3;
+}
+.Slide3 {
+  height: 10rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #2f847d;
+  color: #85dac3;
+}
+.Slide4 {
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: #2f847d;
+  color: #85dac3;
+}
+.BannerText {
+  font-family: "Jura";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* Animation for banner */
+/* !!!TODO!!!
+FIX- Animation timing between latter slides */
+@keyframes banner-slide {
+  0%,
+  100% {
+    top: 0;
+  }
+  25% {
+    top: -5rem;
+  }
+  35% {
+    top: -5rem;
+  }
+  45% {
+    top: -10rem;
+  }
+  50% {
+    top: -10rem;
+  }
+  75% {
+    top: -20rem;
+  }
+  85% {
+    top: -20rem;
+  }
+  95% {
+    top: -30rem;
+  }
+}
+
+/* END of Banner Style */
+
+/* Section Styling */
+.services-title {
+  font-family: "Jura";
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  margin-top: 3rem;
+}
+.services {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.services h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+}
+
+/* Flexbox Layout */
+.services-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  color: #ffffff;
+}
+.services-row-1 {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+.services-row-2 {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+/* Service Box */
+.service-box {
+  font-family: "Jura";
+  background-color: transparent; /* Slightly lighter purple */
+  padding: 20px;
+
+  max-width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease; /* From https://css.glass */
+  background: rgba(99, 55, 141, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 1px solid rgba(99, 55, 141, 1);
+}
+
+.service-box:hover {
+  transform: translateY(-5px);
+}
+
+/* Icons */
+.service-box img {
+  width: 40px;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+.service-box h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+/* Paragraphs */
+.service-box p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Recent Work Section */
+.RecentProjectsSectionTitle {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+  letter-spacing: 10px;
+  text-transform: capitalize;
+  font-family: "Jura";
+  font-weight: 900;
+  font-size: xxx-large;
+}
+.RecentProjectsSection {
+  display: flex;
+  justify-content: center;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+.Project-Column-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.Project-Column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+/* Card Styling */
+.ProjectCardContainer {
+  font-family: "Jura";
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(133, 218, 195, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  border: 1px solid rgba(133, 218, 195, 1);
+}
+.CardImg {
+  width: 22.5rem;
+  height: auto;
+}
+.CardImg > img {
+  max-width: 22.5rem;
+  border-radius: 2rem;
+  box-shadow: #ffd364;
+}
+.CardText {
+  margin-top: 1rem;
+  color: #f0daf9;
+}
+.CardTextTitle {
+  text-align: center;
+}
+.CardSubtitleText {
+  font-style: italic;
+  padding-top: 0.5rem;
+  opacity: 0.75;
+}
+/* END project section styling */
+
+/* Container for the Cards */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers cards horizontally */
+  gap: 2rem; /* Spacing between cards */
+  padding: 50px;
+}
+
+/* Card Styles */
+.card {
+  font-family: "Jura";
+  background-color: var(--Purple900);
+  color: white;
+  flex: 1 1 calc(33.333% - 20px); /* 3 columns on larger screens */
+  max-width: 350px; /* Prevents cards from stretching too wide */
+  min-width: 250px; /* Gives a lower bound for smaller screens */
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Card Image */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: #ccc; /* Fallback gray for missing images */
+}
+
+/* Card Content */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.card-content p {
+  font-size: 14px;
+
+  margin-bottom: 2rem;
+}
+
+/* "Learn More" link */
+.learn-more {
+  font-size: 14px;
+  text-decoration: none;
+  color: var(--Yellow500);
+  font-weight: bold;
+}
+
+.learn-more:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Media Queries - CARDs */
+
+/* Tablet: 2 columns when screen width <= 992px */
+@media (max-width: 992px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+/* Mobile: 1 column when screen width <= 576px */
+@media (max-width: 576px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+/* Email and Social Link Anchor Tags
+These are to keep the text colour
+ consistent with the rest of the body text */
+.EmailLink {
+  color: white;
+  text-decoration: none;
+}
+/* Contact Section Styling */
+.ContactSection {
+  font-family: "Jura";
+  background-image: url(../Assets/BackgroundGradient.png);
+}
+.ContactSectiontitle {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.ContactContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Jura";
+}
+.ContactText {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  max-width: 30rem;
+  align-items: center;
+}
+.CFormText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.CformLinks {
+  color: white;
+  display: flex;
+  gap: 0.5em;
+}
+/* Footer Styling */
+.SCMfooter {
+  background-color: #1c0a43;
+  height: 100vh;
+}
+.FooterTopRow {
+  display: flex;
+  overflow: hidden;
+  justify-content: flex-start;
+}
+.footerlogo {
+  width: 500px;
+  margin-top: 0;
+  transform: rotate(270deg);
+}
+.footerlogoIMG {
+  width: inherit;
+  padding-bottom: 200px;
+  padding-right: 2rem;
+}

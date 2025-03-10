@@ -1,0 +1,131 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2e1a47; /* Dark purple background */
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Root Variables */
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+  --White: #ffffff;
+
+  /* Base font size for rem calculations */
+  font-size: 16px;
+}
+
+/* Footer styling */
+/* Import Jura font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;600&display=swap");
+
+/* Root Variables */
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+  --White: #ffffff;
+
+  /* Base font size for rem calculations */
+  font-size: 16px;
+}
+
+/* Footer Styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300;400;600&display=swap");
+
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+  --White: #ffffff;
+  font-size: 16px;
+}
+
+.SCMfooter {
+  background: var(--Purple900);
+  color: var(--White);
+  padding: 2.5rem;
+  font-family: "Jura", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.FooterTopRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footerlogoIMG {
+  height: 9rem;
+  transform: rotate(-90deg);
+}
+
+.ContactPrompt {
+  flex: 1;
+  text-align: center;
+}
+
+.FooterContactTitle h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.FooterContactTitle p {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.social-links a {
+  margin: 0 0.625rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--Yellow500);
+  text-decoration: none;
+}
+
+.footer-right {
+  text-align: right;
+}
+
+.small-logo {
+  height: 5rem;
+}
+
+.footer-services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+  justify-content: center;
+}
+
+.service-category {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.service-category h4 {
+  color: var(--Yellow500);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.service-category a {
+  color: var(--White);
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .footer-services {
+    grid-template-columns: 1fr;
+  }
+}

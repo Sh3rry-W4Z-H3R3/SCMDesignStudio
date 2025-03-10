@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SCM Design Studio</title>
+    <link rel="stylesheet" href="../Stylesheets/stylesheetA.css" />
+    <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
+    <link rel="script" href="../SourceCode/script.js" />
+  </head>
+  <body>
+    <!--START- NAVBAR - Applied site wide -->
+
+    <button
+      id="open-sidebar-btn"
+      onclick="openSidebar()"
+      aria-label="open Sidebar"
+      aria-expanded="false"
+      aria-controls="navbar"
+    >
+      <svg
+        width="20"
+        height="10"
+        viewBox="0 0 20 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line y1="1" x2="20" y2="1" stroke="#21100B" stroke-width="2" />
+        <line y1="5" x2="20" y2="5" stroke="#21100B" stroke-width="2" />
+        <line y1="9" x2="20" y2="9" stroke="#21100B" stroke-width="2" />
+      </svg>
+    </button>
+    <nav class="NavBar" id="navbar">
+      <!-- Fix logo and NavBtn Alignment -->
+      <div class="logo">
+        <span>
+          <a href="../SourceCode/index.html">
+            <img
+              class="SCM-FullLogo-Header"
+              src="../Assets/SCM_FullLogo.png"
+              alt="."
+            /> </a
+        ></span>
+      </div>
+
+      <ul class="NavBarNav">
+        <li>
+          <button
+            id="close-sidebar-btn"
+            onclick="closeSidebar()"
+            aria-label="close sidebar"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 18 18"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.71973 16.2793L16.2796 1.71943"
+                stroke="#21100B"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16.2803 16.2793L1.7204 1.71943"
+                stroke="#21100B"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+        </li>
+        <li class="NavItem">
+          <button class="NavBtn">
+            <a class="Nav-Link" state="active" href="Index.html">Home</a>
+          </button>
+        </li>
+        <li>
+          <button class="NavBtn">
+            <a class="Nav-Link" href="About.html">About</a>
+          </button>
+        </li>
+
+        <li>
+          <button class="NavBtn">
+            <a class="Nav-Link" href="Process.html">Creative Process</a>
+          </button>
+        </li>
+        <li>
+          <button class="NavBtn">
+            <a class="Nav-Link" href="Gallery.html">Gallery</a>
+          </button>
+        </li>
+        <li>
+          <button class="NavBtn">
+            <a class="Nav-Link" href="Contact.html">Contact</a>
+          </button>
+        </li>
+        <li>
+          <button class="NavBtn">
+            <a class="Nav-Link" href="#shop">Shop</a>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- END- NAVBAR- Applied sitewide -->
+    <!-- Close button for overlay -->
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <div class="PageWrapper" id="HomePageWrapper">
+      <section class="HeroSection">
+        <div class="HeroContent">
+          <div class="HeroTitle">
+            <!-- !TODO!
+             Fix H1 size so its not ridiclously big -->
+            <h1>Where Ideas, come to life...</h1>
+            <p>
+              Hello. <br />
+              We’re SCM Design Studio. We bring your ideas to life—whether it’s
+              a website, product packaging, or a full rebrand. From concept to
+              launch, we’re with you every step of the way.
+              <br />
+              <strong> Your vision is our passion.</strong>
+            </p>
+          </div>
+
+          <div class="CTA-Container-Hero">
+            <button class="CTA-GetStarted">
+              <a class="CTA-GetStarted-Link" href="">Get Started</a>
+            </button>
+            <button class="CTA-Packages">
+              <a class="CTA-Packages-Link" href=""> Starter Packages </a>
+            </button>
+          </div>
+        </div>
+        <div class="OuterHeading">
+          <h2>
+            At SCM, we can help you with
+            <div class="InnerHeading">
+              <!-- Revolving text -->
+              <span>
+                Brand Design <br />
+                Graphic Design <br />
+                Package Design <br />
+                Product Design <br />
+                UI/UX Design <br />
+                Brand Strategy <br />
+                Web Design <br />
+                Web Development <br />
+                Web Hosting <br />
+              </span>
+            </div>
+          </h2>
+        </div>
+      </section>
+      <section class="Section-2-HomePage">
+        <div class="Section-2-HomePage-Wrapper-Content">
+          <div class="Section2Title">
+            <h2>Transforming Ideas into Impactful Designs</h2>
+          </div>
+          <div class="Sec2Text">
+            <div class="Section2-Text-Container">
+              <div class="TextBoxRow1">
+                <p>
+                  At SCM Studio, we specialize in creating stunning designs that
+                  elevate your brand. Our services, from website design to
+                  packaging, are crafted to help you expand your audience and
+                  grow your business.
+                </p>
+              </div>
+              <div class="TextBoxRow2">
+                <div class="LineItem1">
+                  <div class="LineItem-Text">
+                    <h3>Creative Solutions</h3>
+                    <p>
+                      Elevate your brand with our innovative design services
+                      tailored for the success of your business.
+                    </p>
+                  </div>
+                </div>
+                <div class="LineItem2">
+                  <div class="LineItem-Text">
+                    <h3>Audience Growth</h3>
+                    <p>
+                      Our designs not only attract attention but also engage and
+                      retain customers effectively.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="BannerSection">
+        <div class="BannerContainer">
+          <div class="Slide1">
+            <div class="BannerText">
+              <h2>Signage</h2>
+              <br />
+              <h1>
+                Event Collateral, Flyers, Pop-up Banners, Fascias, Posters,
+                Table Displays.
+              </h1>
+            </div>
+          </div>
+          <div class="Slide2">
+            <div class="BannerText">
+              <h2>Branding</h2>
+              <br />
+              <h1>
+                Event Collateral, Flyers, Pop-up Banners, Fascias, Posters,
+                Table Displays.
+              </h1>
+            </div>
+          </div>
+          <div class="Slide3">
+            <div class="BannerText">
+              <h2>Web & Digital</h2>
+              <br />
+              <h1>
+                Profitable, User Friendly, Interactive, Cost Effective,
+                Impactive, Personal.
+              </h1>
+            </div>
+          </div>
+          <div class="Slide4">
+            <div class="BannerText">
+              <h2>Marketing</h2>
+              <br />
+              <h1>
+                Social Media, Print, Campaign Management, Creative Direction,
+                Brand Consistency.
+              </h1>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="services-title">
+        <h2>
+          Transforming Ideas into Reality:<br />
+          Our Comprehensive Design and Development Services
+        </h2>
+      </div>
+      <section>
+        <div class="services-container">
+          <div class="services-row-1">
+            <div class="service-box">
+              <img src="/Assets\SCM White Logo Icon.png" alt="Digital Icon" />
+              <h3>Digital</h3>
+              <p>
+                Crafting user-friendly and mobile-ready websites that engage
+                visitors and convert them into customers. Great design starts
+                with a strong foundation.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <img src="/Assets/SCM White Logo Icon.png" alt="Brand Icon" />
+              <h3>Brand Design</h3>
+              <p>
+                SCM builds brands with strategy and creativity. We craft unique
+                Brand Design, define positioning with Brand Strategy, and ensure
+                consistency through Brand Guidelines.
+              </p>
+            </div>
+          </div>
+
+          <div class="services-row-2">
+            <div class="service-box">
+              <img src="/Assets/SCM White Logo Icon.png" alt="Print Icon" />
+              <h3>Print</h3>
+              <p>
+                We design impactful print materials, from publications to
+                packaging and signage, ensuring high-quality results that make a
+                lasting impression.
+              </p>
+            </div>
+
+            <div class="service-box">
+              <img src="/Assets/SCM White Logo Icon.png" alt="Product Icon" />
+              <h3>Product</h3>
+              <p>
+                For physical and industrial products, we conduct in-depth Market
+                Research, craft innovative Product Design, and refine every
+                detail through Product Development.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="RecentProjectsSectionTitle">
+        <h2>OUR RECENT WORK</h2>
+      </div>
+      <section class="RecentProjectsSection">
+        <div class="Project-Column-1">
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img src="../Images/Fascia.jpg" alt="" />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h2>Hair By Beth - 2024</h2>
+              </div>
+              <div class="CardSubtitleText">
+                <h4>Graphic Design, Signage</h4>
+              </div>
+            </div>
+          </div>
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img src="../Images/Fascia.jpg" alt="" />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h2>Hair By Beth - 2024</h2>
+              </div>
+              <div class="CardSubtitleText">
+                <h4>Graphic Design, Signage</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Project-Column-2">
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img src="../Images/Fascia.jpg" alt="" />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h2>Hair By Beth - 2024</h2>
+              </div>
+              <div class="CardSubtitleText">
+                <h4>Graphic Design, Signage</h4>
+              </div>
+            </div>
+          </div>
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img src="../Images/Fascia.jpg" alt="" />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h2>Hair By Beth - 2024</h2>
+              </div>
+              <div class="CardSubtitleText">
+                <h4>Graphic Design, Signage</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="cards-container">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="../Images/Fascia.jpg" alt="Transforming Ideas" />
+          <div class="card-content">
+            <h3>
+              Designing for Growth: Your Vision, Our Expertise. Major Impact
+            </h3>
+            <p>
+              We begin with thorough research to understand your unique needs
+              and goals.
+            </p>
+            <a href="#" class="learn-more">Learn More &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="../Images/Fascia.jpg" alt="Creative Conception" />
+          <div class="card-content">
+            <h3>Creative Conception: Ideation that Fuels Innovation</h3>
+            <p>
+              Our team collaborates to brainstorm and refine concepts that
+              resonate with your audience.
+            </p>
+            <a href="#" class="learn-more">Previous Work &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="../Images/Fascia.jpg" alt="Development Phase" />
+          <div class="card-content">
+            <h3>
+              Development Phase: Bringing Your Ideas to Life with Precision
+            </h3>
+            <p>
+              We meticulously develop your project, ensuring every detail aligns
+              with your vision.
+            </p>
+            <a href="#" class="learn-more">Get In Touch &rarr;</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ContactSection">
+        <div class="ContactSectiontitle">
+          <h2>CONTACT</h2>
+        </div>
+        <div class="ContactContent">
+          <div class="ContactText">
+            <div class="CFormText">
+              <p>
+                Now that you’ve had a look at our past work, its time to get in
+                touch and let us know about your ideas! <br />
+                Use the form below and we’ll get back to you within 24 hours.
+                <br />For other enquiries, please get in touch via email or
+                slide into our Instagram DMs.
+              </p>
+            </div>
+            <div class="CformLinks">
+              <img src="../Assets\EmailIcon.svg" alt="" />
+              <a class="EmailLink" href="mailto:SCMstudio@hotmail.com"
+                ><p><strong>SCMstudio@hotmail.com</strong></p></a
+              >
+            </div>
+            <div class="CformLinks">
+              <img src="../Assets\EmailIcon.svg" alt="" />
+              <a
+                class="EmailLink"
+                href="https://www.instagram.com/scm_designstudio/"
+                ><p><strong>@SCM_designstudio</strong></p></a
+              >
+            </div>
+          </div>
+          <div class="ContactFor">
+            <form
+              action="https://formsubmit.co/covewuro@mailgolem.com"
+              method="POST"
+              class="ContactForm"
+            >
+              <label for="fname">First name:</label>
+              <input type="text" id="fname" name="fname" />
+              <label for="lname">Last name:</label>
+              <input type="text" id="lname" name="lname" />
+              <label for="email">E-Mail Address:</label>
+              <input type="text" id="email" name="email" />
+              <label for="Subject">Subject:</label>
+              <input type="text" id="Subject" name="Subject" />
+              <label for="message">Message:</label>
+              <input
+                type="text"
+                id="message"
+                name="message"
+                class="messageInput"
+              />
+              <button class="submitButton">Submit</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+    <footer class="SCMfooter">
+      <div class="FooterTopRow">
+        <span class="footerlogo">
+          <img class="footerlogoIMG" src="../Assets/SCM_FullLogo.png" alt="" />
+        </span>
+        <div class="ContactPrompt">
+          <div class="FooterContactTitle">
+            <h2>Got some thoughts?</h2>
+            <h3>Feel free to share!</h3>
+            <p>Emial</p>
+          </div>
+        </div>
+      </div>
+      <div class="FooterBottomRow"></div>
+    </footer>
+  </body>
+</html>

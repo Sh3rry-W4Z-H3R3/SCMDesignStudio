@@ -1,0 +1,72 @@
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+}
+.ContactFor {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+.ContactForm {
+  font-family: Futura;
+  background-color: var(--Purple900);
+  color: var(--Yellow500);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 513px;
+  height: 535px;
+  border-radius: 8px;
+  justify-content: space-between;
+  margin-bottom: 2rem; /*this is also hacky*/
+  overflow: hidden;
+}
+
+.submitButton {
+  background-color: #170705;
+  border: var(--sds-size-stroke-border);
+  color: #fbebd3;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: inset 0 0 0 0 var(--Yellow500);
+  transition: ease-in 0.3s;
+}
+
+.submitButton:hover {
+  transition: ease-in 0.3s;
+  box-shadow: inset 513px 0 0 var(--Yellow500);
+}
+
+.ContactForm > input {
+  border: 1px;
+  padding: "12px 16px";
+  border-radius: 8px;
+  background-color: var(--Purple500);
+  min-width: 333.33px;
+  height: 40px;
+}
+
+/* this is abit hacky because of how we use styles */
+.ContactForm > label,
+button {
+  margin-top: 1rem;
+  overflow: hidden;
+}
+
+.ContactForm > label {
+  line-height: 22.4px;
+  font-size: 16px;
+  font-family: Futura;
+  overflow: hidden;
+}
+
+.messageInput {
+  height: 111px !important;
+}
+
+@media (max-width: 550px) {
+  .ContactFor {
+    transform: scale(0.6);
+  }
+}
