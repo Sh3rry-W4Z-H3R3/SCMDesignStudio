@@ -757,6 +757,8 @@ These are to keep the text colour
   display: flex;
   justify-content: center;
   color: white;
+  font-weight: 900;
+  font-size: xx-large;
 }
 .ContactContent {
   display: flex;
@@ -770,6 +772,8 @@ These are to keep the text colour
   flex-direction: column;
   max-width: 30rem;
   align-items: center;
+  gap: 1em;
+  padding-top: 0.25rem;
 }
 .CFormText {
   display: flex;
