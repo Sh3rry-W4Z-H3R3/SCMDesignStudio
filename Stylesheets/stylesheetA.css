@@ -231,7 +231,7 @@ body::-webkit-scrollbar-thumb {
 }
 .PageWrapper {
   background-color: #63378d;
-  background-image: url(../Assets/BackgroundGradient.png);
+  background-image: url(../Assets/BackgroundGradientLRG.jpg);
   background-repeat: repeat-y;
   display: flex;
   flex-direction: column;
@@ -751,7 +751,6 @@ These are to keep the text colour
 /* Contact Section Styling */
 .ContactSection {
   font-family: "Jura";
-  background-image: url(../Assets/BackgroundGradient.png);
 }
 .ContactSectiontitle {
   display: flex;
@@ -788,15 +787,22 @@ These are to keep the text colour
 /* Footer Styling */
 .SCMfooter {
   background-color: #1c0a43;
-  height: 100vh;
+  height: fit-content;
   color: #ffffff;
   text-decoration: none;
   font-family: "Jura";
+  overflow-y: visible;
+  display: flex;
+  flex-direction: column;
 }
 .FooterTopRow {
   display: flex;
   overflow: hidden;
   justify-content: flex-start;
+}
+.FooterBottomRow {
+  display: flex;
+  justify-content: center;
 }
 .footerlogo {
   width: 500px;
@@ -834,4 +840,66 @@ These are to keep the text colour
 .Footer-Social-Link-Hyper {
   text-decoration: none;
   color: white;
+}
+.footer-section-services {
+  background-color: var(
+    --Purple900
+  ); /* Dark purple background from the image */
+  color: white;
+  padding: 3rem;
+  font-family: sans-serif; /* Adjust to match your site's font */
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.grid-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 0.5rem 0.5rem; /* Row gap, column gap */
+  max-width: 350px; /* Adjust as needed */
+}
+
+.service-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.service-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
+}
+
+.service-column li {
+  color: rgba(255, 255, 255, 0.85); /* Slightly less bright than the headings */
+}
+.Footer-boring-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 0.5rem;
+}
+.TCs-links {
+  text-decoration: none;
+  color: #ffffff;
+}
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack to single column */
+    gap: 2rem;
+  }
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center; /* Centers the heading text */
 }

@@ -45,87 +45,54 @@ body {
   font-size: 16px;
 }
 
-.SCMfooter {
-  background: var(--Purple900);
-  color: var(--White);
-  padding: 2.5rem;
-  font-family: "Jura", sans-serif;
-  position: relative;
-  overflow: hidden;
+.footer-section-services {
+  background-color: #1a0f3b; /* Dark purple background from the image */
+  color: white;
+  padding: 3rem;
+  font-family: sans-serif; /* Adjust to match your site's font */
 }
 
-.FooterTopRow {
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.grid-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.footerlogoIMG {
-  height: 9rem;
-  transform: rotate(-90deg);
-}
-
-.ContactPrompt {
-  flex: 1;
-  text-align: center;
-}
-
-.FooterContactTitle h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-.FooterContactTitle p {
-  font-size: 1rem;
-  font-weight: 300;
-}
-
-.social-links a {
-  margin: 0 0.625rem;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--Yellow500);
-  text-decoration: none;
-}
-
-.footer-right {
-  text-align: right;
-}
-
-.small-logo {
-  height: 5rem;
-}
-
-.footer-services {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
-  margin-top: 2.5rem;
   justify-content: center;
 }
-
-.service-category {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns */
+  grid-template-rows: auto auto; /* Two rows */
+  gap: 0.5rem 0.5rem; /* Row gap, column gap */
+  max-width: 350px; /* Adjust as needed */
 }
 
-.service-category h4 {
-  color: var(--Yellow500);
-  font-size: 1.25rem;
-  font-weight: 600;
+.service-column h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-.service-category a {
-  color: var(--White);
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: 300;
+.service-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1.8;
 }
 
-@media (max-width: 768px) {
-  .footer-services {
-    grid-template-columns: 1fr;
+.service-column li {
+  color: rgba(255, 255, 255, 0.85); /* Slightly less bright than the headings */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack to single column */
+    gap: 2rem;
   }
+}
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center; /* Centers the heading text */
 }
