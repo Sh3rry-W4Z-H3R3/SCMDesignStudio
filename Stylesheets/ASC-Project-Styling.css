@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+  padding: 0%;
+  margin: 0%;
+
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.jura > {
+  font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+}
+.body {
+  overflow: hidden;
+  font-family: "Jura";
+  font-weight: 400;
+  font-style: normal;
+  background-color: #63378d;
+  color: white;
+  height: 100vh;
+  width: 100%;
+}
+/* START -Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: yellow;
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--Purple900);
+}
+/* END - Scrollbar Styling */
+.PageWrapper-ASC {
+  font-family: "jura";
+  background-color: #63378d;
+  background-image: url(../Assets/BackgroundGradientLRG.jpg);
+  color: white;
+}
+.ASC-Page-Title {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  margin-top: 3rem;
+  gap: 1em;
+}
+.ASC-Context {
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.ASC-Hero-Img-Container {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.ASC-Hero-Img-Container > p {
+  margin: 1em 0 1em 2rem;
+}
+.ASC-Hero-Img {
+  min-width: 100vw;
+}
+/* Work section wrapper- Use to display work involved.  */
+.ASC-Work {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+/* Branding Works - Container */
+.ASC-Branding-Content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+/* Branding Body Text */
+.ASC-Branding-Text {
+  max-width: 35rem;
+}
+
+.ASC-Branding-Img-Container {
+  max-width: 35rem;
+  max-height: 280px;
+  overflow: hidden;
+  border-radius: 3rem;
+}
+.ASC-Branding-Img {
+  object-fit: fill;
+}
+/* Web Design Section */
+.ASC-WebDes-Content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.ASC-WebDes-Text {
+  max-width: 35rem;
+}
+
+/* Web DEVELOPMENT Section */
+.ASC-WebDev-Content {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.ASC-WebDev-Text {
+  max-width: 35rem;
+}
