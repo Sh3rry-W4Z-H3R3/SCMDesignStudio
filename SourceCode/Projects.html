@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
     <link rel="script" href="../SourceCode/script.js" />
     <link rel="stylesheet" href="../Stylesheets/Footer-Sitewide.css" />
+    <link rel="stylesheet" href="../Stylesheets/Stylesheet-Projects.css" />
   </head>
   <body>
     <!--START- NAVBAR - Applied site wide -->
@@ -75,7 +76,9 @@
         </li>
         <li class="NavItem">
           <button class="NavBtn">
-            <a class="Nav-Link" state="active" href="Index.html">Home</a>
+            <a class="Nav-Link" state="active" href="../SourceCode/index.html"
+              >Home</a
+            >
           </button>
         </li>
         <li>
@@ -86,12 +89,12 @@
 
         <li>
           <button class="NavBtn">
-            <a class="Nav-Link" href="Process.html">Services</a>
+            <a class="Nav-Link" href="../SourceCode/Services.html">Services</a>
           </button>
         </li>
         <li>
           <button class="NavBtn">
-            <a class="Nav-Link" href="Gallery.html">Projects</a>
+            <a class="Nav-Link" href="../SourceCode/Projects.html">Projects</a>
           </button>
         </li>
         <li>
@@ -112,37 +115,57 @@
     <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
     <div class="PageWrapper-Projects-MainPage">
       <div class="Project-Column-1">
-        <div class="ProjectCardContainer">
-          <div class="CardImg">
-            <img
-              src="../Images/UPLOAD TO SCM SITE - ASC FILES/Light.png"
-              alt=""
-            />
-          </div>
-          <div class="CardText">
-            <div class="CardTextTitle">
-              <h2>Alastair Smith Ceramics - 2025</h2>
+        <a
+          class="Project-Page-LinkToProject"
+          href="../SourceCode/ProjectPage-ASC.html"
+          ><div class="Projects-MainPage-ProjectCardContainer">
+            <div class="Projects-MainPage-CardImg">
+              <img
+                src="../Images/UPLOAD TO SCM SITE - ASC FILES/Light.png"
+                alt=""
+              />
             </div>
-            <div class="CardSubtitleText">
+            <div class="Projects-MainPage-CardText">
+              <div class="Projects-MainPage-CardTextTitle">
+                <h2>Alastair Smith Ceramics - 2025</h2>
+              </div>
+              <div class="Projects-MainPage-CardSubtitleText">
+                <h4>
+                  Graphic Design, Web Design + Development <br />Branding + Logo
+                  Design
+                </h4>
+              </div>
+            </div>
+          </div></a
+        >
+        <div class="Projects-MainPage-ProjectCardContainer">
+          <div class="Projects-MainPage-CardImg">
+            <img src="../Images/West End/West End Signage pic.jpg" alt="" />
+          </div>
+          <div class="Projects-MainPage-CardText">
+            <div class="Projects-MainPage-CardTextTitle">
+              <h2>West End Convenience - 2024</h2>
+            </div>
+            <div class="Projects-MainPage-CardSubtitleText">
               <h4>
-                Graphic Design, Web Design + Development <br />Branding + Logo
-                Design
+                Graphic Design, Signage, <br />
+                Print Design, Leaflet Design
               </h4>
             </div>
           </div>
         </div>
-        <div class="ProjectCardContainer">
-          <div class="CardImg">
+        <div class="Projects-MainPage-ProjectCardContainer">
+          <div class="Projects-MainPage-CardImg">
             <img
               src="../Images/UPLOAD TO SCM SITE - WGA/SIGNAGE 1.jpg"
               alt=""
             />
           </div>
-          <div class="CardText">
-            <div class="CardTextTitle">
+          <div class="Projects-MainPage-CardText">
+            <div class="Projects-MainPage-CardTextTitle">
               <h2>Westgarth Auto Services - 2024</h2>
             </div>
-            <div class="CardSubtitleText">
+            <div class="Projects-MainPage-CardSubtitleText">
               <h4>
                 Graphic Design, Web Design + Development <br />
                 Signage
@@ -152,15 +175,15 @@
         </div>
       </div>
       <div class="Project-Column-2">
-        <div class="ProjectCardContainer">
-          <div class="CardImg">
+        <div class="Projects-MainPage-ProjectCardContainer">
+          <div class="Projects-MainPage-CardImg">
             <img src="../Images/JR Shopfront.jpg" alt="" />
           </div>
-          <div class="CardText">
-            <div class="CardTextTitle">
+          <div class="Projects-MainPage-CardText">
+            <div class="Projects-MainPage-CardTextTitle">
               <h2>Just Rite Barbers - 2025</h2>
             </div>
-            <div class="CardSubtitleText">
+            <div class="Projects-MainPage-CardSubtitleText">
               <h4>
                 Graphic Design, Signage, <br />
                 Project Management, Consultancy
@@ -168,16 +191,33 @@
             </div>
           </div>
         </div>
-        <div class="ProjectCardContainer">
-          <div class="CardImg">
+        <div class="Projects-MainPage-ProjectCardContainer">
+          <div class="Projects-MainPage-CardImg">
+            <!-- DO NOT make a page for this one -->
+            <img src="../Images/OOFT OUD/OOFTOUD DOuble.jpg" alt="" />
+          </div>
+          <div class="Projects-MainPage-CardText">
+            <div class="Projects-MainPage-CardTextTitle">
+              <h2>Ooft Oud - 2024</h2>
+            </div>
+            <div class="Projects-MainPage-CardSubtitleText">
+              <h4>Graphic Design, Menu Design</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="Projects-MainPage-ProjectCardContainer">
+          <div class="Projects-MainPage-CardImg">
             <img src="../Images/KQimg1.jpg" alt="" />
           </div>
-          <div class="CardText">
-            <div class="CardTextTitle">
+          <div class="Projects-MainPage-CardText">
+            <div class="Projects-MainPage-CardTextTitle">
               <h2>KuntrQultura - 2024</h2>
             </div>
-            <div class="CardSubtitleText">
-              <h4>Graphic Design, Packaging</h4>
+            <div class="Projects-MainPage-CardSubtitleText">
+              <h4>
+                Graphic Design, Packaging <br />Brand Design, Brand Assets
+              </h4>
             </div>
           </div>
         </div>

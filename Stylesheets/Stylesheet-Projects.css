@@ -24,7 +24,7 @@
   font-family: "Jura";
   font-weight: 400;
   font-style: normal;
-  background-color: #63378d;
+  background-color: var(--Purple500);
   color: white;
   height: 100vh;
   width: 100%;
@@ -42,3 +42,71 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background: var(--Purple900);
 }
+/* END- Scrollbar styling */
+
+.PageWrapper-Projects-MainPage {
+  background-image: url(../Assets/BackgroundGradientLRG.jpg);
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Project-Column-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.Project-Column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+/* Card Links from Main ProjectS page onto Sub pages
+ showcasing full project details */
+.Project-Page-LinkToProject {
+  text-decoration: none;
+}
+/* Card Styling */
+.Projects-MainPage-ProjectCardContainer {
+  font-family: "Jura";
+  border-radius: 2rem;
+  padding: 1rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(133, 218, 195, 0.27);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(11.4px);
+  -webkit-backdrop-filter: blur(11.4px);
+  border: 1px solid rgba(133, 218, 195, 1);
+}
+.Projects-MainPage-CardImg {
+  width: 22.5rem;
+  height: auto;
+}
+.Projects-MainPage-CardImg > img {
+  max-width: 22.5rem;
+  border-radius: 2rem;
+  box-shadow: #ffd364;
+}
+.Projects-MainPage-CardText {
+  margin-top: 1rem;
+  color: #f0daf9;
+}
+.Projects-MainPage-CardTextTitle {
+  text-align: center;
+}
+.Projects-MainPage-CardSubtitleText {
+  font-style: italic;
+  padding-top: 0.5rem;
+  opacity: 0.75;
+}
+/* END project section styling */
