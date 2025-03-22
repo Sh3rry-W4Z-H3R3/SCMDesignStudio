@@ -44,60 +44,60 @@ body::-webkit-scrollbar-thumb {
   background: var(--Purple900);
 }
 /* END - Scrollbar Styling */
-.PageWrapper-ASC {
+.PageWrapper-WGA {
   font-family: "jura";
   background-color: #63378d;
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
   color: white;
 }
-.ASC-Page-Title {
+.WGA-Page-Title {
   display: flex;
   flex-direction: column;
   margin-left: 2rem;
   margin-top: 3rem;
   gap: 1em;
 }
-.ASC-Title {
+.WGA-Title {
   color: var(--Yellow500);
 }
-.ASC-Context {
+.WGA-Context {
   max-width: 30rem;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-.ASC-Hero-Img-Container {
+.WGA-Hero-Img-Container {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
-.ASC-Hero-Img-Container > p {
+.WGA-Hero-Img-Container > p {
   margin: 1em 0 1em 2rem;
 }
-.ASC-Hero-Img {
+.WGA-Hero-Img {
   min-width: 100vw;
 }
 /* Work section wrapper- Use to display work involved. Stack sections vertically and play from there  */
-.ASC-Work {
+.WGA-Work {
   display: flex;
   flex-direction: column;
   margin-top: 3rem;
 }
 /* Section containers */
-.ASC-Branding-Content,
-.ASC-LogoDes-Content,
-.ASC-WebDes-Content,
-.ASC-WebDev-Content {
+.WGA-Branding-Content,
+.WGA-LogoDes-Content,
+.WGA-WebDes-Content,
+.WGA-WebDev-Content {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem;
 }
 /* Keeps all img containers identical */
-.ASC-WebDev-Img-Container,
-.ASC-WebDes-Img-Container,
-.ASC-LogoDes-Img-Container,
-.ASC-Branding-Img-Container {
+.WGA-WebDev-Img-Container,
+.WGA-WebDes-Img-Container,
+.WGA-LogoDes-Img-Container,
+.WGA-Branding-Img-Container {
   max-width: 35rem;
   max-height: 280px;
   overflow: hidden;
@@ -106,19 +106,19 @@ body::-webkit-scrollbar-thumb {
 
 /* Applies to all image content displaying work done by the Agency
 One class to manage 3-5 imgs */
-.ASC-Content-work-images {
+.WGA-Content-work-images {
   object-fit: fill;
 }
 
 /* Sections text content*/
-.ASC-Branding-Text,
-.ASC-WebDes-Text,
-.ASC-WebDev-Text,
-.ASC-LogoDes-Text {
+.WGA-Branding-Text,
+.WGA-WebDes-Text,
+.WGA-WebDev-Text,
+.WGA-LogoDes-Text {
   max-width: 35rem;
 }
 
-.ASC-CTA-Container {
+.WGA-CTA-Container {
   display: flex;
   flex-direction: column;
 
@@ -131,7 +131,7 @@ One class to manage 3-5 imgs */
   flex-direction: column;
   justify-content: center;
 }
-.ASC-Page-CTAs {
+.WGA-Page-CTAs {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
@@ -140,7 +140,7 @@ One class to manage 3-5 imgs */
 }
 
 /* CTA buttons */
-.ASC-CTA-Button {
+.WGA-CTA-Button {
   text-decoration: none;
   border-radius: 2rem;
   background-color: var(--Teal500);
@@ -149,7 +149,7 @@ One class to manage 3-5 imgs */
   transition-duration: 0.5s;
 }
 /* CTA buttons - hover transition */
-.ASC-CTA-Button:hover {
+.WGA-CTA-Button:hover {
   background-color: var(--Yellow500);
   color: var(--Purple900);
   font-weight: bold;

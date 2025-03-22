@@ -621,7 +621,10 @@ FIX- Animation timing between latter slides */
   justify-content: center;
   gap: 3rem;
 }
-
+/* Links from project cards on home page onto subpages showing work of that project */
+.Home-to-Project-Card-Link {
+  text-decoration: none;
+}
 /* Card Styling */
 .ProjectCardContainer {
   font-family: "Jura";
