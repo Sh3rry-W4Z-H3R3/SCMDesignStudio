@@ -18,6 +18,7 @@
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
+  --Teal500: #2f847d;
 }
 .body {
   overflow: hidden;
@@ -227,6 +228,7 @@ body::-webkit-scrollbar-thumb {
     font-size: 0.5em;
     text-align: center;
     padding: 0;
+    font-family: "Jura";
   }
 }
 .PageWrapper {
@@ -265,44 +267,32 @@ body::-webkit-scrollbar-thumb {
   text-align: left;
   font-size: clamp(1rem, 1.5vw, 2rem);
 }
-.CTA-Container-Hero {
+/* CTA container */
+.Home-Page-CTAs {
+  font-family: "Jura";
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2rem;
   gap: 1rem;
 }
-.CTA-GetStarted {
-  max-height: max-content;
-  display: inline-flex;
-  text-align: center;
-  padding: 0.5rem;
-  border-radius: 2rem;
-  border-color: #ddd;
-
-  background-color: #ea5195;
-}
-.CTA-GetStarted-Link {
+/* CTA target class */
+.Home-Page-CTA-Button {
   text-decoration: none;
-  color: white;
-}
-.CTA-Packages {
-  max-height: max-content;
-  display: inline-flex;
-  text-align: center;
-  padding: 0.5rem;
   border-radius: 2rem;
-  border-color: #ddd;
-
-  background-color: #c93b88;
-}
-.CTA-Packages-Link {
-  text-decoration: none;
+  background-color: var(--Teal500);
+  padding: 1em;
   color: white;
+  transition-duration: 0.5s;
 }
-/* Revolving Text 
+/* CTA buttons - hover transition */
+.Home-Page-CTA-Button:hover {
+  background-color: var(--Yellow500);
+  color: var(--Purple900);
+  font-weight: bold;
+}
 
-Heading*/
+/* Revolving Text Heading*/
 .OuterHeading {
   font-family: "Jura";
   color: #ffffff;
