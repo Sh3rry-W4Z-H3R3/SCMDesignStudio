@@ -2,7 +2,6 @@
 * {
   padding: 0%;
   margin: 0%;
-
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -23,7 +22,7 @@
   --Teal900: #09303f;
 }
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   font-family: "Jura";
   font-weight: 400;
   font-style: normal;
@@ -93,7 +92,6 @@ body {
   padding: 0.625rem;
   font-family: "Jura";
   text-align: center;
-
   color: white;
   background-color: var(--Purple900);
   border-radius: 1rem;
@@ -180,6 +178,16 @@ body {
   padding: 1em;
   margin-left: auto;
   cursor: pointer;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 8;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 }
 
 #close-sidebar-btn {
@@ -188,6 +196,14 @@ body {
   border: none;
   padding: 1em;
   cursor: pointer;
+  align-self: flex-end;
+  border-radius: 50%;
+  width: 2.5rem;
+  height: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+  overflow: visible;
 }
 
 /* White icons for menu buttons */
@@ -242,8 +258,8 @@ body {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    padding: 2rem 0 0 0;
-    gap: 0.75rem;
+    padding: 1rem 0 0 0;
+    gap: 0.5rem;
   }
 
   .NavItem {
@@ -252,154 +268,58 @@ body {
   }
 
   .Nav-Link {
-    width: fit-content;
-    height: fit-content;
-    padding: 0.75rem 1rem;
+    width: 100%;
+    height: auto;
+    padding: 0.5rem 0.75rem;
     text-align: center;
+    font-size: 1.5rem;
+    border-radius: 0.75rem;
+  }
 
-    border-radius: 1rem;
+  /* Reduce the size of the underline animation */
+  .Nav-Link::after {
+    bottom: 0.125rem;
+    height: 0.0625rem;
+  }
+
+  /* Adjust hover transform to prevent overflow */
+  .Nav-Link:hover {
+    transform: translateY(-0.0625rem) scale(1.02);
+  }
+
+  /* Adjust active transform to maintain consistency */
+  .Nav-Link:active,
+  .Nav-Link:focus {
+    transform: translateY(0.0625rem) scale(0.98);
   }
 
   #open-sidebar-btn {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
-    z-index: 8;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--Purple900);
-    box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
   }
 
   #close-sidebar-btn {
-    align-self: flex-end;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1rem;
-    overflow: visible;
   }
 
   .logo {
     display: none;
   }
 }
+
+/* Additional adjustments for very small screens */
+@media (max-height: 600px) {
+  .NavBarNav {
+    gap: 0.25rem;
+  }
+
+  .Nav-Link {
+    padding: 0.375rem 0.5rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+  }
+
+  #close-sidebar-btn {
+    margin-bottom: 0.25rem;
+  }
+}
 /* --END of NavBar styling */
-/* Banner Animation and Styling */
-/* Banner Animation and Styling */
-.BannerContainer {
-  font-family: "Jura";
-  margin-top: 10rem;
-  height: 10rem;
-  overflow-y: hidden;
-  width: 100vw;
-  position: relative;
-}
-
-.slides-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40rem; /* Total height of all slides */
-}
-
-.Slide1,
-.Slide2,
-.Slide3,
-.Slide4 {
-  padding: 3rem;
-  width: 100dvw;
-  height: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #2f847d;
-  color: #85dac3;
-  position: absolute;
-  left: 0;
-}
-
-.Slide1 {
-  top: 0;
-}
-
-.Slide2 {
-  top: 10rem;
-}
-
-.Slide3 {
-  top: 20rem;
-}
-
-.Slide4 {
-  top: 30rem;
-}
-
-.BannerText {
-  font-family: "Jura";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-}
-
-/* Animation for banner with static 2-second displays and smoother transitions */
-@keyframes banner-slide {
-  /* Slide 1 static for 2 seconds */
-  0%,
-  17% {
-    transform: translateY(0);
-  }
-  /* Longer transition to Slide 2 (1 second) */
-  17%,
-  25% {
-    transform: translateY(-10rem);
-  }
-  /* Slide 2 static for 2 seconds */
-  25%,
-  42% {
-    transform: translateY(-10rem);
-  }
-  /* Longer transition to Slide 3 (1 second) */
-  42%,
-  50% {
-    transform: translateY(-20rem);
-  }
-  /* Slide 3 static for 2 seconds */
-  50%,
-  67% {
-    transform: translateY(-20rem);
-  }
-  /* Longer transition to Slide 4 (1 second) */
-  67%,
-  75% {
-    transform: translateY(-30rem);
-  }
-  /* Slide 4 static for 2 seconds */
-  75%,
-  92% {
-    transform: translateY(-30rem);
-  }
-  /* Longer transition back to Slide 1 (1 second) */
-  92%,
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.slides-wrapper {
-  animation: banner-slide 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-/* END of Banner Style */

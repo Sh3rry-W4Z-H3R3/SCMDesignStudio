@@ -1,0 +1,486 @@
+/* About Page Styles for SCM Design Studio */
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "Jura";
+}
+/* General Styles */
+:root {
+  --Purple500: #63378d;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+  --Yellow900: #7a5113;
+  --Teal500: #2f847d;
+  --Teal900: #09303f;
+}
+
+/* Page Wrapper */
+#AboutPageWrapper {
+  background-color: var(--Purple500);
+  background-image: url(../Assets/BackgroundGradientLRG.jpg);
+  background-repeat: repeat-y;
+  background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Section Styles */
+section {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title h2 {
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+
+  color: white;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 1rem;
+  overflow: visible;
+}
+
+.section-title h2::after {
+  content: "";
+  position: absolute;
+  bottom: -0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 3px;
+  background-color: var(--Teal500);
+}
+
+.section-title p {
+  font-size: 1.2rem;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.about-hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.about-hero-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-hero-content h1 {
+  font-family: "Jura", sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  color: white;
+  margin-bottom: 1.5rem;
+}
+
+.about-hero-content p {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Our Story Section */
+.about-story-section {
+  padding: 4rem 2rem;
+}
+
+.story-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.story-text {
+  flex: 1;
+  color: white;
+}
+
+.story-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.story-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Team Section */
+.about-team-section {
+  padding: 4rem 2rem;
+}
+
+.team-members {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-member-card {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  background-color: rgba(28, 10, 67, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.team-member-photo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.photo-placeholder {
+  width: 100%;
+  aspect-ratio: 1/1;
+  background-color: var(--Teal500);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.photo-placeholder::after {
+  content: "SH";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+}
+
+.team-member-info {
+  flex: 2;
+  color: white;
+}
+
+.team-member-info h3 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: var(--Yellow500);
+}
+
+.team-member-info h4 {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: var(--Teal500);
+}
+
+.team-member-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Our Approach Section */
+.about-approach-section {
+  padding: 4rem 2rem;
+}
+
+.approach-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+}
+
+.approach-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Services Overview Section */
+.about-services-section {
+  padding: 4rem 2rem;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: rgba(28, 10, 67, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--Yellow500);
+}
+
+.service-card p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+}
+
+.service-list {
+  list-style-position: inside;
+  padding-left: 0.5rem;
+}
+
+.service-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Values Section */
+.about-values-section {
+  padding: 4rem 2rem;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.value-card {
+  background-color: rgba(28, 10, 67, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--Teal500);
+}
+
+.value-card p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Why Choose SCM Section */
+.about-why-choose-section {
+  padding: 4rem 2rem;
+}
+
+.why-choose-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: white;
+  background-color: rgba(28, 10, 67, 0.7);
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.why-choose-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.why-choose-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Call to Action Section */
+.about-cta-section {
+  padding: 6rem 2rem;
+  background-color: rgba(28, 10, 67, 0.5);
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+  color: white;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--Yellow500);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-block;
+  background-color: var(--Teal500);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: 2rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+  background-color: var(--Yellow500);
+  color: var(--Purple900);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .services-grid,
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .story-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .story-image {
+    order: -1;
+  }
+
+  .team-member-card {
+    flex-direction: column;
+  }
+
+  .team-member-photo {
+    margin-bottom: 2rem;
+  }
+
+  .photo-placeholder {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: 3rem 1.5rem;
+  }
+
+  .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .team-member-info h3 {
+    font-size: 1.8rem;
+  }
+
+  .team-member-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .cta-content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-grid,
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 2rem 1rem;
+  }
+
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero-content p {
+    font-size: 1rem;
+  }
+
+  .story-text p,
+  .team-member-info p,
+  .approach-content p,
+  .why-choose-content p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

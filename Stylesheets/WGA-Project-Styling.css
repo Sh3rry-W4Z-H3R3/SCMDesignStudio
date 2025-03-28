@@ -118,39 +118,83 @@ One class to manage 3-5 imgs */
   max-width: 35rem;
 }
 
-.WGA-CTA-Container {
-  display: flex;
-  flex-direction: column;
-
-  align-items: center;
-  margin-bottom: 2rem;
-}
-.ASCctaText {
-  max-width: 35rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.WGA-Page-CTAs {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  display: flex;
-  gap: 1rem;
-}
-
-/* CTA buttons */
-.WGA-CTA-Button {
-  text-decoration: none;
-  border-radius: 2rem;
-  background-color: var(--Teal500);
-  padding: 1em;
+/* CTA Section */
+.services-cta-section {
+  padding: 5rem 2rem;
+  background-color: var(--Teal900);
   color: white;
-  transition-duration: 0.5s;
+  text-align: center;
+  overflow: hidden; /* Added to contain CTA button hover effects */
 }
-/* CTA buttons - hover transition */
-.WGA-CTA-Button:hover {
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--Yellow500);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Modified CTA buttons container to use flex */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 0.5rem; /* Add padding to contain hover effects */
+}
+
+/* Fixed CTA button hover effects to prevent scrollbar */
+.primary-cta-button {
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
   background-color: var(--Yellow500);
   color: var(--Purple900);
-  font-weight: bold;
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform; /* Optimize for animations */
+  position: relative; /* Establish containing block */
+  overflow: visible !important;
+}
+
+.primary-cta-button:hover {
+  background-color: white;
+  transform: scale(1.05) translateZ(0);
+}
+
+.secondary-cta-button {
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 2.4rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform; /* Optimize for animations */
+  position: relative; /* Establish containing block */
+  overflow: visible !important;
+}
+
+.secondary-cta-button:hover {
+  background-color: white;
+  color: var(--Purple900);
+  transform: scale(1.05) translateZ(0);
 }

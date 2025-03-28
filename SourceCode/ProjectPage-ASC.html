@@ -11,46 +11,32 @@
     <link rel="stylesheet" href="../Stylesheets/ASC-Project-Styling.css" />
   </head>
   <body>
-    <!--START- NAVBAR - Applied site wide -->
-
-    <button
-      id="open-sidebar-btn"
-      onclick="openSidebar()"
-      aria-label="open Sidebar"
-      aria-expanded="false"
-      aria-controls="navbar"
+    <!-- Improved Navbar with all enhancements -->
+    <nav
+      class="NavBar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main Navigation"
     >
-      <svg
-        width="20"
-        height="10"
-        viewBox="0 0 20 10"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <line y1="1" x2="20" y2="1" stroke="#21100B" stroke-width="2" />
-        <line y1="5" x2="20" y2="5" stroke="#21100B" stroke-width="2" />
-        <line y1="9" x2="20" y2="9" stroke="#21100B" stroke-width="2" />
-      </svg>
-    </button>
-    <nav class="NavBar" id="navbar">
-      <!-- Fix logo and NavBtn Alignment -->
+      <!-- Logo -->
       <div class="logo">
-        <span>
-          <a href="../SourceCode/index.html">
-            <img
-              class="SCM-FullLogo-Header"
-              src="../Assets/SCM_FullLogo.png"
-              alt="."
-            /> </a
-        ></span>
+        <a href="../SourceCode/index.html">
+          <img
+            class="SCM-FullLogo-Header"
+            src="../Assets/SCM_FullLogo.png"
+            alt="SCM Studio Logo"
+          />
+        </a>
       </div>
 
+      <!-- Navigation Links -->
       <ul class="NavBarNav">
         <li>
           <button
             id="close-sidebar-btn"
             onclick="closeSidebar()"
             aria-label="close sidebar"
+            aria-controls="navbar"
           >
             <svg
               width="18"
@@ -61,13 +47,13 @@
             >
               <path
                 d="M1.71973 16.2793L16.2796 1.71943"
-                stroke="#21100B"
+                stroke="white"
                 stroke-width="2"
                 stroke-linecap="round"
               />
               <path
                 d="M16.2803 16.2793L1.7204 1.71943"
-                stroke="#21100B"
+                stroke="white"
                 stroke-width="2"
                 stroke-linecap="round"
               />
@@ -75,44 +61,63 @@
           </button>
         </li>
         <li class="NavItem">
-          <button class="NavBtn">
-            <a class="Nav-Link" state="active" href="../SourceCode/index.html"
-              >Home</a
-            >
-          </button>
+          <a class="Nav-Link" href="../SourceCode/index.html" role="menuitem"
+            >Home</a
+          >
         </li>
-        <li>
-          <button class="NavBtn">
-            <a class="Nav-Link" href="About.html">About</a>
-          </button>
+        <li class="NavItem">
+          <a class="Nav-Link" href="About.html" role="menuitem">About</a>
         </li>
-
-        <li>
-          <button class="NavBtn">
-            <a class="Nav-Link" href="../SourceCode/Services.html">Services</a>
-          </button>
+        <li class="NavItem">
+          <a class="Nav-Link" href="../SourceCode/Services.html" role="menuitem"
+            >Services</a
+          >
         </li>
-        <li>
-          <button class="NavBtn">
-            <a class="Nav-Link" href="../SourceCode/Projects.html">Projects</a>
-          </button>
+        <li class="NavItem">
+          <a class="Nav-Link" href="../SourceCode/Projects.html" role="menuitem"
+            >Projects</a
+          >
         </li>
-        <li>
-          <button class="NavBtn">
-            <a class="Nav-Link" href="Contact.html">Contact</a>
-          </button>
+        <li class="NavItem">
+          <a
+            id="Contact-CTA-Hero"
+            class="Nav-Link"
+            href="../SourceCode/ContactPage.html"
+            role="menuitem"
+            >Contact</a
+          >
         </li>
-        <li>
-          <button class="NavBtn">
-            <a class="Nav-Link" href="#shop">Shop</a>
-          </button>
+        <li class="NavItem">
+          <a class="Nav-Link" href="#shop" role="menuitem">Shop</a>
         </li>
       </ul>
     </nav>
 
-    <!-- END- NAVBAR- Applied sitewide -->
-    <!-- Close button for overlay -->
-    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+    <!-- Mobile menu button -->
+    <button
+      id="open-sidebar-btn"
+      onclick="openSidebar() "
+      aria-label="open sidebar"
+      aria-expanded="false"
+      aria-controls="navbar"
+      aria-haspopup="true"
+    >
+      <svg
+        width="20"
+        height="10"
+        viewBox="0 0 20 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line y1="1" x2="20" y2="1" stroke="white" stroke-width="2" />
+        <line y1="5" x2="20" y2="5" stroke="white" stroke-width="2" />
+        <line y1="9" x2="20" y2="9" stroke="white" stroke-width="2" />
+      </svg>
+    </button>
+
+    <!-- Overlay for mobile menu -->
+    <div id="overlay" onclick="closeSidebar() " aria-hidden="true"></div>
+    <!-- Page Wrapper + Content -->
 
     <main class="PageWrapper-ASC">
       <div class="ASC-Page-Title">
@@ -120,15 +125,15 @@
           <h1>Alastair Smith Ceramics - 2025</h1>
         </div>
         <div class="ASC-Context">
-          <p>
+          <h2>
             <em
               ><strong>Branding |</strong> Brand Design, Brand Guidelines, Logo
               Design</em
             >
-          </p>
-          <p>
+          </h2>
+          <h2>
             <em> <strong>Digital |</strong> Web Design, Web Development </em>
-          </p>
+          </h2>
           <p>
             <strong>Context:</strong> A new potter setting up his online
             presence as a craftsperson using ancient techniques as well as
@@ -244,25 +249,24 @@
           </div>
         </div>
       </div>
-      <div class="ASC-CTA-Container">
-        <div class="ASCctaText">
-          <h2>Ready to Bring Your Vision to Life?</h2>
+      <!-- CTA Section -->
+      <section class="services-cta-section">
+        <div class="cta-content">
+          <h2>Ready to Transform Your Ideas into Reality?</h2>
           <p>
-            Explore more of our projects to see how SCM Studio transforms ideas
-            into captivating digital realities. Whether you have a fully-fledged
-            design or just the spark of an idea, our team is here to help you
-            turn it into something extraordinary. Get in touch with us today to
-            discuss your project and discover how we can elevate your online
-            presence with our expert development services. Let's create
-            something amazing together.
+            Let's discuss how our services can help you achieve your business
+            goals.
           </p>
+          <div class="cta-buttons">
+            <a href="../SourceCode/ContactPage.html" class="primary-cta-button"
+              >Get in Touch</a
+            >
+            <a href="../SourceCode/Projects.html" class="secondary-cta-button"
+              >View Our Work</a
+            >
+          </div>
         </div>
-        <div class="ASC-Page-CTAs">
-          <a href="../SourceCode/Projects.html" class="ASC-CTA-Button"
-            >See More Projects</a
-          >
-          <a href="#" class="ASC-CTA-Button">Get In Touch</a>
-        </div>
+      </section>
       </div>
     </main>
     <footer class="SCMfooter">
@@ -362,5 +366,146 @@
         <a href="" class="TCs-links">&copy; SCM Design Studio 2025</a>
       </div>
     </footer>
+    <script src="../SourceCode/MobileMenuHamburgerScript.js"></script>
+    <!-- JavaScript for navigation functionality -->
+    <script>
+      // Navigation functionality and accessibility
+      document.addEventListener("DOMContentLoaded", function () {
+        // Get elements with proper error checking
+        const openButton = document.getElementById("open-sidebar-btn");
+        const closeButton = document.getElementById("close-sidebar-btn");
+        const navbar = document.querySelector(".NavBar"); // Using class selector instead of ID
+        const overlay = document.getElementById("overlay");
+
+        // Log which elements were found for debugging
+        console.log("Elements found:", {
+          openButton: !!openButton,
+          closeButton: !!closeButton,
+          navbar: !!navbar,
+          overlay: !!overlay,
+        });
+
+        // Set current page as active and mark with aria-current
+        const currentPage = window.location.pathname
+          .split("/")
+          .pop()
+          .toLowerCase();
+        const navLinks = document.querySelectorAll(".Nav-Link");
+
+        navLinks.forEach((link) => {
+          // Check if this is the current page
+          const linkHref = link.getAttribute("href").toLowerCase();
+          if (
+            linkHref.includes(currentPage) ||
+            (currentPage === "" && linkHref.includes("index.html"))
+          ) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+          }
+
+          // Ensure all links have accessible names
+          if (!link.textContent.trim()) {
+            const linkText = link
+              .getAttribute("href")
+              .split("/")
+              .pop()
+              .split(".")[0];
+            link.setAttribute("aria-label", linkText);
+          }
+        });
+
+        // Exit if critical elements are missing
+        if (!navbar) {
+          console.error("Critical element navbar not found");
+          return;
+        }
+
+        const media = window.matchMedia("(width < 700px)");
+
+        media.addEventListener("change", (e) => updateNavbar(e));
+
+        function updateNavbar(e) {
+          const isMobile = e.matches;
+          console.log("Is mobile:", isMobile);
+          if (isMobile) {
+            navbar.setAttribute("inert", "");
+          } else {
+            // desktop device
+            navbar.removeAttribute("inert");
+          }
+        }
+
+        function openSidebar() {
+          console.log("Opening sidebar");
+          navbar.classList.add("show");
+          if (overlay) overlay.classList.add("show");
+          if (openButton) {
+            openButton.setAttribute("aria-expanded", "true");
+            openButton.setAttribute("aria-hidden", "true");
+          }
+          navbar.removeAttribute("inert");
+
+          // Trap focus inside the sidebar when open
+          const focusableElements = navbar.querySelectorAll(
+            'a, button, input, select, textarea, [tabindex]:not([tabindex="-1"])'
+          );
+          if (focusableElements.length > 0) {
+            setTimeout(() => focusableElements[0].focus(), 100);
+          }
+        }
+
+        function closeSidebar() {
+          console.log("Closing sidebar");
+          navbar.classList.remove("show");
+          if (overlay) overlay.classList.remove("show");
+          if (openButton) {
+            openButton.setAttribute("aria-expanded", "false");
+            openButton.setAttribute("aria-hidden", "false");
+          }
+          navbar.setAttribute("inert", "");
+
+          // Return focus to the open button
+          if (openButton) {
+            setTimeout(() => openButton.focus(), 100);
+          }
+        }
+
+        // Add event listeners safely
+        if (openButton) {
+          openButton.addEventListener("click", openSidebar);
+        }
+
+        if (closeButton) {
+          closeButton.addEventListener("click", closeSidebar);
+        }
+
+        if (overlay) {
+          overlay.addEventListener("click", closeSidebar);
+        }
+
+        // For Bookmark Links
+        navLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            if (window.matchMedia("(width < 700px)").matches) {
+              closeSidebar();
+            }
+          });
+        });
+
+        // Handle keyboard navigation
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && navbar.classList.contains("show")) {
+            closeSidebar();
+          }
+        });
+
+        // Initialize navbar state
+        updateNavbar(media);
+
+        // Make functions available globally for inline onclick handlers
+        window.openSidebar = openSidebar;
+        window.closeSidebar = closeSidebar;
+      });
+    </script>
   </body>
 </html>
