@@ -1248,6 +1248,7 @@ These are to keep the text colour
     padding-top: 1.5rem;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .Project-Column-1,
