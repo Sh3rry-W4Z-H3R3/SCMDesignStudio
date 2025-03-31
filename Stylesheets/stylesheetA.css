@@ -1244,6 +1244,7 @@ These are to keep the text colour
   .RecentProjectsSection {
     padding-top: 1.5rem;
     flex-direction: column;
+    align-items: center;
   }
 
   .Project-Column-1,
