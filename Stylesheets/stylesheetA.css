@@ -749,7 +749,15 @@ body::-webkit-scrollbar-thumb {
 .Home-to-Project-Card-Link {
   text-decoration: none;
   display: block;
-  width: 100%;
+  /* Use fit content so it shrinks rather than exapnd for the full width */
+  width: fit-content;
+}
+
+/* keeps the project cards centred. width:100% fucks it up so keep it on auto */
+@media only screen and (max-width: 768px) {
+  .Home-to-Project-Card-Link {
+    width: auto;
+  }
 }
 /* Card Styling */
 .ProjectCardContainer {
