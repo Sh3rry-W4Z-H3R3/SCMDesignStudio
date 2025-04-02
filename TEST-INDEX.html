@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
     <link rel="script" href="../Misc/MobileMenuHamburgerScript.js" />
     <link rel="stylesheet" href="../Stylesheets/Footer-Sitewide.css" />
+    <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
   </head>
   <body>
     <!-- Improved Navbar with all enhancements -->
@@ -520,30 +521,38 @@
               >
             </div>
           </div>
-          <div class="ContactFor">
-            <form
-              action="https://formsubmit.co/covewuro@mailgolem.com"
-              method="POST"
-              class="ContactForm"
-            >
-              <label for="fname">First name:</label>
-              <input type="text" id="fname" name="fname" />
-              <label for="lname">Last name:</label>
-              <input type="text" id="lname" name="lname" />
-              <label for="email">E-Mail Address:</label>
-              <input type="text" id="email" name="email" />
-              <label for="Subject">Subject:</label>
-              <input type="text" id="Subject" name="Subject" />
-              <label for="message">Message:</label>
-              <input
-                type="text"
-                id="message"
-                name="message"
-                class="messageInput"
-              />
-              <button class="submitButton">Submit</button>
+          <section class="contact-form">
+            <h3>Send Us a Message</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone (Optional)</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a subject</option>
+                  <option value="website">Website Design</option>
+                  <option value="branding">Branding</option>
+                  <option value="packaging">Product Packaging</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group full-width">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
             </form>
-          </div>
+          </section>
         </div>
       </section>
     </div>

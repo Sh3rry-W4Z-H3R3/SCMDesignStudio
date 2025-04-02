@@ -1494,3 +1494,86 @@ These are to keep the text colour
     }
   }
 }
+
+/* Homepage */
+/* Contact Form Section */
+.contact-form {
+  background: rgba(30, 10, 60, 0.6);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: white;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  grid-column: 2;
+  justify-self: end;
+}
+
+button:hover {
+  background: var(--Teal500);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(42, 183, 169, 0.3);
+}
