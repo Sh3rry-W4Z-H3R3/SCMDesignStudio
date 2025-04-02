@@ -66,9 +66,3 @@ button {
 .messageInput {
   height: 111px !important;
 }
-
-@media (max-width: 550px) {
-  .ContactFor {
-    transform: scale(0.6);
-  }
-}
