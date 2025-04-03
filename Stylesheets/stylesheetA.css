@@ -500,6 +500,7 @@ body::-webkit-scrollbar-thumb {
   color: #85dac3;
   position: absolute;
   left: 0;
+  overflow: visible;
 }
 
 .Slide1 {
