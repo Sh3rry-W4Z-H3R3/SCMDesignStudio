@@ -10,8 +10,9 @@
     <link rel="stylesheet" href="../Stylesheets/Footer-Sitewide.css" />
     <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
     <link rel="stylesheet" href="../Stylesheets/ContactPage.css" />
-
-    <!-- <link rel="stylesheet" href="\ASmithCeramics\contactPage.css" /> -->
+    <script src="../SCMDesignStudio/Misc/MobileMenuHamburgerScript.js"></script>
+    <!-- Add the accordion script with defer attribute to ensure it loads after DOM is ready -->
+    <script src="../SCMDesignStudio/Misc/accordion.js" defer></script>
   </head>
   <body>
     <!-- Improved Navbar with all enhancements -->
@@ -213,9 +214,9 @@
 
       <section class="faq-section">
         <h3>Frequently Asked Questions</h3>
-        <div onclick="toggleFaqItem(this)" class="FaqItem">
-          <div class="FaqQuestion">What services do SCM Studio offer?</div>
-          <div class="FaqAnswer">
+        <div class="faq-item">
+          <div class="faq-question">What services do SCM Studio offer?</div>
+          <div class="faq-answer">
             <p>
               At SCM Studio we're open to hearing about any project! Whether
               it's a physical product or something digital or software related.
@@ -227,9 +228,9 @@
             </p>
           </div>
         </div>
-        <div class="FaqItem">
-          <div class="FaqQuestion">How does the design process work?</div>
-          <div class="FaqAnswer">
+        <div class="faq-item">
+          <div class="faq-question">How does the design process work?</div>
+          <div class="faq-answer">
             <p>
               Our design process typically includes discovery, research, concept
               development, design creation, revisions, and final delivery. We
@@ -238,11 +239,11 @@
             </p>
           </div>
         </div>
-        <div class="FaqItem">
-          <div class="FaqQuestion">
+        <div class="faq-item">
+          <div class="faq-question">
             How long does a typical design project take?
           </div>
-          <div class="FaqAnswer">
+          <div class="faq-answer">
             <p>
               Project timelines vary based on scope and complexity. A website
               design and development could take anywhere from 2-6 weeks, while a
@@ -253,11 +254,11 @@
             </p>
           </div>
         </div>
-        <div class="FaqItem">
-          <div class="FaqQuestion">
+        <div class="faq-item">
+          <div class="faq-question">
             What information do you need to start a project?
           </div>
-          <div class="FaqAnswer">
+          <div class="faq-answer">
             <p>
               To get started, we need to understand your brand, target audience,
               project goals, timeline, and budget. The more information you
@@ -268,9 +269,9 @@
             </p>
           </div>
         </div>
-        <div class="FaqItem">
-          <div class="FaqQuestion">Do you offer revisions to designs?</div>
-          <div class="FaqAnswer">
+        <div class="faq-item">
+          <div class="faq-question">Do you offer revisions to designs?</div>
+          <div class="faq-answer">
             <p>
               Yes, our standard packages include 2 rounds of revisions. We
               believe in collaboration and want to ensure you're completely
@@ -281,14 +282,159 @@
           </div>
         </div>
       </section>
+      <div class="ContactPageImgs">
+        <img
+          class="ContactPageContent"
+          src="../SCMDesignStudio/Images/EDITED IMAGES/007 IMG_7722.JPG"
+          alt=""
+        />
+        <img
+          class="ContactPageContent"
+          src="../SCMDesignStudio/Images/EDITED IMAGES/217 P1016256.JPG"
+          alt=""
+        />
+        <img
+          class="ContactPageContent"
+          src="../SCMDesignStudio/Images/EDITED IMAGES/218 P1016259.JPG"
+          alt=""
+        />
+      </div>
     </div>
-    <script>
-      function toggleFaqItem(FaqItem) {
-        const content = FaqItem.nextElementSibling;
 
-        content.style.maxHeight = "500px";
-        console.log(content.style.maxHeight);
-      }
+    <footer class="SCMfooter">
+      <div class="FooterTopRow">
+        <span class="footerlogo">
+          <img
+            class="footerlogoIMG"
+            src="../SCMDesignStudio/Assets/SCM_FullLogo.png"
+            alt=""
+          />
+        </span>
+        <div class="ContactPrompt">
+          <div class="FooterContactTitle">
+            <h2>Got some thoughts?</h2>
+            <h3>Feel free to share!</h3>
+            <div class="Footer-Contact-List-Item">
+              <img class="Footer-Contact-List-Item-Icon" src="" alt="" />
+              <a href="mailto:SCMstudio@hotmail.com"
+                ><p>Email: SCMstudio@hotmail.com</p></a
+              >
+            </div>
+            <div class="Footer-Social-Links">
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""
+                    ><p>Instagram</p></a
+                  >
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""
+                    ><p>LinkedIn</p></a
+                  >
+                </div>
+              </div>
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""><p>Spotify</p></a>
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""
+                    ><p>Pintrest</p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-services">
+        <h2 class="section-title">Core Services</h2>
+        <div class="grid-wrapper">
+          <div class="services-grid">
+            <!-- Top Row -->
+            <div class="service-column">
+              <h3>Digital</h3>
+              <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>UI Design</li>
+                <li>E-Commerce</li>
+                <li>Apps</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Product</h3>
+              <ul>
+                <li>Market Research</li>
+                <li>Product Design</li>
+                <li>Product Development</li>
+                <li>Material Research</li>
+                <li>Product Testing</li>
+              </ul>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="service-column">
+              <h3>Brand</h3>
+              <ul>
+                <li>Brand Design</li>
+                <li>Brand Strategy</li>
+                <li>Creative Assets</li>
+                <li>Art Direction</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Print</h3>
+              <ul>
+                <li>Graphic Design</li>
+                <li>Publications</li>
+                <li>Packaging</li>
+                <li>Signage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Footer-boring-links">
+        <a class="TCs-links" href="">Privacy Policy</a>
+        <a href="" class="TCs-links">&copy; SCM Design Studio 2025</a>
+      </div>
+    </footer>
+    <script>
+      // Fixed Accordion Functionality for FAQ Section
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // FAQ Accordion Functionality
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        // Initialize accordion - ensure all answers are hidden initially
+        faqQuestions.forEach((question) => {
+          const answer = question.nextElementSibling;
+          question.classList.remove("active");
+          answer.classList.remove("show");
+        });
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const answer = question.nextElementSibling;
+            const isActive = question.classList.contains("active");
+
+            // Close all other FAQs
+            faqQuestions.forEach((q) => {
+              q.classList.remove("active");
+              q.nextElementSibling.classList.remove("show");
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+              question.classList.add("active");
+              answer.classList.add("show");
+            }
+          });
+        });
+      });
     </script>
   </body>
 </html>
