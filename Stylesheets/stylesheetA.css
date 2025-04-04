@@ -32,10 +32,12 @@
   --Yellow900: #7a5113;
   --Teal500: #2f847d;
   --Teal900: #09303f;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 .body {
   overflow: hidden;
-  font-family: "Jura";
+
   font-weight: 400;
   font-style: normal;
   background-color: #63378d;
@@ -117,7 +119,7 @@ body::-webkit-scrollbar-thumb {
 .Nav-Link {
   display: block;
   padding: 0.625rem;
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   text-align: center;
   color: white;
   background-color: var(--Purple900);
@@ -377,7 +379,7 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   color: #ffffff;
   text-align: center;
-  font-family: "Bodoni Moda";
+  font-family: var(--Title-Font);
   font-weight: 100;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   position: relative;
@@ -387,11 +389,11 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   text-align: left;
   font-size: clamp(1rem, 1.5vw, 2rem);
-  font-family: "Century Gothic";
+  font-family: var(--Body-Font);
   font-weight: 500;
 }
 body > p {
-  font-family: "Century Gothic";
+  font-family: var(--Body-Font);
   font-size: 1rem;
   font-style: normal;
   font-variant: normal;
