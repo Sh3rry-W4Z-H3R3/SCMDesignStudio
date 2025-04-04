@@ -1,6 +1,6 @@
 /* Services Page Styles with Enhanced Grid Layouts and Interactions */
 * {
-  font-family: "Jura";
+  background-color: var(--Purple500);
 }
 
 :root {
@@ -9,6 +9,8 @@
   --Yellow500: #ffd364;
   --Yellow600: #dbad49;
   --Teal500: #2f847d;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 /* Service Categories Section */
 .service-categories-section {
