@@ -1,6 +1,10 @@
 /* Services Page Styles with Enhanced Grid Layouts and Interactions */
 * {
-  background-color: var(--Purple500);
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
