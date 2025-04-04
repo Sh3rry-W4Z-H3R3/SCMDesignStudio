@@ -50,7 +50,6 @@ body::-webkit-scrollbar-thumb {
 }
 .SCMfooter > h1,
 h2,
-h3,
 h4 {
   font-family: var(--Title-Font);
 }
