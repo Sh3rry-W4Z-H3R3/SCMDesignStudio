@@ -48,11 +48,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   width: 100%;
 }
-.SCMfooter > h1,
-h2,
-h4 {
-  font-family: var(--Title-Font);
-}
+
 .SCMfooter > p {
   font-family: var(--Body-Font);
 }
