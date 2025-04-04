@@ -13,12 +13,11 @@
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 .body {
   overflow: hidden;
-  font-family: "Century Gothic";
-  font-weight: 400;
-  font-style: normal;
   background-color: #63378d;
   color: white;
   height: 100vh;
@@ -44,13 +43,20 @@ body::-webkit-scrollbar-thumb {
   height: fit-content;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Century Gothic";
   overflow-y: visible;
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-
+.SCMfooter > h1,
+h2,
+h3,
+h4 {
+  font-family: var(--Title-Font);
+}
+.SCMfooter > p {
+  font-family: var(--Body-Font);
+}
 .FooterTopRow {
   display: flex;
   overflow: hidden;
@@ -110,7 +116,6 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--Purple900);
   color: white;
   padding: 3rem;
-  font-family: sans-serif;
 }
 
 .section-title {
