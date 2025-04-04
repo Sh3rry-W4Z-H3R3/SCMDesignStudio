@@ -765,6 +765,7 @@ body > p {
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  font-family: var(--Body-Font);
 }
 /* Links from project cards on home page onto subpages showing work of that project */
 .Home-to-Project-Card-Link {
