@@ -52,7 +52,6 @@
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.8;
   font-family: var(--Body-Font);
 }
 
@@ -85,6 +84,7 @@
   font-size: 18px;
   margin-bottom: 10px;
   color: var(--secondary-color);
+  font-family: var(--Body-Font);
 }
 
 .contact-item p,
@@ -138,12 +138,14 @@
   padding: 40px;
   margin: 40px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: var(--Body-Font);
 }
 
 .contact-form h3 {
   font-size: 24px;
   margin-bottom: 20px;
   color: var(--secondary-color);
+  font-family: var(--Body-Font);
 }
 
 form {
@@ -231,6 +233,7 @@ button:hover {
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 20px;
+  font-family: var(--Body-Font);
 }
 
 .faq-question {
@@ -241,6 +244,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  font-family: var(--Body-Font);
 }
 
 .faq-question::after {
@@ -258,6 +262,7 @@ button:hover {
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 10px;
+  font-family: var(--Body-Font);
 }
 
 .faq-answer.show {

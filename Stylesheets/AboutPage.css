@@ -1,8 +1,6 @@
 /* Bodoni Moda - For Heading Text */
 
 @import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
-/* Jura - for body text */
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
 /* About Page Styles for SCM Design Studio */
 * {
   padding: 0%;
@@ -101,7 +99,7 @@ section {
 }
 
 .about-hero-content h1 {
-  font-family: "Jura", sans-serif;
+  font-family: var(--Title-Font);
   font-weight: 700;
   font-size: clamp(2.5rem, 5vw, 4rem);
   color: white;
