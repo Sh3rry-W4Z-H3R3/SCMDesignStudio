@@ -784,7 +784,7 @@ body > p {
 
 /* Card Styling */
 .ProjectCardContainer {
-  font-family: "Century Gothic";
+  font-family: var(--Body-Font);
   border-radius: 2rem;
   padding: 1rem;
   width: 30rem;

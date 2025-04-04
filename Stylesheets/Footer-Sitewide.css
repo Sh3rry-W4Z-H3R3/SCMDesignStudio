@@ -125,7 +125,7 @@ h4 {
   font-size: 2rem;
   margin-bottom: 1rem;
   text-align: center;
-  font-family: "Bodoni Moda";
+  font-family: var(--Title-Font);
 }
 
 .grid-wrapper {
@@ -144,7 +144,7 @@ h4 {
 .service-column h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
-  font-family: "Bodoni Moda";
+  font-family: var(--Title-Font);
 }
 
 .service-column ul {
@@ -152,6 +152,7 @@ h4 {
   padding: 0;
   margin: 0;
   line-height: 1.8;
+  font-family: var(--Body-Font);
 }
 
 .service-column li {
@@ -165,11 +166,13 @@ h4 {
   margin-bottom: 0.5rem;
   padding: 1rem 0;
   flex-wrap: wrap;
+  font-family: var(--Body-Font);
 }
 
 .TCs-links {
   text-decoration: none;
   color: #ffffff;
+  font-family: var(--Body-Font);
 }
 
 /* Enhanced Media queries for responsiveness */
