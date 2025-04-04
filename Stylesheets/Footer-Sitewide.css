@@ -44,7 +44,7 @@ body::-webkit-scrollbar-thumb {
   height: fit-content;
   color: #ffffff;
   text-decoration: none;
-  font-family: "Jura";
+  font-family: "Century Gothic";
   overflow-y: visible;
   display: flex;
   flex-direction: column;
@@ -136,6 +136,7 @@ body::-webkit-scrollbar-thumb {
 .service-column h3 {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+  font-family: "Bodoni Moda";
 }
 
 .service-column ul {
