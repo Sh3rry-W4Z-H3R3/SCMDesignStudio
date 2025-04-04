@@ -152,10 +152,11 @@ h4 {
   padding: 0;
   margin: 0;
   line-height: 1.8;
-  font-family: var(--Body-Font);
 }
 
 .service-column li {
+  font-family: var(--Body-Font);
+
   color: rgba(255, 255, 255, 0.85); /* Slightly less bright than the headings */
 }
 

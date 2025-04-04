@@ -10,7 +10,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  background-color: var(--Purple500);
 }
 .bodoni-moda > {
   font-family: "Bodoni Moda", serif;
@@ -114,6 +113,7 @@ section {
   color: white;
   max-width: 800px;
   margin: 0 auto;
+  font-family: var(--Body-Font);
 }
 
 /* Our Story Section */
@@ -133,10 +133,13 @@ section {
 
 .story-text {
   flex: 1;
+  font-family: var(--Body-Font);
   color: white;
 }
 
 .story-text p {
+  font-family: var(--Body-Font);
+
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -224,6 +227,7 @@ section {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Our Approach Section */
@@ -238,6 +242,7 @@ section {
 }
 
 .approach-content p {
+  font-family: var(--Body-Font);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -278,6 +283,7 @@ section {
 }
 
 .service-card p {
+  font-family: var(--Body-Font);
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -290,6 +296,7 @@ section {
 
 .service-list li {
   margin-bottom: 0.5rem;
+  font-family: var(--Body-Font);
   font-size: 0.95rem;
 }
 
@@ -331,6 +338,7 @@ section {
 }
 
 .value-card p {
+  font-family: var(--Body-Font);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -353,6 +361,7 @@ section {
 .why-choose-content p {
   font-size: 1.1rem;
   line-height: 1.6;
+  font-family: var(--Body-Font);
   margin-bottom: 1.5rem;
 }
 
@@ -383,6 +392,7 @@ section {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 .cta-button {
