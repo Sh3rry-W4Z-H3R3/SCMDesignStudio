@@ -1,3 +1,9 @@
+/* Sitewide and Homepage styling */
+
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+/* Jura - for body text */
 @import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
 * {
   padding: 0%;
@@ -9,6 +15,12 @@
 
 .jura > {
   font-family: "Jura", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+.bodoni-moda > {
+  font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -365,8 +377,8 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   color: #ffffff;
   text-align: center;
-  font-family: "Jura";
-  font-weight: 900;
+  font-family: "Bodoni Moda";
+  font-weight: 100;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   position: relative;
 }
@@ -375,10 +387,20 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   text-align: left;
   font-size: clamp(1rem, 1.5vw, 2rem);
+  font-family: "Century Gothic";
+  font-weight: 500;
 }
+body > p {
+  font-family: "Century Gothic";
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+}
+
 /* CTA container */
 .Home-Page-CTAs {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -399,11 +421,12 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--Yellow500);
   color: var(--Purple900);
   font-weight: bold;
+  transform: scale(1.1);
 }
 
 /* Revolving Text Heading*/
 .OuterHeading {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   color: #ffffff;
   height: 50vh;
   display: flex;
@@ -412,10 +435,11 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   overflow: hidden;
   padding-right: 30rem;
+  font-weight: 400;
 }
 /* Rotating text */
 .InnerHeading {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   border: 0px solid #ddd;
   height: 50px;
   line-height: 50px;
@@ -466,7 +490,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Banner Animation and Styling */
 .BannerContainer {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   margin-top: 10rem;
   height: 10rem;
   overflow-y: hidden;
@@ -612,7 +636,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   padding-top: 1rem;
   gap: 1rem;
-  font-family: "Jura";
+  font-family: "Century Gothic";
 }
 
 .TextBoxRow2 {
@@ -636,7 +660,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Section Styling */
 .services-title {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   display: flex;
   justify-content: center;
   color: #ffffff;
@@ -681,7 +705,7 @@ body::-webkit-scrollbar-thumb {
 }
 /* Service Box */
 .service-box {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   background-color: transparent; /* Slightly lighter purple */
   padding: 20px;
   max-width: 280px;
@@ -726,7 +750,7 @@ body::-webkit-scrollbar-thumb {
   color: #ffffff;
   letter-spacing: 10px;
   text-transform: capitalize;
-  font-family: "Jura";
+  font-family: "Bodoni Moda";
   font-weight: 900;
   text-align: center;
   padding: 0 1rem;
@@ -756,7 +780,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Card Styling */
 .ProjectCardContainer {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   border-radius: 2rem;
   padding: 1rem;
   width: 30rem;
@@ -813,7 +837,7 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   letter-spacing: 5px;
   text-transform: capitalize;
-  font-family: "Jura";
+  font-family: "Bodoni Moda";
   font-weight: 900;
   text-align: center;
   padding: 0 1rem;
@@ -829,7 +853,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Card Styles */
 .card {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   background-color: var(--Purple900);
   color: white;
   flex: 1 1 calc(33.333% - 20px); /* 3 columns on larger screens */
@@ -860,6 +884,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card-content h3 {
+  font-family: "Bodoni Mooda";
+
   font-weight: bold;
   margin-bottom: 1rem;
 }
@@ -890,7 +916,7 @@ These are to keep the text colour
 }
 /* Contact Section Styling */
 .ContactSection {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   width: 100%;
 }
 .ContactSectiontitle {
@@ -899,12 +925,13 @@ These are to keep the text colour
   color: white;
   font-weight: 900;
   font-size: xx-large;
+  font-family: "Bodoni Moda";
 }
 .ContactContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Jura";
+  font-family: "Century Gothic";
   width: 100%;
 }
 .ContactText {
