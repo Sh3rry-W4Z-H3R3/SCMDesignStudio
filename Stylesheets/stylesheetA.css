@@ -823,6 +823,7 @@ body > p {
   margin-top: 1rem;
   color: #f0daf9;
   width: 100%;
+  font-family: var(--Body-Font);
 }
 .CardTextTitle {
   text-align: center;

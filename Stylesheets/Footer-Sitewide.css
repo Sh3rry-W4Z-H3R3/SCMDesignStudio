@@ -100,16 +100,19 @@ h4 {
 .Footer-Contact-List-Item {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  font-family: var(--Body-Font);
 }
 
 .Footer-Contact-List-Item > a {
   text-decoration: none;
   color: white;
+  font-family: var(--Body-Font);
 }
 
 .Footer-Social-Link-Hyper {
   text-decoration: none;
   color: white;
+  font-family: var(--Body-Font);
 }
 
 .footer-section-services {
