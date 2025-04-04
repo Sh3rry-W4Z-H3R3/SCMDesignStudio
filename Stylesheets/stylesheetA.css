@@ -772,6 +772,7 @@ body > p {
   display: block;
   /* Use fit content so it shrinks rather than exapnd for the full width */
   width: fit-content;
+  font-family: var(--Body-Font);
 }
 
 /* Card Styling */
@@ -807,7 +808,7 @@ body > p {
   width: 100%;
   max-width: 22.5rem;
   border-radius: 2rem;
-  box-shadow: #ffd364;
+  box-shadow: var(--Yellow500);
   height: auto;
   object-fit: cover;
 }
@@ -852,7 +853,7 @@ body > p {
 
 /* Card Styles */
 .card {
-  font-family: "Century Gothic";
+  font-family: var(--Body-Font);
   background-color: var(--Purple900);
   color: white;
   flex: 1 1 calc(33.333% - 20px); /* 3 columns on larger screens */
@@ -892,6 +893,7 @@ body > p {
 .card-content p {
   font-size: 14px;
   margin-bottom: 2rem;
+  font-family: var(--Body-Font);
 }
 
 /* "Learn More" link */

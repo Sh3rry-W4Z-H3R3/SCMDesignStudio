@@ -19,7 +19,6 @@
   --Body-Font: "Century Gothic";
 }
 .Page-Wrapper-Contact-Page {
-  font-family: "jura";
   background-color: var(--Purple500);
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
   color: white;
@@ -54,6 +53,7 @@
   max-width: 600px;
   margin: 0 auto;
   opacity: 0.8;
+  font-family: var(--Body-Font);
 }
 
 /* Contact Info Section */
@@ -90,6 +90,7 @@
 .contact-item p,
 .contact-item a {
   color: var(--text-color);
+  font-family: var(--Body-Font);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;

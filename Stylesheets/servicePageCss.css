@@ -573,6 +573,7 @@
 
 .services-hero-content p {
   font-size: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Fix for scrollbar issues */
