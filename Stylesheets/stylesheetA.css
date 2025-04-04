@@ -562,7 +562,7 @@ body > p {
   font-family: var(--Title-Font);
 }
 
-.BannerText h3 {
+.BannerText > h3 {
   font-size: 1.2rem;
   text-align: center;
   line-height: 1.4;
@@ -754,7 +754,7 @@ body > p {
   color: #ffffff;
   letter-spacing: 10px;
   text-transform: capitalize;
-  font-family: "Bodoni Moda";
+  font-family: var(--Title-Font);
   font-weight: 900;
   text-align: center;
   padding: 0 1rem;
