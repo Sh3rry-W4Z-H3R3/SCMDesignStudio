@@ -402,6 +402,7 @@ section {
   padding: 1rem 2rem;
   border-radius: 50px;
   font-size: 1.2rem;
+  font-family: var(--Body-Font);
   text-decoration: none;
   margin-top: 2rem;
   transition: all 0.3s ease;

@@ -166,6 +166,7 @@
 .service-features {
   list-style: none;
   padding: 0;
+  font-family: var(--Body-Font);
 }
 
 .service-features li {
@@ -404,6 +405,7 @@
   overflow: visible !important;
   position: relative;
   z-index: 1;
+  font-family: var(--Body-Font);
 }
 
 .process-step:hover {
@@ -475,6 +477,7 @@
   gap: 1.5rem;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   padding: 0.5rem; /* Add padding to contain hover effects */
+  font-family: var(--Body-Font);
 }
 
 /* Fixed CTA button hover effects to prevent scrollbar */
@@ -488,6 +491,8 @@
   padding: 1rem 2.5rem;
   border-radius: 2rem;
   font-weight: 600;
+  font-family: var(--Body-Font);
+
   transition: all 0.3s ease;
   transform: translateZ(0); /* Force GPU acceleration */
   will-change: transform; /* Optimize for animations */
@@ -509,6 +514,7 @@
   text-decoration: none;
   padding: 0.9rem 2.4rem;
   border-radius: 2rem;
+  font-family: var(--Body-Font);
   font-weight: 600;
   border: 2px solid white;
   transition: all 0.3s ease;

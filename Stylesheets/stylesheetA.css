@@ -826,9 +826,11 @@ body > p {
   font-family: var(--Body-Font);
 }
 .CardTextTitle {
+  font-family: var(--Body-Font);
   text-align: center;
 }
 .CardSubtitleText {
+  font-family: var(--Body-Font);
   font-style: italic;
   padding-top: 0.5rem;
   opacity: 0.75;
