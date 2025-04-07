@@ -225,6 +225,7 @@ body::-webkit-scrollbar-thumb {
   gap: 1.5rem;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   padding: 0.5rem; /* Add padding to contain hover effects */
+  font-family: var(--Body-Font);
 }
 
 /* Fixed CTA button hover effects to prevent scrollbar */
