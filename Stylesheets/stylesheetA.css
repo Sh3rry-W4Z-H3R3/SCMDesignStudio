@@ -400,6 +400,7 @@ body > p {
   align-items: center;
   padding-left: 2rem;
   gap: 1rem;
+  overflow: visible;
 }
 /* CTA target class */
 .Home-Page-CTA-Button {
