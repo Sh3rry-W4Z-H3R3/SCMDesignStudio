@@ -107,7 +107,7 @@ body::-webkit-scrollbar-thumb {
 /* Applies to all image content displaying work done by the Agency
 One class to manage 3-5 imgs */
 .ASC-Content-work-images {
-  object-fit: fill;
+  object-fit: contain;
 }
 
 /* Sections text content*/
