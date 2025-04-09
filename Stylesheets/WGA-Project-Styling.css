@@ -106,7 +106,7 @@ body::-webkit-scrollbar-thumb {
 /* Applies to all image content displaying work done by the Agency
 One class to manage 3-5 imgs */
 .WGA-Content-work-images {
-  object-fit: fill;
+  object-fit: contain;
 }
 
 /* Sections text content*/
@@ -132,7 +132,7 @@ One class to manage 3-5 imgs */
 }
 
 .PrevClientLink:hover {
-  color: var(--Teal500);
+  color: var(--Purple500);
   text-decoration: none;
 }
 .cta-content {
