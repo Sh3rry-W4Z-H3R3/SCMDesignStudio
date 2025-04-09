@@ -108,7 +108,6 @@ body::-webkit-scrollbar-thumb {
 One class to manage 3-5 imgs */
 .ASC-Content-work-images {
   object-fit: contain;
-  height: inherit;
 }
 
 /* Sections text content*/
