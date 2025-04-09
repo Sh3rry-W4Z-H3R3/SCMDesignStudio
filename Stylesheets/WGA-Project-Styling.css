@@ -125,6 +125,10 @@ One class to manage 3-5 imgs */
   text-align: center;
   overflow: hidden; /* Added to contain CTA button hover effects */
 }
+/* Backlink to WGA Site */
+.PrevClientLink {
+  text-decoration: none;
+}
 
 .cta-content {
   max-width: 800px;
