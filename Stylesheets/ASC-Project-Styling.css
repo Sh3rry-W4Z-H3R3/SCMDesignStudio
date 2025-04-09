@@ -227,5 +227,6 @@ One class to manage 3-5 imgs */
   .ASC-WebDes-Content,
   .ASC-WebDev-Content {
     flex-wrap: wrap;
+    justify-content: center;
   }
 }
