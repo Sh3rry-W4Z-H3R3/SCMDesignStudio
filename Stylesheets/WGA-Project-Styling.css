@@ -90,6 +90,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem;
+  gap: 2rem;
 }
 /* Keeps all img containers identical */
 .WGA-WebDev-Img-Container,
@@ -195,4 +196,16 @@ One class to manage 3-5 imgs */
   background-color: white;
   color: var(--Purple900);
   transform: scale(1.05) translateZ(0);
+}
+/* Media Queries for responsive */
+@media screen and (max-width: 1000px) {
+  /* Section containers */
+  .WGA-Branding-Content,
+  .WGA-LogoDes-Content,
+  .WGA-WebDes-Content,
+  .WGA-WebDev-Content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 }

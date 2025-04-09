@@ -92,6 +92,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem;
+  gap: 2rem;
 }
 /* Keeps all img containers identical */
 .ASC-WebDev-Img-Container,
@@ -124,7 +125,6 @@ One class to manage 3-5 imgs */
 
   align-items: center;
   margin-bottom: 2rem;
-  gap: 2rem;
 }
 .ASCctaText {
   max-width: 35rem;
