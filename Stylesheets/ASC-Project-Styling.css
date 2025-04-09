@@ -124,6 +124,7 @@ One class to manage 3-5 imgs */
 
   align-items: center;
   margin-bottom: 2rem;
+  gap: 2rem;
 }
 .ASCctaText {
   max-width: 35rem;
@@ -228,5 +229,6 @@ One class to manage 3-5 imgs */
   .ASC-WebDev-Content {
     flex-wrap: wrap;
     justify-content: center;
+    gap: 1rem;
   }
 }
