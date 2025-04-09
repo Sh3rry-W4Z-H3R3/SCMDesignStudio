@@ -128,8 +128,13 @@ One class to manage 3-5 imgs */
 /* Backlink to WGA Site */
 .PrevClientLink {
   text-decoration: none;
+  color: var(--Yellow500);
 }
 
+.PrevClientLink:hover {
+  color: var(--Teal500);
+  text-decoration: none;
+}
 .cta-content {
   max-width: 800px;
   margin: 0 auto;
