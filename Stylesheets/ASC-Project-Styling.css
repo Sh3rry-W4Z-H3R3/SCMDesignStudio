@@ -219,3 +219,13 @@ One class to manage 3-5 imgs */
   color: var(--Purple900);
   transform: scale(1.05) translateZ(0);
 }
+
+@media screen and (max-width: 1000px) {
+  /* Section containers */
+  .ASC-Branding-Content,
+  .ASC-LogoDes-Content,
+  .ASC-WebDes-Content,
+  .ASC-WebDev-Content {
+    flex-wrap: wrap;
+  }
+}
