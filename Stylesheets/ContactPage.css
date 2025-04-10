@@ -269,3 +269,8 @@ button:hover {
   max-height: 500px;
   padding: 10px;
 }
+
+.ClickHereLink {
+  color: var(--Yellow500);
+  text-decoration: none;
+}
