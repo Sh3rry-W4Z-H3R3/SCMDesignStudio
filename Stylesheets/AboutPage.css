@@ -1,3 +1,6 @@
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 /* About Page Styles for SCM Design Studio */
 * {
   padding: 0%;
@@ -5,16 +8,26 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: "Jura";
 }
+.bodoni-moda > {
+  font-family: "Bodoni Moda", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
 /* General Styles */
 :root {
+  /* Brand Colours */
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
   --Yellow900: #7a5113;
   --Teal500: #2f847d;
   --Teal900: #09303f;
+  /* Brand Typefaces */
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 
 /* Page Wrapper */
@@ -40,7 +53,7 @@ section {
 }
 
 .section-title h2 {
-  font-family: "Jura", sans-serif;
+  font-family: var(--Title-Font);
   font-weight: 700;
 
   color: white;
@@ -66,6 +79,7 @@ section {
   color: white;
   max-width: 800px;
   margin: 0 auto;
+  font-family: var(--Body-Font);
 }
 
 /* Hero Section */
@@ -85,7 +99,7 @@ section {
 }
 
 .about-hero-content h1 {
-  font-family: "Jura", sans-serif;
+  font-family: var(--Title-Font);
   font-weight: 700;
   font-size: clamp(2.5rem, 5vw, 4rem);
   color: white;
@@ -97,6 +111,7 @@ section {
   color: white;
   max-width: 800px;
   margin: 0 auto;
+  font-family: var(--Body-Font);
 }
 
 /* Our Story Section */
@@ -116,10 +131,13 @@ section {
 
 .story-text {
   flex: 1;
+  font-family: var(--Body-Font);
   color: white;
 }
 
 .story-text p {
+  font-family: var(--Body-Font);
+
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -207,6 +225,7 @@ section {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Our Approach Section */
@@ -221,6 +240,7 @@ section {
 }
 
 .approach-content p {
+  font-family: var(--Body-Font);
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -261,6 +281,7 @@ section {
 }
 
 .service-card p {
+  font-family: var(--Body-Font);
   font-size: 1rem;
   margin-bottom: 1.5rem;
   line-height: 1.5;
@@ -273,6 +294,7 @@ section {
 
 .service-list li {
   margin-bottom: 0.5rem;
+  font-family: var(--Body-Font);
   font-size: 0.95rem;
 }
 
@@ -314,6 +336,7 @@ section {
 }
 
 .value-card p {
+  font-family: var(--Body-Font);
   font-size: 1rem;
   line-height: 1.5;
 }
@@ -336,6 +359,7 @@ section {
 .why-choose-content p {
   font-size: 1.1rem;
   line-height: 1.6;
+  font-family: var(--Body-Font);
   margin-bottom: 1.5rem;
 }
 
@@ -366,6 +390,7 @@ section {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 .cta-button {
@@ -375,6 +400,7 @@ section {
   padding: 1rem 2rem;
   border-radius: 50px;
   font-size: 1.2rem;
+  font-family: var(--Body-Font);
   text-decoration: none;
   margin-top: 2rem;
   transition: all 0.3s ease;

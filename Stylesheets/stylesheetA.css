@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+/* Sitewide and Homepage styling */
+
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 * {
   padding: 0%;
   margin: 0%;
-
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-.jura > {
-  font-family: "Jura", sans-serif;
+.bodoni-moda > {
+  font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
@@ -21,10 +24,12 @@
   --Yellow900: #7a5113;
   --Teal500: #2f847d;
   --Teal900: #09303f;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 .body {
   overflow: hidden;
-  font-family: "Jura";
+
   font-weight: 400;
   font-style: normal;
   background-color: #63378d;
@@ -106,7 +111,7 @@ body::-webkit-scrollbar-thumb {
 .Nav-Link {
   display: block;
   padding: 0.625rem;
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   text-align: center;
   color: white;
   background-color: var(--Purple900);
@@ -167,6 +172,7 @@ body::-webkit-scrollbar-thumb {
 #Contact-CTA-Hero {
   box-shadow: 0 0 0 rgba(255, 211, 100, 0);
   transition: all 0.3s ease, box-shadow 0.5s ease;
+  border-bottom: var(--Yellow500) 2px;
 }
 
 /* Contact CTA hover state */
@@ -175,6 +181,7 @@ body::-webkit-scrollbar-thumb {
   color: var(--Purple900);
   box-shadow: 0 0 0.5rem 0.125rem rgba(255, 211, 100, 0.3);
   text-shadow: none;
+  overflow: hidden;
 }
 
 /* Contact CTA active/focus state */
@@ -350,10 +357,13 @@ body::-webkit-scrollbar-thumb {
 .HeroSection {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .HeroContent {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-bottom: 1rem;
 }
 .HeroTitle {
   margin: 2rem;
@@ -364,8 +374,8 @@ body::-webkit-scrollbar-thumb {
   align-items: flex-start;
   color: #ffffff;
   text-align: center;
-  font-family: "Jura";
-  font-weight: 900;
+  font-family: var(--Title-Font);
+  font-weight: 100;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   position: relative;
 }
@@ -374,15 +384,26 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   text-align: left;
   font-size: clamp(1rem, 1.5vw, 2rem);
+  font-family: var(--Body-Font);
+  font-weight: 500;
 }
+body > p {
+  font-family: var(--Body-Font);
+  font-size: 1rem;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 400;
+}
+
 /* CTA container */
 .Home-Page-CTAs {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2rem;
   gap: 1rem;
+  padding-bottom: 1rem;
 }
 /* CTA target class */
 .Home-Page-CTA-Button {
@@ -398,11 +419,13 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--Yellow500);
   color: var(--Purple900);
   font-weight: bold;
+  transform: scale(1.1);
+  overflow-y: visible;
 }
 
 /* Revolving Text Heading*/
 .OuterHeading {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   color: #ffffff;
   height: 50vh;
   display: flex;
@@ -411,10 +434,11 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   overflow: hidden;
   padding-right: 30rem;
+  font-weight: 400;
 }
 /* Rotating text */
 .InnerHeading {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   border: 0px solid #ddd;
   height: 50px;
   line-height: 50px;
@@ -465,11 +489,11 @@ body::-webkit-scrollbar-thumb {
 
 /* Banner Animation and Styling */
 .BannerContainer {
-  font-family: "Jura";
+  font-family: "Century Gothic";
   margin-top: 10rem;
   height: 10rem;
   overflow-y: hidden;
-  width: 100vw;
+  width: 100%;
   position: relative;
 }
 
@@ -479,6 +503,10 @@ body::-webkit-scrollbar-thumb {
   left: 0;
   width: 100%;
   height: 40rem; /* Total height of all slides */
+  animation: banner-slide 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .Slide1,
@@ -486,7 +514,7 @@ body::-webkit-scrollbar-thumb {
 .Slide3,
 .Slide4 {
   padding: 3rem;
-  width: 100dvw;
+  width: 100%;
   height: 10rem;
   display: flex;
   flex-direction: column;
@@ -495,6 +523,7 @@ body::-webkit-scrollbar-thumb {
   color: #85dac3;
   position: absolute;
   left: 0;
+  overflow: visible;
 }
 
 .Slide1 {
@@ -514,12 +543,27 @@ body::-webkit-scrollbar-thumb {
 }
 
 .BannerText {
-  font-family: "Jura";
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: visible;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.BannerText h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  font-family: var(--Title-Font);
+}
+
+.BannerText > h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.4;
+  font-family: var(--Body-Font);
 }
 
 /* Animation for banner with static 2-second displays and smoother transitions */
@@ -566,13 +610,6 @@ body::-webkit-scrollbar-thumb {
   }
 }
 
-.slides-wrapper {
-  animation: banner-slide 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-/* END of Banner Style */
 /* Section2 Styling */
 .Section-2-HomePage {
   color: #ffffff;
@@ -581,7 +618,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: flex-end;
   margin-right: 3rem;
-  font-family: "Jura";
+  font-family: var(--Title-Font);
   font-weight: 900;
 }
 .Sec2Text {
@@ -599,7 +636,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   padding-top: 1rem;
   gap: 1rem;
-  font-family: "Jura";
+  font-family: var(--Body-Font);
 }
 
 .TextBoxRow2 {
@@ -621,275 +658,15 @@ body::-webkit-scrollbar-thumb {
   gap: 0.5em;
 }
 
-/* Banner Animation and Styling with Mobile Responsiveness */
-.BannerContainer {
-  font-family: "Jura";
-  margin-top: 10rem;
-  height: 10rem;
-  overflow-y: hidden;
-  width: 100vw;
-  position: relative;
-}
-
-.slides-wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 40rem; /* Total height of all slides */
-}
-
-.Slide1,
-.Slide2,
-.Slide3,
-.Slide4 {
-  padding: 3rem;
-  width: 100dvw;
-  height: 10rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #2f847d;
-  color: #85dac3;
-  position: absolute;
-  left: 0;
-}
-
-.Slide1 {
-  top: 0;
-}
-
-.Slide2 {
-  top: 10rem;
-}
-
-.Slide3 {
-  top: 20rem;
-}
-
-.Slide4 {
-  top: 30rem;
-}
-
-.BannerText {
-  font-family: "Jura";
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: visible;
-}
-
-.BannerText h1 {
-  font-size: 1.5rem;
-  text-align: center;
-}
-
-.BannerText h2 {
-  font-size: 2rem;
-  text-align: center;
-}
-
-/* Animation for banner with static 2-second displays and smoother transitions */
-@keyframes banner-slide {
-  /* Slide 1 static for 2 seconds */
-  0%,
-  17% {
-    transform: translateY(0);
-  }
-  /* Longer transition to Slide 2 (1 second) */
-  17%,
-  25% {
-    transform: translateY(-10rem);
-  }
-  /* Slide 2 static for 2 seconds */
-  25%,
-  42% {
-    transform: translateY(-10rem);
-  }
-  /* Longer transition to Slide 3 (1 second) */
-  42%,
-  50% {
-    transform: translateY(-20rem);
-  }
-  /* Slide 3 static for 2 seconds */
-  50%,
-  67% {
-    transform: translateY(-20rem);
-  }
-  /* Longer transition to Slide 4 (1 second) */
-  67%,
-  75% {
-    transform: translateY(-30rem);
-  }
-  /* Slide 4 static for 2 seconds */
-  75%,
-  92% {
-    transform: translateY(-30rem);
-  }
-  /* Longer transition back to Slide 1 (1 second) */
-  92%,
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.slides-wrapper {
-  animation: banner-slide 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
-  will-change: transform;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-/* Media queries for responsive design */
-@media (max-width: 768px) {
-  .BannerContainer {
-    height: 8rem;
-    margin-top: 5rem;
-  }
-
-  .Slide1,
-  .Slide2,
-  .Slide3,
-  .Slide4 {
-    height: 8rem;
-    padding: 1.5rem;
-  }
-
-  .Slide2 {
-    top: 8rem;
-  }
-
-  .Slide3 {
-    top: 16rem;
-  }
-
-  .Slide4 {
-    top: 24rem;
-  }
-
-  .BannerText h1 {
-    font-size: 1.2rem;
-  }
-
-  .BannerText h2 {
-    font-size: 1.5rem;
-  }
-
-  @keyframes banner-slide {
-    0%,
-    17% {
-      transform: translateY(0);
-    }
-    17%,
-    25% {
-      transform: translateY(-8rem);
-    }
-    25%,
-    42% {
-      transform: translateY(-8rem);
-    }
-    42%,
-    50% {
-      transform: translateY(-16rem);
-    }
-    50%,
-    67% {
-      transform: translateY(-16rem);
-    }
-    67%,
-    75% {
-      transform: translateY(-24rem);
-    }
-    75%,
-    92% {
-      transform: translateY(-24rem);
-    }
-    92%,
-    100% {
-      transform: translateY(0);
-    }
-  }
-}
-
-@media (max-width: 480px) {
-  .BannerContainer {
-    height: 7rem;
-    margin-top: 3rem;
-  }
-
-  .Slide1,
-  .Slide2,
-  .Slide3,
-  .Slide4 {
-    height: 7rem;
-    padding: 1rem;
-  }
-
-  .Slide2 {
-    top: 7rem;
-  }
-
-  .Slide3 {
-    top: 14rem;
-  }
-
-  .Slide4 {
-    top: 21rem;
-  }
-
-  .BannerText h1 {
-    font-size: 0.9rem;
-  }
-
-  .BannerText h2 {
-    font-size: 1.2rem;
-  }
-
-  @keyframes banner-slide {
-    0%,
-    17% {
-      transform: translateY(0);
-    }
-    17%,
-    25% {
-      transform: translateY(-7rem);
-    }
-    25%,
-    42% {
-      transform: translateY(-7rem);
-    }
-    42%,
-    50% {
-      transform: translateY(-14rem);
-    }
-    50%,
-    67% {
-      transform: translateY(-14rem);
-    }
-    67%,
-    75% {
-      transform: translateY(-21rem);
-    }
-    75%,
-    92% {
-      transform: translateY(-21rem);
-    }
-    92%,
-    100% {
-      transform: translateY(0);
-    }
-  }
-}
-
 /* Section Styling */
 .services-title {
-  font-family: "Jura";
+  font-family: var(--Title-Font);
   display: flex;
   justify-content: center;
   color: #ffffff;
   margin-top: 3rem;
   text-align: center;
+  padding: 0 1rem;
 }
 .services {
   text-align: center;
@@ -899,6 +676,7 @@ body::-webkit-scrollbar-thumb {
 .services h2 {
   font-size: 28px;
   margin-bottom: 40px;
+  font-family: var(--Title-Font);
 }
 
 /* Flexbox Layout */
@@ -910,23 +688,27 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   gap: 2.5rem;
   color: #ffffff;
+  width: 100%;
 }
 .services-row-1 {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .services-row-2 {
   display: flex;
   justify-content: center;
   gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
 }
 /* Service Box */
 .service-box {
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   background-color: transparent; /* Slightly lighter purple */
   padding: 20px;
-
   max-width: 280px;
   text-align: center;
   transition: transform 0.3s ease; /* From https://css.glass */
@@ -936,6 +718,7 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(8.3px);
   -webkit-backdrop-filter: blur(8.3px);
   border: 1px solid rgba(99, 55, 141, 1);
+  width: 100%;
 }
 
 .service-box:hover {
@@ -968,39 +751,43 @@ body::-webkit-scrollbar-thumb {
   color: #ffffff;
   letter-spacing: 10px;
   text-transform: capitalize;
-  font-family: "Jura";
+  font-family: var(--Title-Font);
   font-weight: 900;
+  text-align: center;
+  padding: 0 1rem;
 }
 .RecentProjectsSection {
   display: flex;
   justify-content: center;
   padding-top: 3rem;
   gap: 3rem;
+  flex-wrap: wrap;
 }
-.Project-Column-1 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-}
+.Project-Column-1,
 .Project-Column-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 3rem;
+  font-family: var(--Body-Font);
 }
 /* Links from project cards on home page onto subpages showing work of that project */
 .Home-to-Project-Card-Link {
   text-decoration: none;
+  display: block;
+  /* Use fit content so it shrinks rather than exapnd for the full width */
+  width: fit-content;
+  font-family: var(--Body-Font);
 }
+
 /* Card Styling */
 .ProjectCardContainer {
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   border-radius: 2rem;
   padding: 1rem;
   width: 30rem;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1011,27 +798,42 @@ body::-webkit-scrollbar-thumb {
   backdrop-filter: blur(11.4px);
   -webkit-backdrop-filter: blur(11.4px);
   border: 1px solid rgba(133, 218, 195, 1);
+  transition: transform 0.3s ease;
 }
+
+.ProjectCardContainer:hover {
+  transform: translateY(-5px);
+}
+
 .CardImg {
-  width: 22.5rem;
+  width: 100%;
+  max-width: 22.5rem;
   height: auto;
 }
 .CardImg > img {
+  width: 100%;
   max-width: 22.5rem;
   border-radius: 2rem;
-  box-shadow: #ffd364;
+  box-shadow: var(--Yellow500);
+  height: auto;
+  object-fit: cover;
 }
 .CardText {
   margin-top: 1rem;
   color: #f0daf9;
+  width: 100%;
+  font-family: var(--Body-Font);
 }
 .CardTextTitle {
+  font-family: var(--Body-Font);
   text-align: center;
 }
 .CardSubtitleText {
+  font-family: var(--Body-Font);
   font-style: italic;
   padding-top: 0.5rem;
   opacity: 0.75;
+  text-align: center;
 }
 /* END project section styling */
 .service-cards-title {
@@ -1041,8 +843,10 @@ body::-webkit-scrollbar-thumb {
   margin-top: 2rem;
   letter-spacing: 5px;
   text-transform: capitalize;
-  font-family: "Jura";
-  font-weight: 900;
+  font-family: "Bodoni Moda";
+  font-weight: 500;
+  text-align: center;
+  padding: 0 1rem;
 }
 /* Container for the Cards */
 .cards-container {
@@ -1050,12 +854,12 @@ body::-webkit-scrollbar-thumb {
   flex-wrap: wrap;
   justify-content: center; /* Centers cards horizontally */
   gap: 2rem; /* Spacing between cards */
-  padding: 50px;
+  padding: 50px 20px;
 }
 
 /* Card Styles */
 .card {
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   background-color: var(--Purple900);
   color: white;
   flex: 1 1 calc(33.333% - 20px); /* 3 columns on larger screens */
@@ -1086,14 +890,16 @@ body::-webkit-scrollbar-thumb {
 }
 
 .card-content h3 {
+  font-family: "Bodoni Mooda";
+
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
 .card-content p {
   font-size: 14px;
-
   margin-bottom: 2rem;
+  font-family: var(--Body-Font);
 }
 
 /* "Learn More" link */
@@ -1108,21 +914,6 @@ body::-webkit-scrollbar-thumb {
   text-decoration: underline;
 }
 
-/* Responsive Media Queries - CARDs */
-
-/* Tablet: 2 columns when screen width <= 992px */
-@media (max-width: 992px) {
-  .card {
-    flex: 1 1 calc(50% - 20px);
-  }
-}
-
-/* Mobile: 1 column when screen width <= 576px */
-@media (max-width: 576px) {
-  .card {
-    flex: 1 1 100%;
-  }
-}
 /* Email and Social Link Anchor Tags
 These are to keep the text colour
  consistent with the rest of the body text */
@@ -1132,7 +923,8 @@ These are to keep the text colour
 }
 /* Contact Section Styling */
 .ContactSection {
-  font-family: "Jura";
+  font-family: "Century Gothic";
+  width: 100%;
 }
 .ContactSectiontitle {
   display: flex;
@@ -1140,12 +932,14 @@ These are to keep the text colour
   color: white;
   font-weight: 900;
   font-size: xx-large;
+  font-family: "Bodoni Moda";
 }
 .ContactContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Jura";
+  font-family: "Century Gothic";
+  width: 100%;
 }
 .ContactText {
   color: white;
@@ -1155,6 +949,7 @@ These are to keep the text colour
   align-items: center;
   gap: 1em;
   padding-top: 0.25rem;
+  width: 100%;
 }
 .CFormText {
   display: flex;
@@ -1165,4 +960,654 @@ These are to keep the text colour
   color: white;
   display: flex;
   gap: 0.5em;
+}
+
+.ContactFor {
+  width: 100%;
+  max-width: 30rem;
+  padding: 0 1rem;
+}
+
+.ContactForm {
+  width: 100%;
+}
+
+.ContactForm input,
+.ContactForm textarea {
+  width: 100%;
+}
+
+/* Screen reader only class for accessibility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Contact Form Section */
+.contact-form {
+  background: rgba(30, 10, 60, 0.6);
+  border-radius: 10px;
+  padding: 40px;
+  margin: 40px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-form h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: white;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+button {
+  background: var(--secondary-color);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  grid-column: 2;
+  justify-self: end;
+}
+
+button:hover {
+  background: var(--Teal500);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(42, 183, 169, 0.3);
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+
+/* Large tablets and small desktops */
+@media (max-width: 1200px) {
+  .OuterHeading {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .RecentProjectsSection {
+    gap: 2rem;
+  }
+
+  .ProjectCardContainer {
+    width: 25rem;
+  }
+
+  .CardImg {
+    max-width: 20rem;
+  }
+
+  .CardImg > img {
+    max-width: 20rem;
+  }
+
+  .HeroTitle > p {
+    max-width: 100%;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  .RecentProjectsSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .Project-Column-1,
+  .Project-Column-2 {
+    width: 100%;
+  }
+
+  .ProjectCardContainer {
+    width: 90%;
+    max-width: 30rem;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 300px;
+  }
+
+  .BannerContainer {
+    height: 8rem;
+    margin-top: 5rem;
+  }
+
+  .Slide1,
+  .Slide2,
+  .Slide3,
+  .Slide4 {
+    height: 8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .Slide2 {
+    top: 8rem;
+  }
+
+  .Slide3 {
+    top: 16rem;
+  }
+
+  .Slide4 {
+    top: 24rem;
+  }
+
+  .BannerText h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .BannerText h3 {
+    font-size: 1rem;
+    line-height: 1.3;
+  }
+
+  @keyframes banner-slide {
+    0%,
+    17% {
+      transform: translateY(0);
+    }
+    17%,
+    25% {
+      transform: translateY(-8rem);
+    }
+    25%,
+    42% {
+      transform: translateY(-8rem);
+    }
+    42%,
+    50% {
+      transform: translateY(-16rem);
+    }
+    50%,
+    67% {
+      transform: translateY(-16rem);
+    }
+    67%,
+    75% {
+      transform: translateY(-24rem);
+    }
+    75%,
+    92% {
+      transform: translateY(-24rem);
+    }
+    92%,
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .Home-Page-CTAs {
+    padding-left: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .Section2Title {
+    justify-content: center;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .Sec2Text {
+    justify-content: center;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .TextBoxRow2 {
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Large mobile phones */
+@media (max-width: 768px) {
+  .RecentProjectsSectionTitle h2 {
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+  }
+  .RecentProjectsSection {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ProjectCardContainer {
+    width: 90%;
+    padding: 0.75rem;
+  }
+
+  .CardImg {
+    max-width: 100%;
+  }
+
+  .CardImg > img {
+    max-width: 100%;
+  }
+
+  .CardTextTitle h3 {
+    font-size: 1.2rem;
+  }
+
+  .CardSubtitleText h4 {
+    font-size: 0.9rem;
+  }
+
+  .service-cards-title h2 {
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+  }
+
+  .cards-container {
+    padding: 30px 15px;
+  }
+
+  .card {
+    min-width: 220px;
+  }
+
+  .BannerContainer {
+    height: 7rem;
+    margin-top: 3rem;
+  }
+
+  .Slide1,
+  .Slide2,
+  .Slide3,
+  .Slide4 {
+    height: 7rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .Slide2 {
+    top: 7rem;
+  }
+
+  .Slide3 {
+    top: 14rem;
+  }
+
+  .Slide4 {
+    top: 21rem;
+  }
+
+  .BannerText h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .BannerText h3 {
+    font-size: 0.85rem;
+    line-height: 1.2;
+  }
+
+  @keyframes banner-slide {
+    0%,
+    17% {
+      transform: translateY(0);
+    }
+    17%,
+    25% {
+      transform: translateY(-7rem);
+    }
+    25%,
+    42% {
+      transform: translateY(-7rem);
+    }
+    42%,
+    50% {
+      transform: translateY(-14rem);
+    }
+    50%,
+    67% {
+      transform: translateY(-14rem);
+    }
+    67%,
+    75% {
+      transform: translateY(-21rem);
+    }
+    75%,
+    92% {
+      transform: translateY(-21rem);
+    }
+    92%,
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .HeroTitle {
+    margin: 1.5rem 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .HeroTitle > p {
+    text-align: center;
+  }
+
+  .InnerHeading {
+    height: 40px;
+    line-height: 40px;
+    font-size: 35px;
+  }
+
+  .services-row-1,
+  .services-row-2 {
+    gap: 2rem;
+  }
+
+  .service-box {
+    max-width: 250px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .RecentProjectsSection {
+    padding-top: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Project-Column-1,
+  .Project-Column-2 {
+    gap: 2rem;
+    width: 100%;
+  }
+
+  .ProjectCardContainer {
+    width: 95%;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+  }
+
+  .CardImg > img {
+    border-radius: 1.5rem;
+  }
+
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .card-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .Home-Page-CTAs {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .Home-Page-CTA-Button {
+    width: 80%;
+    text-align: center;
+  }
+
+  .TextBoxRow2 {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .services-row-1,
+  .services-row-2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-box {
+    max-width: 90%;
+  }
+
+  .InnerHeading {
+    height: 35px;
+    line-height: 35px;
+    font-size: 30px;
+  }
+
+  @keyframes animation {
+    0%,
+    100% {
+      top: 0;
+    }
+    12% {
+      top: -35px;
+    }
+    24% {
+      top: -70px;
+    }
+    36% {
+      top: -105px;
+    }
+    48% {
+      top: -140px;
+    }
+    60% {
+      top: -175px;
+    }
+    72% {
+      top: -210px;
+    }
+    84% {
+      top: -245px;
+    }
+    96% {
+      top: -280px;
+    }
+  }
+}
+
+/* Small mobile phones */
+@media (max-width: 360px) {
+  .RecentProjectsSectionTitle {
+    letter-spacing: 3px;
+  }
+
+  .RecentProjectsSectionTitle h2 {
+    font-size: 1.2rem;
+  }
+
+  .ProjectCardContainer {
+    padding: 0.5rem;
+  }
+
+  .CardTextTitle h3 {
+    font-size: 1rem;
+  }
+
+  .CardSubtitleText h4 {
+    font-size: 0.8rem;
+  }
+
+  .service-cards-title h2 {
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-content p {
+    font-size: 12px;
+    margin-bottom: 1.5rem;
+  }
+
+  .BannerContainer {
+    height: 6rem;
+    margin-top: 2rem;
+  }
+
+  .Slide1,
+  .Slide2,
+  .Slide3,
+  .Slide4 {
+    height: 6rem;
+    padding: 0.75rem 0.5rem;
+  }
+
+  .Slide2 {
+    top: 6rem;
+  }
+
+  .Slide3 {
+    top: 12rem;
+  }
+
+  .Slide4 {
+    top: 18rem;
+  }
+
+  .BannerText h2 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+  }
+
+  .BannerText h3 {
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+
+  @keyframes banner-slide {
+    0%,
+    17% {
+      transform: translateY(0);
+    }
+    17%,
+    25% {
+      transform: translateY(-6rem);
+    }
+    25%,
+    42% {
+      transform: translateY(-6rem);
+    }
+    42%,
+    50% {
+      transform: translateY(-12rem);
+    }
+    50%,
+    67% {
+      transform: translateY(-12rem);
+    }
+    67%,
+    75% {
+      transform: translateY(-18rem);
+    }
+    75%,
+    92% {
+      transform: translateY(-18rem);
+    }
+    92%,
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .HeroTitle {
+    margin: 1rem;
+  }
+
+  .HeroTitle > p {
+    font-size: 0.9rem;
+  }
+
+  .InnerHeading {
+    height: 30px;
+    line-height: 30px;
+    font-size: 25px;
+  }
+
+  @keyframes animation {
+    0%,
+    100% {
+      top: 0;
+    }
+    12% {
+      top: -30px;
+    }
+    24% {
+      top: -60px;
+    }
+    36% {
+      top: -90px;
+    }
+    48% {
+      top: -120px;
+    }
+    60% {
+      top: -150px;
+    }
+    72% {
+      top: -180px;
+    }
+    84% {
+      top: -210px;
+    }
+    96% {
+      top: -240px;
+    }
+  }
 }

@@ -22,10 +22,6 @@
       rel="stylesheet"
       href="../SCMDesignStudio/Stylesheets/ContactPage.css"
     />
-    <script src="../SCMDesignStudio/Misc/MobileMenuHamburgerScript.js"></script>
-    <script src="../SCMDesignStudio/Misc/contact_form.js" defer></script>
-
-    <!-- <link rel="stylesheet" href="\ASmithCeramics\contactPage.css" /> -->
   </head>
   <body>
     <!-- Improved Navbar with all enhancements -->
@@ -192,7 +188,11 @@
       <!-- MANUS AI FORM -->
       <section class="contact-form">
         <h3>Send Us a Message</h3>
-        <form id="contactForm">
+        <form
+          action="https://formsubmit.co/SCMstudio@hotmail.com"
+          method="POST"
+          id="contactForm"
+        >
           <div class="form-group">
             <label for="name">Name</label>
             <input type="text" id="name" name="name" required />
@@ -278,7 +278,10 @@
               provide, the better we can tailor our design to meet your needs.
               We usually handle this with a discovery call. This is seperate to
               an inital consultation which is always free. Use the form above or
-              <a href="">click here</a> to email us any inquiries
+              <a class="ClickHereLink" href="mailto:SCMstudio@hotmail.com"
+                >click here</a
+              >
+              to email us any inquiries
             </p>
           </div>
         </div>
@@ -555,6 +558,40 @@
         // Make functions available globally for inline onclick handlers
         window.openSidebar = openSidebar;
         window.closeSidebar = closeSidebar;
+      });
+    </script>
+    <script>
+      // Fixed Accordion Functionality for FAQ Section
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // FAQ Accordion Functionality
+        const faqQuestions = document.querySelectorAll(".faq-question");
+
+        // Initialize accordion - ensure all answers are hidden initially
+        faqQuestions.forEach((question) => {
+          const answer = question.nextElementSibling;
+          question.classList.remove("active");
+          answer.classList.remove("show");
+        });
+
+        faqQuestions.forEach((question) => {
+          question.addEventListener("click", () => {
+            const answer = question.nextElementSibling;
+            const isActive = question.classList.contains("active");
+
+            // Close all other FAQs
+            faqQuestions.forEach((q) => {
+              q.classList.remove("active");
+              q.nextElementSibling.classList.remove("show");
+            });
+
+            // Toggle current FAQ
+            if (!isActive) {
+              question.classList.add("active");
+              answer.classList.add("show");
+            }
+          });
+        });
       });
     </script>
   </body>

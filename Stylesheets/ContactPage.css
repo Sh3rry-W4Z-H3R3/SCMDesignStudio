@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 * {
   padding: 0%;
   margin: 0%;
@@ -8,27 +10,21 @@
   overflow-x: hidden;
 }
 
-.jura > {
-  font-family: "Jura", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
 :root {
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
   --Teal500: #2f847d;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 .Page-Wrapper-Contact-Page {
-  font-family: "jura";
   background-color: var(--Purple500);
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Jura";
 }
 
 .ContactHeader {
@@ -44,6 +40,7 @@
 .page-title {
   text-align: center;
   margin: 60px 0 30px;
+  font-family: var(--Title-Font);
 }
 
 .page-title h2 {
@@ -55,7 +52,7 @@
   font-size: 18px;
   max-width: 600px;
   margin: 0 auto;
-  opacity: 0.8;
+  font-family: var(--Body-Font);
 }
 
 /* Contact Info Section */
@@ -87,11 +84,13 @@
   font-size: 18px;
   margin-bottom: 10px;
   color: var(--secondary-color);
+  font-family: var(--Body-Font);
 }
 
 .contact-item p,
 .contact-item a {
   color: var(--text-color);
+  font-family: var(--Body-Font);
   text-decoration: none;
   font-size: 16px;
   transition: color 0.3s ease;
@@ -139,12 +138,14 @@
   padding: 40px;
   margin: 40px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  font-family: var(--Body-Font);
 }
 
 .contact-form h3 {
   font-size: 24px;
   margin-bottom: 20px;
   color: var(--secondary-color);
+  font-family: var(--Body-Font);
 }
 
 form {
@@ -232,6 +233,7 @@ button:hover {
   margin-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding-bottom: 20px;
+  font-family: var(--Body-Font);
 }
 
 .faq-question {
@@ -242,6 +244,7 @@ button:hover {
   justify-content: space-between;
   align-items: center;
   padding: 10px 0;
+  font-family: var(--Body-Font);
 }
 
 .faq-question::after {
@@ -259,9 +262,15 @@ button:hover {
   overflow: hidden;
   transition: max-height 0.3s ease;
   padding: 0 10px;
+  font-family: var(--Body-Font);
 }
 
 .faq-answer.show {
   max-height: 500px;
   padding: 10px;
+}
+
+.ClickHereLink {
+  color: var(--Yellow500);
+  text-decoration: none;
 }

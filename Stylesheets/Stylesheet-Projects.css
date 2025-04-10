@@ -1,29 +1,26 @@
-/* Updated CSS for Projects Page with Improved Responsiveness */
+/* Bodoni Moda - For Heading Text */
 
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
 * {
   padding: 0%;
   margin: 0%;
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
-  font-family: "Jura";
 }
 
-.jura > {
-  font-family: "Jura", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
 :root {
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
+  --Teal500: #2f847d;
+  --Teal900: #09303f;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 body {
   overflow-x: hidden;
-  font-family: "Jura";
+
   font-weight: 400;
   font-style: normal;
   background-color: var(--Purple500);
@@ -47,9 +44,11 @@ body::-webkit-scrollbar-thumb {
 /* END- Scrollbar styling */
 
 .PageWrapper-Projects-MainPage {
+  background-color: var(--Purple500);
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
   display: flex;
   flex-direction: column;
+  font-family: var(--Body-Font);
 }
 /* Hero Section */
 .services-hero-section {
@@ -91,10 +90,12 @@ body::-webkit-scrollbar-thumb {
   font-size: 3.5rem;
   margin-bottom: 1.5rem;
   color: var(--Yellow500);
+  font-family: var(--Title-Font);
 }
 
 .services-hero-content p {
   font-size: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Project Cards Grid - IMPROVED RESPONSIVE LAYOUT */
@@ -127,7 +128,7 @@ body::-webkit-scrollbar-thumb {
 
 /* Card Styling - IMPROVED RESPONSIVE DESIGN */
 .Projects-MainPage-ProjectCardContainer {
-  font-family: "Jura";
+  font-family: var(--Body-Font);
   border-radius: 2rem;
   padding: 1.5rem;
   width: 100%;
@@ -149,6 +150,8 @@ body::-webkit-scrollbar-thumb {
 .Projects-MainPage-ProjectCardContainer:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* To show full box on hover */
+  overflow-y: visible;
 }
 
 .Projects-MainPage-CardImg {
@@ -214,6 +217,7 @@ body::-webkit-scrollbar-thumb {
 .cta-content p {
   font-size: 1.2rem;
   margin-bottom: 2.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Modified CTA buttons container to use flex */
@@ -223,6 +227,7 @@ body::-webkit-scrollbar-thumb {
   gap: 1.5rem;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   padding: 0.5rem; /* Add padding to contain hover effects */
+  font-family: var(--Body-Font);
 }
 
 /* Fixed CTA button hover effects to prevent scrollbar */

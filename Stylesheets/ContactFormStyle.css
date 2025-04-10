@@ -3,6 +3,7 @@
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
 }
+/* JUST A COMMENT SO I CAN RESUBMIT CHANGES TO GIT */
 .ContactFor {
   margin-top: 1rem;
   display: flex;
@@ -65,10 +66,4 @@ button {
 
 .messageInput {
   height: 111px !important;
-}
-
-@media (max-width: 550px) {
-  .ContactFor {
-    transform: scale(0.6);
-  }
 }

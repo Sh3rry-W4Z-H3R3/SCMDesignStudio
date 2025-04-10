@@ -1,5 +1,5 @@
 [build]
-  publish = "SourceCode"
+  publish = ""
   command = ""  # Explicitly set to empty to avoid any build commands
 
 [[redirects]]

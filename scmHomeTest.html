@@ -3,36 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- SEO Additions -->
+    <title>SCM Design Studio | Creative Design & Development Services</title>
     <meta
       name="description"
       content="SCM Design Studio brings your ideas to life with expert web design, branding, graphic design, and product development services. Transform your vision into reality."
     />
-    <meta name="“robots”" content="index," follow” />
-
     <meta
       name="keywords"
-      content="design studio, website design, graphic design, branding, product design, UI/UX design, packaging, signage, creative services"
+      content="design studio, web design, graphic design, branding, product design, UI/UX design, packaging, signage, creative services"
     />
-    <title>SCM Design Studio</title>
-    <!-- Stylesheet Links -->
-    <!-- Main sheet -->
-    <link
-      rel="stylesheet"
-      href="../SCMDesignStudio/Stylesheets/stylesheetA.css"
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="SCM Design Studio | Creative Design & Development Services"
     />
-    <link
-      rel="stylesheet"
-      href="../SCMDesignStudio/Stylesheets/ContactFormStyle.css"
+    <meta
+      property="og:description"
+      content="SCM Design Studio brings your ideas to life with expert web design, branding, graphic design, and product development services."
     />
-    <link
-      rel="script"
-      href="../SCMDesignStudio/Misc/MobileMenuHamburgerScript.js"
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scmdesignstudio.com/" />
+    <meta
+      property="og:image"
+      content="../SCMDesignStudio/Assets/SCM_FullLogo.png"
     />
-    <link
-      rel="stylesheet"
-      href="../SCMDesignStudio/Stylesheets/Footer-Sitewide.css"
-    />
+
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://scmdesignstudio.com/" />
+
+    <link rel="stylesheet" href="/Stylesheets/testHome.css" />
+    <link rel="stylesheet" href="../Stylesheets/ContactFormStyle.css" />
+    <link rel="stylesheet" href="../Stylesheets/TEST-Responsive-Footer.css" />
+    <link rel="preload" href="../Assets/SCM_FullLogo.png" as="image" />
   </head>
   <body>
     <!-- Improved Navbar with all enhancements -->
@@ -44,11 +47,16 @@
     >
       <!-- Logo -->
       <div class="logo">
-        <a href="../SCMDesignStudio/index.html">
+        <a
+          href="../SCMDesignStudio/index.html"
+          aria-label="SCM Design Studio Home"
+        >
           <img
             class="SCM-FullLogo-Header"
             src="../SCMDesignStudio/Assets/SCM_FullLogo.png"
-            alt="SCM Design Studio Logo"
+            alt="SCM Studio Logo"
+            width="180"
+            height="100"
           />
         </a>
       </div>
@@ -68,6 +76,7 @@
               viewBox="0 0 18 18"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true"
             >
               <path
                 d="M1.71973 16.2793L16.2796 1.71943"
@@ -82,6 +91,7 @@
                 stroke-linecap="round"
               />
             </svg>
+            <span class="sr-only">Close Menu</span>
           </button>
         </li>
         <li class="NavItem">
@@ -89,6 +99,7 @@
             class="Nav-Link"
             href="../SCMDesignStudio/index.html"
             role="menuitem"
+            aria-current="page"
             >Home</a
           >
         </li>
@@ -131,7 +142,7 @@
     <!-- Mobile menu button -->
     <button
       id="open-sidebar-btn"
-      onclick="openSidebar() "
+      onclick="openSidebar()"
       aria-label="open sidebar"
       aria-expanded="false"
       aria-controls="navbar"
@@ -143,26 +154,29 @@
         viewBox="0 0 20 10"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
       >
         <line y1="1" x2="20" y2="1" stroke="white" stroke-width="2" />
         <line y1="5" x2="20" y2="5" stroke="white" stroke-width="2" />
         <line y1="9" x2="20" y2="9" stroke="white" stroke-width="2" />
       </svg>
+      <span class="sr-only">Open Menu</span>
     </button>
 
     <!-- Overlay for mobile menu -->
-    <div id="overlay" onclick="closeSidebar() " aria-hidden="true"></div>
+    <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+
     <!-- Page Wrapper + Content -->
-    <div class="PageWrapper" id="HomePageWrapper">
+    <main class="PageWrapper" id="HomePageWrapper">
       <section class="HeroSection">
         <div class="HeroContent">
           <div class="HeroTitle">
-            <h1>Where Ideas, come to life.</h1>
+            <h1>Where Ideas, come to life...</h1>
             <p>
               Hello. <br />
-              We’re SCM Design Studio. We bring your ideas to life—whether it’s
+              We're SCM Design Studio. We bring your ideas to life—whether it's
               a website, product packaging, or a full rebrand. From concept to
-              launch, we’re with you every step of the way.
+              launch, we're with you every step of the way.
               <br />
               <strong> Your vision is our passion.</strong>
             </p>
@@ -175,7 +189,7 @@
               >Get Started</a
             >
             <a
-              href="../SCMDesignStudio/Services.html"
+              href="./SCMDesignStudio/Services.html"
               class="Home-Page-CTA-Button"
               >Starter Packages</a
             >
@@ -201,6 +215,7 @@
           </h2>
         </div>
       </section>
+
       <section class="Section-2-HomePage">
         <div class="Section-2-HomePage-Wrapper-Content">
           <div class="Section2Title">
@@ -241,13 +256,12 @@
         </div>
       </section>
 
-      <section class="BannerSection">
+      <section class="BannerSection" aria-label="Our Services Slideshow">
         <div class="BannerContainer">
           <div class="slides-wrapper">
             <div class="Slide1">
               <div class="BannerText">
                 <h2>Signage</h2>
-                <br />
                 <h3>
                   Event Collateral, Flyers, Pop-up Banners, Fascias, Posters,
                   Table Displays.
@@ -257,7 +271,6 @@
             <div class="Slide2">
               <div class="BannerText">
                 <h2>Branding</h2>
-                <br />
                 <h3>
                   Event Collateral, Flyers, Pop-up Banners, Fascias, Posters,
                   Table Displays.
@@ -267,7 +280,6 @@
             <div class="Slide3">
               <div class="BannerText">
                 <h2>Web & Digital</h2>
-                <br />
                 <h3>
                   Profitable, User Friendly, Interactive, Cost Effective,
                   Impactive, Personal.
@@ -277,7 +289,6 @@
             <div class="Slide4">
               <div class="BannerText">
                 <h2>Marketing</h2>
-                <br />
                 <h3>
                   Social Media, Print, Campaign Management, Creative Direction,
                   Brand Consistency.
@@ -287,19 +298,22 @@
           </div>
         </div>
       </section>
+
       <div class="services-title">
         <h2>
           Transforming Ideas into Reality:<br />
           Our Comprehensive Design and Development Services
         </h2>
       </div>
-      <section>
+      <section class="services-section">
         <div class="services-container">
           <div class="services-row-1">
             <div class="service-box">
               <img
                 src="../SCMDesignStudio/Assets/SCM White Logo Icon.png"
-                alt="Digital Icon"
+                alt="Digital Services Icon"
+                width="40"
+                height="40"
               />
               <h3>Digital</h3>
               <p>
@@ -312,7 +326,9 @@
             <div class="service-box">
               <img
                 src="../SCMDesignStudio/Assets/SCM White Logo Icon.png"
-                alt="Brand Icon"
+                alt="Brand Design Icon"
+                width="40"
+                height="40"
               />
               <h3>Brand Design</h3>
               <p>
@@ -327,7 +343,9 @@
             <div class="service-box">
               <img
                 src="../SCMDesignStudio/Assets/SCM White Logo Icon.png"
-                alt="Print Icon"
+                alt="Print Services Icon"
+                width="40"
+                height="40"
               />
               <h3>Print</h3>
               <p>
@@ -340,7 +358,9 @@
             <div class="service-box">
               <img
                 src="../SCMDesignStudio/Assets/SCM White Logo Icon.png"
-                alt="Product Icon"
+                alt="Product Design Icon"
+                width="40"
+                height="40"
               />
               <h3>Product</h3>
               <p>
@@ -352,6 +372,7 @@
           </div>
         </div>
       </section>
+
       <div class="RecentProjectsSectionTitle">
         <h2>OUR RECENT WORK</h2>
       </div>
@@ -360,11 +381,16 @@
           <a
             class="Home-to-Project-Card-Link"
             href="../SCMDesignStudio/ProjectPage-ASC.html"
-            ><div class="ProjectCardContainer">
+            aria-label="View Alastair Smith Ceramics project details"
+          >
+            <div class="ProjectCardContainer">
               <div class="CardImg">
                 <img
                   src="../SCMDesignStudio/Images/UPLOAD TO SCM SITE - ASC FILES/Light.png"
-                  alt="Logo and wordmakr designed by SCM Design Studio for Alastair Smith Ceramics. A Scottish studio potter based in Aberdeen, Scotland. Image captured in 2025. Logo produced in 2024."
+                  alt="Alastair Smith Ceramics project showcase"
+                  width="360"
+                  height="240"
+                  loading="lazy"
                 />
               </div>
               <div class="CardText">
@@ -378,17 +404,20 @@
                   </h4>
                 </div>
               </div>
-            </div></a
-          >
+            </div>
+          </a>
           <a
-            class="Home-to-Project-Card-Link"
             href="../SCMDesignStudio/ProjectPage-WGA.html"
+            aria-label="View Westgarth Auto Services project details"
           >
             <div class="ProjectCardContainer">
               <div class="CardImg">
                 <img
                   src="../SCMDesignStudio/Images/UPLOAD TO SCM SITE - WGA/SIGNAGE 1.jpg"
-                  alt="Signage Image. Signage produced and designed by SCM Design Studio for Fife based garage - Westgarth Auto Services. 2024"
+                  alt="Westgarth Auto Services signage project"
+                  width="360"
+                  height="240"
+                  loading="lazy"
                 />
               </div>
               <div class="CardText">
@@ -402,50 +431,54 @@
                   </h4>
                 </div>
               </div>
-            </div></a
-          >
+            </div>
+          </a>
         </div>
         <div class="Project-Column-2">
-          <a href="">
-            <div class="ProjectCardContainer">
-              <div class="CardImg">
-                <img
-                  src="../SCMDesignStudio/Images/JR Shopfront.jpg"
-                  alt="Image of Just Rite Barber shopfront in Paisely, Glasgow. Taken in 2024. This is before the work undertaken by SCM Design Studio"
-                />
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img
+                src="../SCMDesignStudio/Images/JR Shopfront.jpg"
+                alt="Just Rite Barbers shopfront design"
+                width="360"
+                height="240"
+                loading="lazy"
+              />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h3>Just Rite Barbers - 2025</h3>
               </div>
-              <div class="CardText">
-                <div class="CardTextTitle">
-                  <h3>Just Rite Barbers - 2025</h3>
-                </div>
-                <div class="CardSubtitleText">
-                  <h4>
-                    Graphic Design, Signage, <br />
-                    Project Management, Consultancy
-                  </h4>
-                </div>
+              <div class="CardSubtitleText">
+                <h4>
+                  Graphic Design, Signage, <br />
+                  Project Management, Consultancy
+                </h4>
               </div>
-            </div></a
-          ><a href="">
-            <div class="ProjectCardContainer">
-              <div class="CardImg">
-                <img
-                  src="../SCMDesignStudio/Images/KQimg1.jpg"
-                  alt="Image of Packaging design and concepts designed for Lithuanian Streetwear Brand, KuntrQultura. Designed in 2024 in Scotland."
-                />
+            </div>
+          </div>
+          <div class="ProjectCardContainer">
+            <div class="CardImg">
+              <img
+                src="../SCMDesignStudio/Images/KQimg1.jpg"
+                alt="KuntrQultura packaging design"
+                width="360"
+                height="240"
+                loading="lazy"
+              />
+            </div>
+            <div class="CardText">
+              <div class="CardTextTitle">
+                <h3>KuntrQultura - 2024</h3>
               </div>
-              <div class="CardText">
-                <div class="CardTextTitle">
-                  <h3>KuntrQultura - 2024</h3>
-                </div>
-                <div class="CardSubtitleText">
-                  <h4>Graphic Design, Packaging</h4>
-                </div>
+              <div class="CardSubtitleText">
+                <h4>Graphic Design, Packaging</h4>
               </div>
-            </div></a
-          >
+            </div>
+          </div>
         </div>
       </section>
+
       <div class="service-cards-title">
         <h2>Our Services</h2>
       </div>
@@ -454,7 +487,10 @@
         <div class="card">
           <img
             src="../SCMDesignStudio/Images/UPLOAD TO SCM SITE - ASC FILES/038 P1015845.JPG"
-            alt="Transforming Ideas"
+            alt="Design process showing transformation of ideas"
+            width="350"
+            height="180"
+            loading="lazy"
           />
           <div class="card-content">
             <h3>
@@ -474,7 +510,10 @@
         <div class="card">
           <img
             src="../SCMDesignStudio/Images/LogoFadeImg.png"
-            alt="Creative Conception"
+            alt="Creative concept development process"
+            width="350"
+            height="180"
+            loading="lazy"
           />
           <div class="card-content">
             <h3>Creative Conception: Ideation that Fuels Innovation</h3>
@@ -492,7 +531,10 @@
         <div class="card">
           <img
             src="../SCMDesignStudio/Images/precisionimg.jpg"
-            alt="Development Phase"
+            alt="Development phase showing precision in design"
+            width="350"
+            height="180"
+            loading="lazy"
           />
           <div class="card-content">
             <h3>
@@ -517,72 +559,102 @@
           <div class="ContactText">
             <div class="CFormText">
               <p>
-                Now that you’ve had a look at our past work, its time to get in
+                Now that you've had a look at our past work, its time to get in
                 touch and let us know about your ideas! <br />
-                Use the form below and we’ll get back to you within 24 hours.
+                Use the form below and we'll get back to you within 24 hours.
                 <br />For other enquiries, please get in touch via email or
                 slide into our Instagram DMs.
               </p>
             </div>
             <div class="CformLinks">
-              <img src="../SCMDesignStudio/Assets/EmailIcon.svg" alt="" />
-              <a class="EmailLink" href="mailto:SCMstudio@hotmail.com"
+              <img
+                src="../SCMDesignStudio/Assets\EmailIcon.svg"
+                alt="Email icon"
+                width="24"
+                height="24"
+              />
+              <a
+                class="EmailLink"
+                href="mailto:SCMstudio@hotmail.com"
+                aria-label="Email SCM Design Studio"
                 ><p><strong>SCMstudio@hotmail.com</strong></p></a
               >
             </div>
             <div class="CformLinks">
-              <img src="../SCMDesignStudio/Assets/IGicon.svg" alt="" />
+              <img
+                src="../SCMDesignStudio/Assets\EmailIcon.svg"
+                alt="Instagram icon"
+                width="24"
+                height="24"
+              />
               <a
                 class="EmailLink"
                 href="https://www.instagram.com/scm_designstudio/"
+                aria-label="Visit SCM Design Studio on Instagram"
                 ><p><strong>@SCM_designstudio</strong></p></a
               >
             </div>
           </div>
           <div class="ContactFor">
-            <section class="contact-form">
-              <h3>Send Us a Message</h3>
-              <form id="contactForm">
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" required />
-                </div>
-                <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required />
-                </div>
-                <div class="form-group">
-                  <label for="phone">Phone (Optional)</label>
-                  <input type="tel" id="phone" name="phone" />
-                </div>
-                <div class="form-group">
-                  <label for="subject">Subject</label>
-                  <select id="subject" name="subject" required>
-                    <option value="" disabled selected>Select a subject</option>
-                    <option value="website">Website Design</option>
-                    <option value="branding">Branding</option>
-                    <option value="packaging">Product Packaging</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div class="form-group full-width">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit">Send Message</button>
-              </form>
-            </section>
+            <form
+              action="https://formsubmit.co/covewuro@mailgolem.com"
+              method="POST"
+              class="ContactForm"
+            >
+              <label for="fname">First name:</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                required
+                aria-required="true"
+              />
+              <label for="lname">Last name:</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                required
+                aria-required="true"
+              />
+              <label for="email">E-Mail Address:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                aria-required="true"
+              />
+              <label for="Subject">Subject:</label>
+              <input
+                type="text"
+                id="Subject"
+                name="Subject"
+                required
+                aria-required="true"
+              />
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                class="messageInput"
+                required
+                aria-required="true"
+              ></textarea>
+              <button class="submitButton" type="submit">Submit</button>
+            </form>
           </div>
         </div>
       </section>
-    </div>
+    </main>
+
     <footer class="SCMfooter">
       <div class="FooterTopRow">
         <span class="footerlogo">
           <img
             class="footerlogoIMG"
-            src="../SCMDesignStudio/Assets/SCM_FullLogo.png"
-            alt="Image of SCM Design Studios complete logo"
+            src="../Assets/SCM_FullLogo.png"
+            alt="SCM Design Studio Logo"
           />
         </span>
         <div class="ContactPrompt">
@@ -590,7 +662,16 @@
             <h2>Got some thoughts?</h2>
             <h3>Feel free to share!</h3>
             <div class="Footer-Contact-List-Item">
-              <a href="mailto:SCMstudio@hotmail.com"
+              <img
+                class="Footer-Contact-List-Item-Icon"
+                src=""
+                alt=""
+                width="24"
+                height="24"
+              />
+              <a
+                href="mailto:SCMstudio@hotmail.com"
+                aria-label="Email SCM Design Studio"
                 ><p>Email: SCMstudio@hotmail.com</p></a
               >
             </div>
@@ -600,22 +681,34 @@
                   <a
                     class="Footer-Social-Link-Hyper"
                     href="https://www.instagram.com/scm_designstudio/"
+                    aria-label="SCM Design Studio on Instagram"
                     ><p>Instagram</p></a
                   >
                 </div>
                 <div class="Footer-Social-Link-Item">
-                  <a class="Footer-Social-Link-Hyper" href=""
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.linkedin.com/company/scm-design-studio"
+                    aria-label="SCM Design Studio on LinkedIn"
                     ><p>LinkedIn</p></a
                   >
                 </div>
               </div>
               <div class="Footer-Social-Link-Column">
                 <div class="Footer-Social-Link-Item">
-                  <a class="Footer-Social-Link-Hyper" href=""><p>Spotify</p></a>
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://open.spotify.com/user/scmdesignstudio"
+                    aria-label="SCM Design Studio on Spotify"
+                    ><p>Spotify</p></a
+                  >
                 </div>
                 <div class="Footer-Social-Link-Item">
-                  <a class="Footer-Social-Link-Hyper" href=""
-                    ><p>Pintrest</p></a
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.pinterest.com/scmdesignstudio/"
+                    aria-label="SCM Design Studio on Pinterest"
+                    ><p>Pinterest</p></a
                   >
                 </div>
               </div>
@@ -674,10 +767,30 @@
         </div>
       </div>
       <div class="Footer-boring-links">
-        <a class="TCs-links" href="">Privacy Policy</a>
-        <a href="" class="TCs-links">&copy; SCM Design Studio 2025</a>
+        <a class="TCs-links" href="../SCMDesignStudio/privacy-policy.html"
+          >Privacy Policy</a
+        >
+        <a href="../SCMDesignStudio/index.html" class="TCs-links"
+          >&copy; SCM Design Studio 2025</a
+        >
       </div>
     </footer>
+
+    <!-- Add screen reader only class for accessibility -->
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+    </style>
+
     <script src="../SCMDesignStudio/Misc/MobileMenuHamburgerScript.js"></script>
     <!-- JavaScript for navigation functionality -->
     <!-- For consistent good performance, keep in html -->
@@ -819,6 +932,57 @@
         window.openSidebar = openSidebar;
         window.closeSidebar = closeSidebar;
       });
+    </script>
+
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "SCM Design Studio",
+        "description": "SCM Design Studio brings your ideas to life with expert web design, branding, graphic design, and product development services.",
+        "url": "https://scmdesignstudio.com/",
+        "logo": "https://scmdesignstudio.com/Assets/SCM_FullLogo.png",
+        "sameAs": [
+          "https://www.instagram.com/scm_designstudio/",
+          "https://www.linkedin.com/company/scm-design-studio",
+          "https://www.pinterest.com/scmdesignstudio/"
+        ],
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "UK"
+        },
+        "email": "SCMstudio@hotmail.com",
+        "priceRange": "££",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        },
+        "service": [
+          {
+            "@type": "Service",
+            "name": "Web Design & Development",
+            "description": "Crafting user-friendly and mobile-ready websites that engage visitors and convert them into customers."
+          },
+          {
+            "@type": "Service",
+            "name": "Brand Design",
+            "description": "Creating unique brand identities, defining positioning with brand strategy, and ensuring consistency through brand guidelines."
+          },
+          {
+            "@type": "Service",
+            "name": "Graphic Design",
+            "description": "Designing impactful print materials, from publications to packaging and signage."
+          },
+          {
+            "@type": "Service",
+            "name": "Product Design",
+            "description": "Conducting market research, crafting innovative product designs, and refining every detail through product development."
+          }
+        ]
+      }
     </script>
   </body>
 </html>

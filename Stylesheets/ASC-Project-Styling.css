@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+
 * {
   padding: 0%;
   margin: 0%;
@@ -8,23 +11,18 @@
   overflow-x: hidden;
 }
 
-.jura > {
-  font-family: "Jura", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
 :root {
   --Purple500: #63378d;
   --Purple900: #1c0a43;
   --Yellow500: #ffd364;
+  --Yellow900: #7a5113;
   --Teal500: #2f847d;
+  --Teal900: #09303f;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 .body {
   overflow: hidden;
-  font-family: "Jura";
-  font-weight: 400;
-  font-style: normal;
   background-color: #63378d;
   color: white;
   height: 100vh;
@@ -45,10 +43,10 @@ body::-webkit-scrollbar-thumb {
 }
 /* END - Scrollbar Styling */
 .PageWrapper-ASC {
-  font-family: "jura";
   background-color: #63378d;
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
   color: white;
+  font-family: var(--Body-Font);
 }
 .ASC-Page-Title {
   display: flex;
@@ -59,12 +57,14 @@ body::-webkit-scrollbar-thumb {
 }
 .ASC-Title {
   color: var(--Yellow500);
+  font-family: var(--Title-Font);
 }
 .ASC-Context {
   max-width: 30rem;
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  font-family: var(--Body-Font);
 }
 .ASC-Hero-Img-Container {
   margin-top: 3rem;
@@ -92,6 +92,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   justify-content: space-between;
   margin: 0 1rem 2rem;
+  gap: 2rem;
 }
 /* Keeps all img containers identical */
 .ASC-WebDev-Img-Container,
@@ -107,7 +108,7 @@ body::-webkit-scrollbar-thumb {
 /* Applies to all image content displaying work done by the Agency
 One class to manage 3-5 imgs */
 .ASC-Content-work-images {
-  object-fit: fill;
+  object-fit: contain;
 }
 
 /* Sections text content*/
@@ -218,4 +219,16 @@ One class to manage 3-5 imgs */
   background-color: white;
   color: var(--Purple900);
   transform: scale(1.05) translateZ(0);
+}
+
+@media screen and (max-width: 1000px) {
+  /* Section containers */
+  .ASC-Branding-Content,
+  .ASC-LogoDes-Content,
+  .ASC-WebDes-Content,
+  .ASC-WebDev-Content {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
 }

@@ -1,6 +1,10 @@
 /* Services Page Styles with Enhanced Grid Layouts and Interactions */
 * {
-  font-family: "Jura";
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -9,6 +13,8 @@
   --Yellow500: #ffd364;
   --Yellow600: #dbad49;
   --Teal500: #2f847d;
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
 }
 /* Service Categories Section */
 .service-categories-section {
@@ -82,6 +88,7 @@
 }
 
 .category-card p {
+  font-family: var(--Body-Font);
   margin-bottom: 1.5rem;
   flex-grow: 1;
 }
@@ -91,6 +98,7 @@
   color: var(--Yellow500);
   text-decoration: none;
   font-weight: 600;
+  font-family: var(--Body-Font);
   transition: color 0.3s ease;
 }
 
@@ -118,6 +126,7 @@
 }
 
 .service-detail-header p {
+  font-family: var(--Body-Font);
   font-size: 1.2rem;
 }
 
@@ -150,12 +159,14 @@
 }
 
 .service-offering-card p {
+  font-family: var(--Body-Font);
   margin-bottom: 1.5rem;
 }
 
 .service-features {
   list-style: none;
   padding: 0;
+  font-family: var(--Body-Font);
 }
 
 .service-features li {
@@ -178,6 +189,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 3rem;
+  font-family: var(--Body-Font);
 }
 
 .pricing-toggle-label {
@@ -246,6 +258,7 @@
   border-radius: 2rem;
   font-weight: 600;
   font-size: 0.9rem;
+  font-family: var(--Body-Font);
 }
 
 .savings-badge {
@@ -293,6 +306,7 @@
   padding-left: 1.5rem;
   position: relative;
   overflow: visible !important;
+  font-family: var(--Body-Font);
 }
 
 .package-features li::before {
@@ -358,6 +372,7 @@
 }
 
 .additional-service-card p {
+  font-family: var(--Body-Font);
   margin-bottom: 1rem;
 }
 
@@ -391,6 +406,7 @@
   overflow: visible !important;
   position: relative;
   z-index: 1;
+  font-family: var(--Body-Font);
 }
 
 .process-step:hover {
@@ -451,6 +467,7 @@
 
 .cta-content p {
   font-size: 1.2rem;
+  font-family: var(--Body-Font);
   margin-bottom: 2.5rem;
 }
 
@@ -461,6 +478,7 @@
   gap: 1.5rem;
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
   padding: 0.5rem; /* Add padding to contain hover effects */
+  font-family: var(--Body-Font);
 }
 
 /* Fixed CTA button hover effects to prevent scrollbar */
@@ -474,6 +492,8 @@
   padding: 1rem 2.5rem;
   border-radius: 2rem;
   font-weight: 600;
+  font-family: var(--Body-Font);
+
   transition: all 0.3s ease;
   transform: translateZ(0); /* Force GPU acceleration */
   will-change: transform; /* Optimize for animations */
@@ -495,6 +515,7 @@
   text-decoration: none;
   padding: 0.9rem 2.4rem;
   border-radius: 2rem;
+  font-family: var(--Body-Font);
   font-weight: 600;
   border: 2px solid white;
   transition: all 0.3s ease;
@@ -553,6 +574,7 @@
 
 .services-hero-content p {
   font-size: 1.5rem;
+  font-family: var(--Body-Font);
 }
 
 /* Fix for scrollbar issues */
