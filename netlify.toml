@@ -1,7 +1,7 @@
 [build]
-  publish = ""
-  command = ""  # Explicitly set to empty to avoid any build commands
+  publish = "."
 
+# Optional: For SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
