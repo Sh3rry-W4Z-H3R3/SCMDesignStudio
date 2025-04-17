@@ -17,7 +17,16 @@
     <title>SCM Design Studio</title>
     <!-- Stylesheet Links -->
     <!-- Main sheet -->
-    <link rel="preload" href="../Stylesheets/stylesheetA.css" as="style" />
+    <link
+      rel="preload"
+      href="../Stylesheets/stylesheetA.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript
+      ><link rel="stylesheet" href="../Stylesheets/stylesheetA.css"
+    /></noscript>
+
     <link rel="preload" href="../Stylesheets/ContactFormStyle.css" as="style" />
     <link rel="script" href="../Misc/MobileMenuHamburgerScript.js" />
     <link rel="preload" href="../Stylesheets/Footer-Sitewide.css" as="style" />
