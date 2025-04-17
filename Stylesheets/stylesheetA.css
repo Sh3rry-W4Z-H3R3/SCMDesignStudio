@@ -1,21 +1,63 @@
-/* Sitewide and Homepage styling */
-
-/* Bodoni Moda - For Heading Text */
-
-@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+@import url(https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap);
+.NavBar,
+.body {
+  width: 100%;
+  overflow: hidden;
+}
+.NavBar,
+.NavBarNav {
+  position: sticky;
+  z-index: 10;
+  display: flex;
+}
+.Nav-Link:active,
+.Nav-Link:focus,
+.Nav-Link:hover {
+  color: var(--Yellow500);
+  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
+}
+#close-sidebar-btn,
+#open-sidebar-btn {
+  background: var(--Purple900);
+  padding: 1em;
+  cursor: pointer;
+}
+#open-sidebar-btn,
+#overlay {
+  position: fixed;
+  display: none;
+}
+.HeroTitle,
+.Nav-Link {
+  text-align: center;
+  color: #fff;
+}
+.bodoni-moda,
+.body,
+body > p {
+  font-style: normal;
+}
+.EmailLink,
+.Home-Page-CTA-Button,
+.Nav-Link,
+.learn-more {
+  text-decoration: none;
+}
+button,
+label {
+  font-size: 16px;
+}
 * {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
-
 .bodoni-moda {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 500;
-  font-style: normal;
 }
 :root {
   --Purple500: #63378d;
@@ -28,128 +70,98 @@
   --Body-Font: "Century Gothic";
 }
 .body {
-  overflow: hidden;
-
   font-weight: 400;
-  font-style: normal;
   background-color: #63378d;
-  color: white;
+  color: #fff;
   height: 100vh;
-  width: 100%;
 }
-/* START -Scrollbar Styling */
+.HeroTitle > p,
+.Nav-Link {
+  font-weight: 500;
+  font-family: var(--Body-Font);
+}
+.Nav-Link,
+.NavBar,
+.NavBarNav,
+.logo {
+  background-color: var(--Purple900);
+}
 body::-webkit-scrollbar {
   width: 1rem;
 }
-
 body::-webkit-scrollbar-track {
-  background: yellow;
+  background: #ff0;
   width: 1rem;
 }
-
 body::-webkit-scrollbar-thumb {
   background: var(--Purple900);
 }
-/* END - Scrollbar Styling */
-/* --Start of NavBar styling */
 .NavBar {
-  position: sticky;
   top: 0;
   height: 5rem;
-  width: 100%;
-  background-color: var(--Purple900);
   font-size: 2rem;
-  display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
   gap: 3rem;
   margin: 0;
-  z-index: 10;
-  overflow: hidden;
 }
-
-/* Logo styling */
+.SCM-FullLogo-Header,
+.logo {
+  width: 11.25rem;
+  padding-top: 0.5rem;
+}
 .logo {
   padding-left: 3rem;
-  padding-top: 0.5rem;
-  width: 11.25rem;
   height: fit-content;
-  background-color: var(--Purple900);
   overflow: visible;
 }
-
 .SCM-FullLogo-Header {
-  width: 11.25rem;
   overflow: hidden;
   height: 6.25rem;
-  padding-top: 0.5rem;
 }
-
-/* Navigation container */
 .NavBarNav {
-  background-color: var(--Purple900);
-  display: flex;
   align-items: center;
   justify-content: center;
   list-style: none;
-  position: sticky;
   width: 100%;
   gap: 1rem;
-  z-index: 10;
   overflow: hidden;
 }
-
-/* Navigation item */
 .NavItem {
   border-radius: 0.5rem;
   list-style: none;
 }
-
-/* Base navigation link styling */
 .Nav-Link {
   display: block;
   padding: 0.625rem;
-  font-family: var(--Body-Font);
-  text-align: center;
-  color: white;
-  background-color: var(--Purple900);
   border-radius: 1.5rem;
-  text-decoration: none;
   cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   position: relative;
   overflow: hidden;
-  font-weight: 500;
 }
-
-/* Standard hover state */
 .Nav-Link:hover {
   background-color: var(--Teal500);
-  color: var(--Yellow500);
   transform: translateY(-0.125rem) scale(1.05);
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
-
-/* Standard active/focus state */
 .Nav-Link:active,
 .Nav-Link:focus {
   background-color: var(--Teal900);
-  color: var(--Yellow500);
-  outline: none;
+  outline: 0;
   transform: translateY(0.0625rem) scale(0.98);
-  text-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.5);
 }
-
-/* Focus styles for keyboard navigation */
+#Contact-CTA-Hero:hover,
+.Home-Page-CTA-Button:hover {
+  background-color: var(--Yellow500);
+  color: var(--Purple900);
+}
 .Nav-Link:focus-visible {
-  outline: 0.125rem solid white;
+  outline: white solid 0.125rem;
   outline-offset: 0.25rem;
   box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.2);
 }
-
-/* Underline animation */
 .Nav-Link::after {
   content: "";
   position: absolute;
@@ -158,50 +170,34 @@ body::-webkit-scrollbar-thumb {
   width: 0;
   height: 0.125rem;
   background-color: var(--Yellow500);
-  transition: all 0.3s ease;
+  transition: 0.3s;
   opacity: 0;
 }
-
 .Nav-Link:hover::after {
   width: 80%;
   left: 10%;
   opacity: 1;
 }
-
-/* Contact CTA styling */
 #Contact-CTA-Hero {
   box-shadow: 0 0 0 rgba(255, 211, 100, 0);
-  transition: all 0.3s ease, box-shadow 0.5s ease;
+  transition: 0.3s, box-shadow 0.5s;
   border-bottom: var(--Yellow500) 2px;
 }
-
-/* Contact CTA hover state */
 #Contact-CTA-Hero:hover {
-  background-color: var(--Yellow500);
-  color: var(--Purple900);
   box-shadow: 0 0 0.5rem 0.125rem rgba(255, 211, 100, 0.3);
   text-shadow: none;
   overflow: hidden;
 }
-
-/* Contact CTA active/focus state */
 #Contact-CTA-Hero:active,
 #Contact-CTA-Hero:focus {
   background-color: var(--Yellow900);
   color: var(--Purple900);
-  outline: none;
+  outline: 0;
   text-shadow: none;
 }
-
-/* Mobile menu button styling */
 #open-sidebar-btn {
-  display: none;
-  background: var(--Purple900);
   border: none;
-  padding: 1em;
   margin-left: auto;
-  cursor: pointer;
-  position: fixed;
   top: 1rem;
   right: 1rem;
   z-index: 8;
@@ -212,13 +208,9 @@ body::-webkit-scrollbar-thumb {
   justify-content: center;
   box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.2);
 }
-
 #close-sidebar-btn {
   display: none;
-  background: var(--Purple900);
   border: none;
-  padding: 1em;
-  cursor: pointer;
   align-self: flex-end;
   border-radius: 50%;
   width: 2.5rem;
@@ -228,34 +220,25 @@ body::-webkit-scrollbar-thumb {
   margin-bottom: 0.5rem;
   overflow: visible;
 }
-
-/* White icons for menu buttons */
-#open-sidebar-btn svg line,
-#close-sidebar-btn svg path {
+#close-sidebar-btn svg path,
+#open-sidebar-btn svg line {
   stroke: white;
 }
-
-/* Improved overlay for mobile menu */
 #overlay {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 9;
-  display: none;
   backdrop-filter: blur(0.25rem);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s;
   opacity: 0;
 }
-
 #overlay.show {
   display: block;
   opacity: 1;
 }
-
-/* Responsive adjustments */
 @media (max-width: 1000px) {
   .NavBar {
     position: fixed;
@@ -271,25 +254,21 @@ body::-webkit-scrollbar-thumb {
     padding: 1rem;
     overflow-y: auto;
   }
-
   .NavBar.show {
     right: 0;
     box-shadow: -0.5rem 0 1rem rgba(0, 0, 0, 0.3);
   }
-
   .NavBarNav {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    padding: 1rem 0 0 0;
+    padding: 1rem 0 0;
     gap: 0.5rem;
   }
-
   .NavItem {
     width: 100%;
     margin: 0;
   }
-
   .Nav-Link {
     width: 100%;
     height: auto;
@@ -298,54 +277,42 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.5rem;
     border-radius: 0.75rem;
   }
-
-  /* Reduce the size of the underline animation */
   .Nav-Link::after {
     bottom: 0.125rem;
     height: 0.0625rem;
   }
-
-  /* Adjust hover transform to prevent overflow */
   .Nav-Link:hover {
     transform: translateY(-0.0625rem) scale(1.02);
   }
-
-  /* Adjust active transform to maintain consistency */
   .Nav-Link:active,
   .Nav-Link:focus {
     transform: translateY(0.0625rem) scale(0.98);
   }
-
+  #close-sidebar-btn,
   #open-sidebar-btn {
     display: flex;
   }
-
-  #close-sidebar-btn {
-    display: flex;
-  }
-
   .logo {
     display: none;
   }
 }
-
-/* Additional adjustments for very small screens */
 @media (max-height: 600px) {
   .NavBarNav {
     gap: 0.25rem;
   }
-
   .Nav-Link {
     padding: 0.375rem 0.5rem;
     font-size: 1.25rem;
     border-radius: 0.5rem;
   }
-
   #close-sidebar-btn {
     margin-bottom: 0.25rem;
   }
 }
-/* --END of NavBar styling */
+.HeroContent,
+.Home-Page-CTAs {
+  padding-bottom: 1rem;
+}
 .PageWrapper {
   background-color: #63378d;
   background-image: url(../Assets/BackgroundGradientLRG.jpg);
@@ -353,80 +320,67 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
 }
-
+.HeroContent,
 .HeroSection {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
-.HeroContent {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding-bottom: 1rem;
-}
 .HeroTitle {
-  margin: 2rem;
-  margin-bottom: 1rem;
+  margin: 2rem 2rem 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  color: #ffffff;
-  text-align: center;
   font-family: var(--Title-Font);
   font-weight: 100;
   font-size: clamp(1.8rem, 3.5vw, 2.8rem);
   position: relative;
+}
+.Sec2Text,
+.Section2Title {
+  margin-right: 3rem;
+  display: flex;
+}
+.BannerContainer,
+.Home-Page-CTAs,
+.InnerHeading,
+.OuterHeading {
+  font-family: "Century Gothic";
 }
 .HeroTitle > p {
   max-width: 30rem;
   margin-top: 2rem;
   text-align: left;
   font-size: clamp(1rem, 1.5vw, 2rem);
-  font-family: var(--Body-Font);
-  font-weight: 500;
 }
 body > p {
   font-family: var(--Body-Font);
   font-size: 1rem;
-  font-style: normal;
   font-variant: normal;
   font-weight: 400;
 }
-
-/* CTA container */
 .Home-Page-CTAs {
-  font-family: "Century Gothic";
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding-left: 2rem;
   gap: 1rem;
-  padding-bottom: 1rem;
 }
-/* CTA target class */
 .Home-Page-CTA-Button {
-  text-decoration: none;
   border-radius: 2rem;
   background-color: var(--Teal500);
   padding: 1em;
-  color: white;
+  color: #fff;
   transition-duration: 0.5s;
 }
-/* CTA buttons - hover transition */
 .Home-Page-CTA-Button:hover {
-  background-color: var(--Yellow500);
-  color: var(--Purple900);
-  font-weight: bold;
+  font-weight: 700;
   transform: scale(1.1);
   overflow-y: visible;
 }
-
-/* Revolving Text Heading*/
 .OuterHeading {
-  font-family: "Century Gothic";
-  color: #ffffff;
+  color: #fff;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -436,26 +390,26 @@ body > p {
   padding-right: 30rem;
   font-weight: 400;
 }
-/* Rotating text */
 .InnerHeading {
-  font-family: "Century Gothic";
-  border: 0px solid #ddd;
+  border: 0 solid #ddd;
   height: 50px;
   line-height: 50px;
   font-size: 45px;
   text-transform: uppercase;
   overflow: hidden;
 }
+.ProjectCardContainer,
+.service-box {
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
 .InnerHeading span {
   position: relative;
   color: #ffd364;
   overflow: hidden;
-  animation: animation 15s ease-in infinite;
+  animation: 15s ease-in infinite animation;
 }
-
-/* Rotating Text animation
- increments of 12% for smoothness
-  and consistent time on each string */
 @keyframes animation {
   0%,
   100% {
@@ -486,29 +440,28 @@ body > p {
     top: -400px;
   }
 }
-
-/* Banner Animation and Styling */
 .BannerContainer {
-  font-family: "Century Gothic";
   margin-top: 10rem;
   height: 10rem;
   overflow-y: hidden;
   width: 100%;
   position: relative;
 }
-
+.BannerText h2,
+.Section2Title {
+  font-family: var(--Title-Font);
+}
 .slides-wrapper {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 40rem; /* Total height of all slides */
-  animation: banner-slide 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  height: 40rem;
+  animation: 20s cubic-bezier(0.25, 0.1, 0.25, 1) infinite banner-slide;
   will-change: transform;
   backface-visibility: hidden;
   transform-style: preserve-3d;
 }
-
 .Slide1,
 .Slide2,
 .Slide3,
@@ -525,23 +478,18 @@ body > p {
   left: 0;
   overflow: visible;
 }
-
 .Slide1 {
   top: 0;
 }
-
 .Slide2 {
   top: 10rem;
 }
-
 .Slide3 {
   top: 20rem;
 }
-
 .Slide4 {
   top: 30rem;
 }
-
 .BannerText {
   display: flex;
   flex-direction: column;
@@ -551,81 +499,54 @@ body > p {
   padding: 0 1rem;
   text-align: center;
 }
-
+.card,
+.sr-only {
+  overflow: hidden;
+}
 .BannerText h2 {
   font-size: 2rem;
   text-align: center;
   margin-bottom: 0.5rem;
-  font-family: var(--Title-Font);
 }
-
 .BannerText > h3 {
   font-size: 1.2rem;
   text-align: center;
   line-height: 1.4;
   font-family: var(--Body-Font);
 }
-
-/* Animation for banner with static 2-second displays and smoother transitions */
 @keyframes banner-slide {
-  /* Slide 1 static for 2 seconds */
   0%,
-  17% {
+  100%,
+  17%,
+  92% {
     transform: translateY(0);
   }
-  /* Longer transition to Slide 2 (1 second) */
   17%,
-  25% {
-    transform: translateY(-10rem);
-  }
-  /* Slide 2 static for 2 seconds */
   25%,
   42% {
     transform: translateY(-10rem);
   }
-  /* Longer transition to Slide 3 (1 second) */
   42%,
-  50% {
-    transform: translateY(-20rem);
-  }
-  /* Slide 3 static for 2 seconds */
   50%,
   67% {
     transform: translateY(-20rem);
   }
-  /* Longer transition to Slide 4 (1 second) */
   67%,
-  75% {
-    transform: translateY(-30rem);
-  }
-  /* Slide 4 static for 2 seconds */
   75%,
   92% {
     transform: translateY(-30rem);
   }
-  /* Longer transition back to Slide 1 (1 second) */
-  92%,
-  100% {
-    transform: translateY(0);
-  }
 }
-
-/* Section2 Styling */
 .Section-2-HomePage {
-  color: #ffffff;
+  color: #fff;
 }
 .Section2Title {
-  display: flex;
   justify-content: flex-end;
-  margin-right: 3rem;
-  font-family: var(--Title-Font);
   font-weight: 900;
 }
 .Sec2Text {
-  display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 3rem;
   gap: 1.5rem;
   max-width: inherit;
 }
@@ -638,32 +559,30 @@ body > p {
   gap: 1rem;
   font-family: var(--Body-Font);
 }
-
+.services h2,
+.services-title {
+  font-family: var(--Title-Font);
+}
 .TextBoxRow2 {
   display: flex;
   justify-content: center;
   gap: 5rem;
 }
-
 .LineItem1,
 .LineItem2 {
   display: flex;
   flex-direction: column;
   text-align: left;
 }
-
 .LineItem-Text {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
 }
-
-/* Section Styling */
 .services-title {
-  font-family: var(--Title-Font);
   display: flex;
   justify-content: center;
-  color: #ffffff;
+  color: #fff;
   margin-top: 3rem;
   text-align: center;
   padding: 0 1rem;
@@ -672,14 +591,10 @@ body > p {
   text-align: center;
   padding: 50px 20px;
 }
-
 .services h2 {
   font-size: 28px;
   margin-bottom: 40px;
-  font-family: var(--Title-Font);
 }
-
-/* Flexbox Layout */
 .services-container {
   margin-top: 1rem;
   display: flex;
@@ -687,16 +602,10 @@ body > p {
   flex-wrap: wrap;
   justify-content: center;
   gap: 2.5rem;
-  color: #ffffff;
+  color: #fff;
   width: 100%;
 }
-.services-row-1 {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  flex-wrap: wrap;
-  width: 100%;
-}
+.services-row-1,
 .services-row-2 {
   display: flex;
   justify-content: center;
@@ -704,57 +613,53 @@ body > p {
   flex-wrap: wrap;
   width: 100%;
 }
-/* Service Box */
 .service-box {
   font-family: var(--Body-Font);
-  background-color: transparent; /* Slightly lighter purple */
+  background-color: transparent;
   padding: 20px;
   max-width: 280px;
   text-align: center;
-  transition: transform 0.3s ease; /* From https://css.glass */
   background: rgba(99, 55, 141, 0.08);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8.3px);
   -webkit-backdrop-filter: blur(8.3px);
-  border: 1px solid rgba(99, 55, 141, 1);
+  border: 1px solid #63378d;
   width: 100%;
 }
-
+.ProjectCardContainer:hover,
+.card:hover,
 .service-box:hover {
   transform: translateY(-5px);
 }
-
-/* Icons */
 .service-box img {
   width: 40px;
   margin-bottom: 15px;
 }
-
-/* Headings */
 .service-box h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-
-/* Paragraphs */
 .service-box p {
   font-size: 14px;
   line-height: 1.6;
 }
-
-/* Recent Work Section */
 .RecentProjectsSectionTitle {
   margin-top: 3rem;
   display: flex;
   justify-content: center;
-  color: #ffffff;
+  color: #fff;
   letter-spacing: 10px;
   text-transform: capitalize;
   font-family: var(--Title-Font);
   font-weight: 900;
   text-align: center;
   padding: 0 1rem;
+}
+.CardSubtitleText,
+.CardText,
+.CardTextTitle,
+.Home-to-Project-Card-Link,
+.ProjectCardContainer {
+  font-family: var(--Body-Font);
 }
 .RecentProjectsSection {
   display: flex;
@@ -772,19 +677,12 @@ body > p {
   gap: 3rem;
   font-family: var(--Body-Font);
 }
-/* Links from project cards on home page onto subpages showing work of that project */
 .Home-to-Project-Card-Link {
   text-decoration: none;
   display: block;
-  /* Use fit content so it shrinks rather than exapnd for the full width */
   width: fit-content;
-  font-family: var(--Body-Font);
 }
-
-/* Card Styling */
 .ProjectCardContainer {
-  font-family: var(--Body-Font);
-  border-radius: 2rem;
   padding: 1rem;
   width: 30rem;
   max-width: 100%;
@@ -793,135 +691,102 @@ body > p {
   align-items: center;
   justify-content: center;
   background: rgba(133, 218, 195, 0.27);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(11.4px);
   -webkit-backdrop-filter: blur(11.4px);
-  border: 1px solid rgba(133, 218, 195, 1);
-  transition: transform 0.3s ease;
+  border: 1px solid #85dac3;
 }
-
-.ProjectCardContainer:hover {
-  transform: translateY(-5px);
-}
-
-.CardImg {
-  width: 100%;
+.CardImg,
+.CardImg > img {
   max-width: 22.5rem;
   height: auto;
+  width: 100%;
 }
 .CardImg > img {
-  width: 100%;
-  max-width: 22.5rem;
   border-radius: 2rem;
   box-shadow: var(--Yellow500);
-  height: auto;
   object-fit: cover;
 }
 .CardText {
   margin-top: 1rem;
   color: #f0daf9;
   width: 100%;
-  font-family: var(--Body-Font);
+}
+.card,
+.service-cards-title {
+  color: #fff;
+  text-align: center;
 }
 .CardTextTitle {
-  font-family: var(--Body-Font);
   text-align: center;
 }
 .CardSubtitleText {
-  font-family: var(--Body-Font);
   font-style: italic;
   padding-top: 0.5rem;
   opacity: 0.75;
   text-align: center;
 }
-/* END project section styling */
 .service-cards-title {
   display: flex;
-  color: white;
   justify-content: center;
   margin-top: 2rem;
   letter-spacing: 5px;
   text-transform: capitalize;
   font-family: "Bodoni Moda";
   font-weight: 500;
-  text-align: center;
   padding: 0 1rem;
 }
-/* Container for the Cards */
 .cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Centers cards horizontally */
-  gap: 2rem; /* Spacing between cards */
+  justify-content: center;
+  gap: 2rem;
   padding: 50px 20px;
 }
-
-/* Card Styles */
 .card {
   font-family: var(--Body-Font);
   background-color: var(--Purple900);
-  color: white;
-  flex: 1 1 calc(33.333% - 20px); /* 3 columns on larger screens */
-  max-width: 350px; /* Prevents cards from stretching too wide */
-  min-width: 250px; /* Gives a lower bound for smaller screens */
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 350px;
+  min-width: 250px;
   border-radius: 16px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s;
 }
-
-.card:hover {
-  transform: translateY(-5px);
+.ContactFor,
+.ContactText {
+  max-width: 30rem;
+  width: 100%;
 }
-
-/* Card Image */
 .card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
-  background-color: #ccc; /* Fallback gray for missing images */
+  background-color: #ccc;
 }
-
-/* Card Content */
 .card-content {
   padding: 20px;
 }
-
 .card-content h3 {
   font-family: "Bodoni Mooda";
-
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
-
 .card-content p {
   font-size: 14px;
   margin-bottom: 2rem;
   font-family: var(--Body-Font);
 }
-
-/* "Learn More" link */
 .learn-more {
   font-size: 14px;
-  text-decoration: none;
   color: var(--Yellow500);
-  font-weight: bold;
+  font-weight: 700;
 }
-
 .learn-more:hover {
   text-decoration: underline;
 }
-
-/* Email and Social Link Anchor Tags
-These are to keep the text colour
- consistent with the rest of the body text */
 .EmailLink {
-  color: white;
-  text-decoration: none;
+  color: #fff;
 }
-/* Contact Section Styling */
 .ContactSection {
   font-family: "Century Gothic";
   width: 100%;
@@ -929,7 +794,7 @@ These are to keep the text colour
 .ContactSectiontitle {
   display: flex;
   justify-content: center;
-  color: white;
+  color: #fff;
   font-weight: 900;
   font-size: xx-large;
   font-family: "Bodoni Moda";
@@ -942,14 +807,12 @@ These are to keep the text colour
   width: 100%;
 }
 .ContactText {
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
-  max-width: 30rem;
   align-items: center;
   gap: 1em;
   padding-top: 0.25rem;
-  width: 100%;
 }
 .CFormText {
   display: flex;
@@ -957,40 +820,28 @@ These are to keep the text colour
   text-align: center;
 }
 .CformLinks {
-  color: white;
+  color: #fff;
   display: flex;
   gap: 0.5em;
 }
-
 .ContactFor {
-  width: 100%;
-  max-width: 30rem;
   padding: 0 1rem;
 }
-
-.ContactForm {
-  width: 100%;
-}
-
+.ContactForm,
 .ContactForm input,
 .ContactForm textarea {
   width: 100%;
 }
-
-/* Screen reader only class for accessibility */
 .sr-only {
   position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
   margin: -1px;
-  overflow: hidden;
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
 }
-
-/* Contact Form Section */
 .contact-form {
   background: rgba(30, 10, 60, 0.6);
   border-radius: 10px;
@@ -998,138 +849,108 @@ These are to keep the text colour
   margin: 40px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
-
+.contact-form h3,
+.form-group {
+  margin-bottom: 20px;
+}
 .contact-form h3 {
   font-size: 24px;
-  margin-bottom: 20px;
-  color: white;
+  color: #fff;
 }
-
 form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-
-.form-group {
-  margin-bottom: 20px;
-}
-
 .form-group.full-width {
   grid-column: span 2;
 }
-
 label {
   display: block;
   margin-bottom: 8px;
-  font-size: 16px;
-  color: white;
+  color: #fff;
 }
-
 input,
-textarea,
-select {
+select,
+textarea {
   width: 100%;
   padding: 12px 15px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  color: white;
+  color: #fff;
   font-size: 16px;
-  transition: all 0.3s ease;
+  transition: 0.3s;
 }
-
 input:focus,
-textarea:focus,
-select:focus {
-  outline: none;
+select:focus,
+textarea:focus {
+  outline: 0;
   border-color: var(--secondary-color);
   background: rgba(255, 255, 255, 0.15);
 }
-
 textarea {
   resize: vertical;
   min-height: 150px;
 }
-
 button {
   background: var(--secondary-color);
-  color: white;
+  color: #fff;
   border: none;
   padding: 12px 25px;
   border-radius: 5px;
-  font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: 0.3s;
   grid-column: 2;
   justify-self: end;
 }
-
 button:hover {
   background: var(--Teal500);
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(42, 183, 169, 0.3);
 }
-
-/* RESPONSIVE MEDIA QUERIES */
-
-/* Large tablets and small desktops */
 @media (max-width: 1200px) {
   .OuterHeading {
     padding-right: 0;
     text-align: center;
   }
-
   .RecentProjectsSection {
     gap: 2rem;
   }
-
   .ProjectCardContainer {
     width: 25rem;
   }
-
-  .CardImg {
-    max-width: 20rem;
-  }
-
+  .CardImg,
   .CardImg > img {
     max-width: 20rem;
   }
-
   .HeroTitle > p {
     max-width: 100%;
   }
 }
-
-/* Tablets */
 @media (max-width: 992px) {
   .RecentProjectsSection {
     flex-direction: column;
     align-items: center;
     gap: 3rem;
   }
-
   .Project-Column-1,
   .Project-Column-2 {
     width: 100%;
   }
-
   .ProjectCardContainer {
     width: 90%;
     max-width: 30rem;
   }
-
   .card {
     flex: 1 1 calc(50% - 20px);
     max-width: 300px;
   }
-
   .BannerContainer {
     height: 8rem;
     margin-top: 5rem;
   }
-
   .Slide1,
   .Slide2,
   .Slide3,
@@ -1137,92 +958,75 @@ button:hover {
     height: 8rem;
     padding: 1.5rem 1rem;
   }
-
   .Slide2 {
     top: 8rem;
   }
-
   .Slide3 {
     top: 16rem;
   }
-
   .Slide4 {
     top: 24rem;
   }
-
   .BannerText h2 {
     font-size: 1.5rem;
     margin-bottom: 0.3rem;
   }
-
   .BannerText h3 {
     font-size: 1rem;
     line-height: 1.3;
   }
-
   @keyframes banner-slide {
     0%,
-    17% {
+    100%,
+    17%,
+    92% {
       transform: translateY(0);
     }
     17%,
-    25% {
-      transform: translateY(-8rem);
-    }
     25%,
     42% {
       transform: translateY(-8rem);
     }
     42%,
-    50% {
-      transform: translateY(-16rem);
-    }
     50%,
     67% {
       transform: translateY(-16rem);
     }
     67%,
-    75% {
-      transform: translateY(-24rem);
-    }
     75%,
     92% {
       transform: translateY(-24rem);
     }
-    92%,
-    100% {
-      transform: translateY(0);
-    }
   }
-
   .Home-Page-CTAs {
     padding-left: 1rem;
     flex-wrap: wrap;
     justify-content: center;
   }
-
   .Section2Title {
     justify-content: center;
     margin-right: 0;
     text-align: center;
   }
-
   .Sec2Text {
     justify-content: center;
     margin-right: 0;
     flex-direction: column;
     align-items: center;
   }
-
   .TextBoxRow2 {
     gap: 2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 }
-
-/* Large mobile phones */
 @media (max-width: 768px) {
+  .HeroTitle,
+  .HeroTitle > p,
+  .LineItem1,
+  .LineItem2 {
+    text-align: center;
+  }
   .RecentProjectsSectionTitle h2 {
     font-size: 1.5rem;
     letter-spacing: 5px;
@@ -1235,44 +1039,30 @@ button:hover {
     width: 90%;
     padding: 0.75rem;
   }
-
-  .CardImg {
-    max-width: 100%;
-  }
-
+  .CardImg,
   .CardImg > img {
     max-width: 100%;
   }
-
   .CardTextTitle h3 {
     font-size: 1.2rem;
   }
-
   .CardSubtitleText h4 {
     font-size: 0.9rem;
   }
-
   .service-cards-title h2 {
     font-size: 1.5rem;
     letter-spacing: 3px;
   }
-
   .cards-container {
     padding: 30px 15px;
   }
-
   .card {
     min-width: 220px;
-  }
-  .LineItem1,
-  .LineItem2 {
-    text-align: center;
   }
   .BannerContainer {
     height: 7rem;
     margin-top: 3rem;
   }
-
   .Slide1,
   .Slide2,
   .Slide3,
@@ -1280,91 +1070,63 @@ button:hover {
     height: 7rem;
     padding: 1rem 0.5rem;
   }
-
   .Slide2 {
     top: 7rem;
   }
-
   .Slide3 {
     top: 14rem;
   }
-
   .Slide4 {
     top: 21rem;
   }
-
   .BannerText h2 {
     font-size: 1.2rem;
     margin-bottom: 0.2rem;
   }
-
   .BannerText h3 {
     font-size: 0.85rem;
     line-height: 1.2;
   }
-
   @keyframes banner-slide {
     0%,
-    17% {
+    100%,
+    17%,
+    92% {
       transform: translateY(0);
     }
     17%,
-    25% {
-      transform: translateY(-7rem);
-    }
     25%,
     42% {
       transform: translateY(-7rem);
     }
     42%,
-    50% {
-      transform: translateY(-14rem);
-    }
     50%,
     67% {
       transform: translateY(-14rem);
     }
     67%,
-    75% {
-      transform: translateY(-21rem);
-    }
     75%,
     92% {
       transform: translateY(-21rem);
     }
-    92%,
-    100% {
-      transform: translateY(0);
-    }
   }
-
   .HeroTitle {
     margin: 1.5rem 1rem;
     align-items: center;
-    text-align: center;
   }
-
-  .HeroTitle > p {
-    text-align: center;
-  }
-
   .InnerHeading {
     height: 40px;
     line-height: 40px;
     font-size: 35px;
   }
-
   .services-row-1,
   .services-row-2 {
     gap: 2rem;
   }
-
   .service-box {
     max-width: 250px;
   }
 }
-
-/* Mobile phones */
 @media (max-width: 576px) {
   .RecentProjectsSection {
     padding-top: 1.5rem;
@@ -1372,65 +1134,53 @@ button:hover {
     align-items: center;
     justify-content: center;
   }
-
   .Project-Column-1,
   .Project-Column-2 {
     gap: 2rem;
     width: 100%;
   }
-
   .ProjectCardContainer {
     width: 95%;
     border-radius: 1.5rem;
     margin: 0 auto;
   }
-
   .CardImg > img {
     border-radius: 1.5rem;
   }
-
   .card {
     flex: 1 1 100%;
     max-width: 100%;
     margin: 0 auto;
   }
-
   .card-content h3 {
     font-size: 1.2rem;
   }
-
   .Home-Page-CTAs {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
   }
-
   .Home-Page-CTA-Button {
     width: 80%;
     text-align: center;
   }
-
   .TextBoxRow2 {
     flex-direction: column;
     gap: 1.5rem;
   }
-
   .services-row-1,
   .services-row-2 {
     flex-direction: column;
     align-items: center;
   }
-
   .service-box {
     max-width: 90%;
   }
-
   .InnerHeading {
     height: 35px;
     line-height: 35px;
     font-size: 30px;
   }
-
   @keyframes animation {
     0%,
     100% {
@@ -1462,48 +1212,37 @@ button:hover {
     }
   }
 }
-
-/* Small mobile phones */
 @media (max-width: 360px) {
   .RecentProjectsSectionTitle {
     letter-spacing: 3px;
   }
-
   .RecentProjectsSectionTitle h2 {
     font-size: 1.2rem;
   }
-
   .ProjectCardContainer {
     padding: 0.5rem;
   }
-
   .CardTextTitle h3 {
     font-size: 1rem;
   }
-
   .CardSubtitleText h4 {
     font-size: 0.8rem;
   }
-
   .service-cards-title h2 {
     font-size: 1.2rem;
     letter-spacing: 2px;
   }
-
   .card-content {
     padding: 15px;
   }
-
   .card-content p {
     font-size: 12px;
     margin-bottom: 1.5rem;
   }
-
   .BannerContainer {
     height: 6rem;
     margin-top: 2rem;
   }
-
   .Slide1,
   .Slide2,
   .Slide3,
@@ -1511,78 +1250,57 @@ button:hover {
     height: 6rem;
     padding: 0.75rem 0.5rem;
   }
-
   .Slide2 {
     top: 6rem;
   }
-
   .Slide3 {
     top: 12rem;
   }
-
   .Slide4 {
     top: 18rem;
   }
-
   .BannerText h2 {
     font-size: 1rem;
     margin-bottom: 0.1rem;
   }
-
   .BannerText h3 {
     font-size: 0.75rem;
     line-height: 1.1;
   }
-
   @keyframes banner-slide {
     0%,
-    17% {
+    100%,
+    17%,
+    92% {
       transform: translateY(0);
     }
     17%,
-    25% {
-      transform: translateY(-6rem);
-    }
     25%,
     42% {
       transform: translateY(-6rem);
     }
     42%,
-    50% {
-      transform: translateY(-12rem);
-    }
     50%,
     67% {
       transform: translateY(-12rem);
     }
     67%,
-    75% {
-      transform: translateY(-18rem);
-    }
     75%,
     92% {
       transform: translateY(-18rem);
     }
-    92%,
-    100% {
-      transform: translateY(0);
-    }
   }
-
   .HeroTitle {
     margin: 1rem;
   }
-
   .HeroTitle > p {
     font-size: 0.9rem;
   }
-
   .InnerHeading {
     height: 30px;
     line-height: 30px;
     font-size: 25px;
   }
-
   @keyframes animation {
     0%,
     100% {
