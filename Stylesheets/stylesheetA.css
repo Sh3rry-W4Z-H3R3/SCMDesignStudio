@@ -11,7 +11,7 @@
   overflow-x: hidden;
 }
 
-.bodoni-moda > {
+.bodoni-moda {
   font-family: "Bodoni Moda", serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -1264,7 +1264,10 @@ button:hover {
   .card {
     min-width: 220px;
   }
-
+  .LineItem1,
+  .LineItem2 {
+    text-align: center;
+  }
   .BannerContainer {
     height: 7rem;
     margin-top: 3rem;
