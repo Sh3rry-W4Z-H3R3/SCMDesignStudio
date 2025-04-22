@@ -25,9 +25,10 @@ jobs:
         REMOTE_DIR: /
       run: |
         $winscpCommand = @"
-        open sftp://$env:SFTP_USERNAME:$env:SFTP_PASSWORD@$env:SFTP_SERVER/ -hostkey=""
-        put $env:LOCAL_DIR $env:REMOTE_DIR
+        open sftp://$env:SFTP_USERNAME:$env:SFTP_PASSWORD@$env:SFTP_SERVER/ -hostkey=*
+        put `"$env:LOCAL_DIR*`" `"$env:REMOTE_DIR`"
         exit
         "@
         $winscpCommand | Out-File -FilePath winscp-script.txt
         & "C:\Program Files (x86)\WinSCP\WinSCP.com" /script=winscp-script.txt
+
