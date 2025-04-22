@@ -18,10 +18,13 @@ jobs:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
         FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
         FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-        LOCAL_DIR: ./
+        LOCAL_DIR: .\
         REMOTE_DIR: /
       run: |
-        winscp.com /command ^
-          "open ftp://$env:FTP_USERNAME:$env:FTP_PASSWORD@$env:FTP_SERVER/" ^
-          "put $env:LOCAL_DIR $env:REMOTE_DIR" ^
-          "exit"
+        $winscpCommand = @"
+        open ftp://$env:FTP_USERNAME:$env:FTP_PASSWORD@$env:FTP_SERVER/
+        put `"$env:LOCAL_DIR`" `"$env:REMOTE_DIR`"
+        exit
+        "@
+        $winscpCommand | Out-File -FilePath winscp-script.txt
+        winscp.com /script=winscp-script.txt
