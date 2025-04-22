@@ -1,0 +1,27 @@
+name: Deploy to IONOS using WinSCP
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow on push to the main branch
+
+jobs:
+  deploy:
+    runs-on: windows-latest  # Use the latest Windows runner
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Checkout the repository code
+
+    - name: Deploy to IONOS
+      env:
+        FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        LOCAL_DIR: ./
+        REMOTE_DIR: /
+      run: |
+        winscp.com /command ^
+          "open ftp://$env:FTP_USERNAME:$env:FTP_PASSWORD@$env:FTP_SERVER/" ^
+          "put $env:LOCAL_DIR $env:REMOTE_DIR" ^
+          "exit"
