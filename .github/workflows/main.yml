@@ -18,14 +18,14 @@ jobs:
 
     - name: Deploy to IONOS
       env:
-        FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-        FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
+        SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
+        SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         LOCAL_DIR: .\
         REMOTE_DIR: /
       run: |
         $winscpCommand = @"
-        open ftp://$env:FTP_USERNAME:$env:FTP_PASSWORD@$env:FTP_SERVER/
+        open sftp://$env:SFTP_USERNAME:$env:SFTP_PASSWORD@$env:SFTP_SERVER/
         put `"$env:LOCAL_DIR`" `"$env:REMOTE_DIR`"
         exit
         "@
