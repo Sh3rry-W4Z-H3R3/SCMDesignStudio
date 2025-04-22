@@ -20,14 +20,14 @@ jobs:
       env:
         SFTP_SERVER: ${{ secrets.SFTP_SERVER }}
         SFTP_USERNAME: ${{ secrets.SFTP_USERNAME }}
-        SFTP_PASSWORD: \${{ secrets.SFTP_PASSWORD }}
+        SFTP_PASSWORD: ${{ secrets.SFTP_PASSWORD }}
         LOCAL_DIR: .\
         REMOTE_DIR: /
       run: |
-        \$winscpCommand = @"
-        open sftp://\$env:SFTP_USERNAME:\$env:SFTP_PASSWORD@\$env:SFTP_SERVER/ -hostkey=*
+        $winscpCommand = @"
+        open sftp://$env:SFTP_USERNAME:$env:SFTP_PASSWORD@$env:SFTP_SERVER/ -hostkey=*
         put `"$env:LOCAL_DIR*`" `"$env:REMOTE_DIR`"
         exit
         "@
-        \$winscpCommand | Out-File -FilePath winscp-script.txt
-        & "C:\Program Files (x86)\WinSCP\WinSC
+        $winscpCommand | Out-File -FilePath winscp-script.txt
+        & "C:\Program Files (x86)\WinSCP\WinSCP.com" /script=winscp-script.txt
