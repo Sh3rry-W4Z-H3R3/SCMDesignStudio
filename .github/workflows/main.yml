@@ -13,6 +13,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2  # Checkout the repository code
 
+    - name: Install WinSCP
+      run: choco install winscp -y  # Install WinSCP using Chocolatey
+
     - name: Deploy to IONOS
       env:
         FTP_SERVER: ${{ secrets.FTP_SERVER }}
@@ -27,4 +30,4 @@ jobs:
         exit
         "@
         $winscpCommand | Out-File -FilePath winscp-script.txt
-        winscp.com /script=winscp-script.txt
+        & "C:\Program Files (x86)\WinSCP\WinSCP.com" /script=winscp-script.txt
