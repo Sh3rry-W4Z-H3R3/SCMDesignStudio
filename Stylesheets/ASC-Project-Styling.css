@@ -78,6 +78,32 @@ body::-webkit-scrollbar-thumb {
 .ASC-Hero-Img {
   min-width: 100vw;
 }
+/* Process Section */
+.process {
+  background-color: var(--Purple500);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.process-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.process-item:hover {
+  transform: translateY(-10px);
+}
+
+.process-item h3 {
+  color: var(--Yellow500);
+}
+
 /* Work section wrapper- Use to display work involved. Stack sections vertically and play from there  */
 .ASC-Work {
   display: flex;

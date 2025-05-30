@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alastair Smith Ceramics | Case Study</title>
+    <link rel="stylesheet" href="./Stylesheets\CaseStudy-ASC-Styles.css" />
+
+    <link rel="stylesheet" href="/Stylesheets/stylesheetA.css" />
+    <link rel="script" href="../Misc/script.js" />
+    <link rel="stylesheet" href="../Stylesheets/Footer-Sitewide.css" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="SCM Design Studio | Creative Design & Development Services"
+    />
+    <meta
+      property="og:description"
+      content="SCM Design Studio brings your ideas to life with expert web design, branding, graphic design, and product development services."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scmdesignstudio.com/" />
+    <meta
+      property="og:image"
+      content="../SCMDesignStudio/Assets/SCM_FullLogo.png"
+    />
+
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://scmdesign.studio/" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <nav
+          class="NavBar"
+          id="navbar"
+          role="navigation"
+          aria-label="Main Navigation"
+        >
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                loading="eager"
+                class="SCM-FullLogo-Header"
+                src="../Assets/SCM_FullLogo.png"
+                alt="SCM Studio Logo"
+              />
+            </a>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="NavBarNav">
+            <li>
+              <button
+                id="close-sidebar-btn"
+                onclick="closeSidebar()"
+                aria-label="close sidebar"
+                aria-controls="navbar"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.71973 16.2793L16.2796 1.71943"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16.2803 16.2793L1.7204 1.71943"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../index.html" role="menuitem">Home</a>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../About.html" role="menuitem">About</a>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../Services.html" role="menuitem"
+                >Services</a
+              >
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../Projects.html" role="menuitem"
+                >Projects</a
+              >
+            </li>
+            <li class="NavItem">
+              <a
+                id="Contact-CTA-Hero"
+                class="Nav-Link"
+                href="../ContactPage.html"
+                role="menuitem"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="open-sidebar-btn"
+          onclick="openSidebar() "
+          aria-label="open sidebar"
+          aria-expanded="false"
+          aria-controls="navbar"
+          aria-haspopup="true"
+        >
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1" x2="20" y2="1" stroke="white" stroke-width="2" />
+            <line y1="5" x2="20" y2="5" stroke="white" stroke-width="2" />
+            <line y1="9" x2="20" y2="9" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
+
+        <!-- Overlay for mobile menu -->
+        <div id="overlay" onclick="closeSidebar() " aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="fade-in" class="Hero-Text">Alastair Smith Ceramics</h1>
+          <p class="fade-in delay-1">
+            A case study on crafting a brand identity and digital presence for a
+            master potter blending ancient techniques with modern engineering.
+          </p>
+          <a href="#project-overview" class="btn fade-in delay-2"
+            >Explore the Process</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="project-overview" class="section project-overview">
+      <div class="container">
+        <div class="section-title">
+          <h2>Project Overview</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-item fade-in">
+            <h3>The Client</h3>
+            <p>
+              Alastair Smith is a skilled potter establishing his online
+              presence as a craftsperson who blends ancient ceramic techniques
+              with his experience in modern engineering.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-1">
+            <h3>The Challenge</h3>
+            <p>
+              Create a brand identity and business website that authentically
+              represents handcrafted ceramics while providing a seamless
+              e-commerce experience.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-2">
+            <h3>The Approach</h3>
+            <p>
+              Develop a comprehensive brand strategy and visual identity that
+              reflects the handcrafted nature of Alastair's work, followed by a
+              website design that showcases his process and products.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discovery & Research -->
+    <section class="section accent-section">
+      <div class="accent-container">
+        <h2>Discovery & Research</h2>
+        <p>
+          Our journey began with understanding Alastair's craft, his audience,
+          and the handmadeceramics market.
+        </p>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="website-item">
+          <div class="website-image">
+            <!--TODO 
+            Replace images with real ones -->
+            <img
+              loading="eager"
+              src="/Images/CaseStudy-ASCimgs/research.jpg"
+              alt="Research and mood boards"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Market Analysis</h3>
+            <p>
+              We identified a gap in the market for authentic, handcrafted
+              ceramics with a modern aesthetic. Our research showed that
+              consumers increasingly value the story and process behind handmade
+              products.
+            </p>
+            <p>
+              Through competitor analysis, we discovered opportunities to
+              differentiate Alastair's brand by highlighting his unique
+              combination of traditional techniques and engineering precision.
+            </p>
+          </div>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Visual Research</h3>
+            <p>
+              Our mood boards explored the intersection of organic ceramic forms
+              and structured, engineered elements. We gathered inspiration from
+              both traditional pottery techniques and contemporary ceramic
+              design.
+            </p>
+            <p>
+              Key insights revealed the importance of showcasing the making
+              process to build customer connection and trust in the
+              craftsmanship.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              loading="eager"
+              src="/Images/CaseStudy-ASCimgs/moodboard.jpg"
+              alt="Visual research and mood boards"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Strategy -->
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Brand Strategy</h2>
+        <p>Establishing the foundation for all design decisions.</p>
+      </div>
+    </section>
+
+    <section id="brand-development" class="section brand-development">
+      <div class="container">
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Brand Positioning</h3>
+            <p>
+              We positioned Alastair Smith Ceramics as premium handcrafted
+              pottery that balances artistic expression with functional design.
+              The brand emphasizes the marriage of traditional craftsmanship
+              with modern precision.
+            </p>
+            <p>
+              Core brand values identified: craftsmanship, authenticity,
+              functionality, and heritage.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              loading="eager"
+              src="/Images/CaseStudy-ASCimgs/brand_strategy.jpg"
+              alt="Brand strategy documentation"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Logo Development -->
+    <section class="section process">
+      <div class="container website-container">
+        <div class="section-title">
+          <h2>Logo Development</h2>
+          s
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/CaseStudy-ASCimgs/logo_sketches.jpg"
+              alt="Logo concept sketches"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Concept Exploration</h3>
+            <p>
+              We began with sketches exploring different symbolic directions:
+              pottery wheel motifs, clay forms, and firing process
+              representations. Each concept aimed to capture the essence of
+              Alastair's craft.
+            </p>
+            <p>
+              Client feedback guided us toward a direction that emphasized the
+              pottery wheel symbolism, representing both tradition and the
+              circular nature of creation.
+            </p>
+          </div>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Final Logo Design</h3>
+            <p>
+              The final logo incorporates a stylized pottery wheel symbol with
+              clean, modern typography. The earthy colour palette references the
+              natural materials used in ceramics.
+            </p>
+            <p>
+              We created multiple variations for different applications,
+              ensuring the logo remains recognizable across digital and physical
+              mediums.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              src="/Images/CaseStudy-ASCimgs/final_logo.jpg"
+              alt="Final logo design"
+            />
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/logo_variation1.jpg"
+              alt="Logo variation 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/logo_variation2.jpg"
+              alt="Logo variation 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/logo_variation3.jpg"
+              alt="Logo variation 3"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/logo_application.jpg"
+              alt="Logo application example"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Identity System -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Brand Identity System</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              src="/Images/CaseStudy-ASCimgs/color_palette.jpg"
+              alt="Colour palette"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Colour & Typography</h3>
+            <p>
+              The colour palette draws directly from the ceramics
+              themselves—warm terracottas, earthy browns, and subtle
+              beiges—creating a cohesive visual language that extends from
+              product to digital experience.
+            </p>
+            <p>
+              Typography balances readability with personality—the display font
+              features slightly irregular edges that suggest handcrafting
+              without sacrificing legibility, while the supporting text employs
+              a clean sans-serif.
+            </p>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/typography.jpg"
+              alt="Typography system"
+            />
+          </div>
+          <div class="gallery-item">
+            <img src="images/placeholders/patterns.jpg" alt="Visual patterns" />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/business_cards.jpg"
+              alt="Business cards"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/packaging.jpg"
+              alt="Product packaging"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Strategy -->
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Website Strategy & Planning</h2>
+        <p>
+          Creating a digital experience that showcases craftsmanship while
+          enabling commerce.
+        </p>
+      </div>
+    </section>
+
+    <section id="website-design" class="section process">
+      <div class="container">
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Site Objectives</h3>
+            <p>
+              We identified three primary objectives for the website: showcase
+              Alastair's craftsmanship and process, sell his ceramic products,
+              and tell his story as an artisan.
+            </p>
+            <p>
+              User journeys were mapped for different visitor types, from casual
+              browsers to serious collectors, ensuring each path led to
+              meaningful engagement.
+            </p>
+          </div>
+          <div class="website-image">
+            <img src="images/placeholders/site_map.jpg" alt="Website sitemap" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Design Process -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Website Design Process</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              src="/Images/CaseStudy-ASCimgs/wireframes.jpg"
+              alt="Website wireframes"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Wireframing & UI Design</h3>
+            <p>
+              We began with wireframes that established a clear visual hierarchy
+              and user flow. The structure evolved based on user needs, ensuring
+              the most important content was prominently featured.
+            </p>
+            <p>
+              The UI design development emphasized creating digital elements
+              that reflect ceramic textures and the organic nature of
+              handcrafted pottery.
+            </p>
+          </div>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Key Design Decisions</h3>
+            <p>
+              The full-width hero image featuring Alastair's ceramic pieces
+              against natural stone immediately communicates authenticity and
+              craftsmanship.
+            </p>
+            <p>
+              The vertical flow guides visitors through a carefully orchestrated
+              narrative: from brand identification, to product showcase, to
+              personal story.
+            </p>
+            <p>
+              Small irregularities in button shapes and subtle texture overlays
+              throughout the interface create a tactile quality that digital
+              experiences often lack—a direct nod to the textural nature of
+              ceramics.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              src="/Images/CaseStudy-ASCimgs/ui_elements.jpg"
+              alt="UI elements"
+            />
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              src="/Images/CaseStudy-ASCimgs/homepage_design.jpg"
+              alt="Homepage design"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/product_page.jpg"
+              alt="Product page design"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/process_page.jpg"
+              alt="Process page design"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/mobile_view.jpg"
+              alt="Mobile responsive design"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development & Implementation -->
+    <section class="section process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Development & Implementation</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Technical Approach</h3>
+            <p>
+              The responsive design maintains the integrity of the visual story
+              across devices through thoughtful recomposition rather than mere
+              rescaling.
+            </p>
+            <p>
+              Performance optimization techniques were implemented to ensure
+              fast loading despite rich imagery, including lazy loading and
+              image compression.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              src="images/placeholders/responsive_design.jpg"
+              alt="Responsive design implementation"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photography & Content -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Photography & Content</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img src="/Images/047 P1015860.JPG" alt="Product photography" />
+          </div>
+          <div class="website-content">
+            <h3>Visual Storytelling</h3>
+            <p>
+              Product photography was directed to highlight ceramic textures and
+              forms, using natural lighting to showcase the authentic qualities
+              of each piece.
+            </p>
+            <p>
+              Behind-the-scenes documentation of Alastair's creation process
+              provides transparency and builds connection with potential
+              customers.
+            </p>
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/process_photo1.jpg"
+              alt="Creation process photo 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/process_photo2.jpg"
+              alt="Creation process photo 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/lifestyle_photo1.jpg"
+              alt="Lifestyle photo 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="images/placeholders/lifestyle_photo2.jpg"
+              alt="Lifestyle photo 2"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Results & Impact</h2>
+        <p>Measuring the success of our brand and website implementation.</p>
+      </div>
+    </section>
+
+    <section id="results" class="section results">
+      <div class="container">
+        <div class="results-grid">
+          <div class="result-item fade-in">
+            <div class="result-number">+215%</div>
+            <h3>Online Sales</h3>
+            <p>
+              Increase in online sales within the first three months after
+              launch.
+            </p>
+          </div>
+          <div class="result-item fade-in delay-1">
+            <div class="result-number">+180%</div>
+            <h3>Website Traffic</h3>
+            <p>
+              Growth in monthly website visitors compared to previous online
+              presence.
+            </p>
+          </div>
+          <div class="result-item fade-in delay-2">
+            <div class="result-number">4</div>
+            <h3>New Stockists</h3>
+            <p>
+              New retail partnerships established as a result of the
+              professional brand presence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="section testimonial">
+      <div class="container">
+        <div class="testimonial-content fade-in">
+          <p>
+            "SCM Design Studio truly understood my vision as a craftsperson.
+            They created a brand and website that perfectly captures the balance
+            between traditional techniques and modern design that defines my
+            work. The result has transformed my business, bringing my ceramics
+            to a wider audience while maintaining the authentic connection to my
+            craft."
+          </p>
+          <div class="client-info">
+            <p class="client-name">Alastair Smith</p>
+            <p>Alastair Smith Ceramics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reflections -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Reflections & Learnings</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-item fade-in">
+            <h3>Key Successes</h3>
+            <p>
+              The integration of physical textures into digital design elements
+              created a cohesive brand experience across all touchpoints.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-1">
+            <h3>Challenges Overcome</h3>
+            <p>
+              Balancing the authentic, handcrafted aesthetic with modern
+              e-commerce functionality required careful consideration of user
+              experience principles.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-2">
+            <h3>Future Opportunities</h3>
+            <p>
+              Expanding the brand into workshop bookings and educational content
+              could further leverage Alastair's expertise and create additional
+              revenue streams.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="SCMfooter">
+      <div class="FooterTopRow">
+        <span class="footerlogo">
+          <img
+            class="footerlogoIMG"
+            src="../Assets/SCM_FullLogo.png"
+            alt="Image of SCM Design Studios complete logo"
+            loading="lazy"
+          />
+        </span>
+        <div class="ContactPrompt">
+          <div class="FooterContactTitle">
+            <h2>Got some thoughts?</h2>
+            <h3>Feel free to share!</h3>
+            <div class="Footer-Contact-List-Item">
+              <a href="mailto:hello@scmdesign.studio"
+                ><p>Email: hello@scmdesign.studio</p></a
+              >
+            </div>
+            <div class="Footer-Social-Links">
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.instagram.com/scm_designstudio/"
+                    ><p>Instagram</p></a
+                  >
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.linkedin.com/company/scm-design-studio/?viewAsMember=true"
+                    ><p>LinkedIn</p></a
+                  >
+                </div>
+              </div>
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""><p>Spotify</p></a>
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""
+                    ><p>Pintrest</p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-services">
+        <h2 class="section-title">Core Services</h2>
+        <div class="grid-wrapper">
+          <div class="services-grid">
+            <!-- Top Row -->
+            <div class="service-column">
+              <h3>Digital</h3>
+              <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>UI Design</li>
+                <li>E-Commerce</li>
+                <li>Apps</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Product</h3>
+              <ul>
+                <li>Market Research</li>
+                <li>Product Design</li>
+                <li>Product Development</li>
+                <li>Material Research</li>
+                <li>Product Testing</li>
+              </ul>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="service-column">
+              <h3>Brand</h3>
+              <ul>
+                <li>Brand Design</li>
+                <li>Brand Strategy</li>
+                <li>Creative Assets</li>
+                <li>Art Direction</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Print</h3>
+              <ul>
+                <li>Graphic Design</li>
+                <li>Publications</li>
+                <li>Packaging</li>
+                <li>Signage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Footer-boring-links">
+        <a class="TCs-links" href="">Privacy Policy</a>
+        <a href="" class="TCs-links">&copy; SCM Design Studio 2025</a>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,496 @@
+/* Bodoni Moda - For Heading Text */
+
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap");
+
+* {
+  padding: 0%;
+  margin: 0%;
+
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+:root {
+  --Purple100: #f0daf9;
+  --Purple200: #dfb8f3;
+  --Purple300: #bd8bdc;
+  --Purple400: #9565ba;
+  --Purple500: #63378d;
+  --Purple-600: #4d2879;
+  --Purple-700: #391b65;
+  --Purple-800: #281151;
+  --Purple900: #1c0a43;
+  --Yellow500: #ffd364;
+  --Yellow900: #7a5113;
+  --Teal500: #2f847d;
+  --Teal900: #09303f;
+  /* Change these colours names */
+
+  --dark-purple: #1a0933;
+  --light-purple: #6b2fa6;
+  --teal: #2a8a8a;
+  --yellow: #ffdd00;
+  --white: #ffffff;
+  --light-gray: #f5f5f5;
+  --dark-gray: #333333;
+  /* Fonts */
+  --Title-Font: "Bodoni Moda";
+  --Body-Font: "Century Gothic";
+}
+.body {
+  overflow: hidden;
+  background-color: var(--Purple500);
+  color: white;
+  height: 100vh;
+  width: 100%;
+}
+/* START -Scrollbar Styling */
+body::-webkit-scrollbar {
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: yellow;
+  width: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--Purple900);
+}
+/* END - Scrollbar Styling */
+/* Base Styles */
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: var(--Body-Font);
+  color: var(--white);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--white);
+  font-family: var(--Title-Font);
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+
+  margin: 0 auto;
+  font-family: var(--Body-Font);
+  color: var(--white);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  max-block-size: inherit;
+}
+
+/* Hero Section */
+.hero {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    var(--Purple-800) 0%,
+    var(--Purple400) 100%
+  );
+}
+
+.Hero-Text {
+  overflow: hidden;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-self: center;
+  text-align: center;
+  z-index: 10;
+  max-width: 800px;
+  color: var(--white);
+}
+
+.hero h1 {
+  font-family: var(--Title-Font);
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero p {
+  font-family: var(--Body-Font);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+}
+
+/* Section Styles */
+.section {
+  padding: 6rem 0;
+  position: relative;
+}
+
+.section-title {
+  max-height: fit-content;
+  overflow: visible;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-title h2 {
+  display: inline-block;
+  position: relative;
+}
+
+/* Project Overview */
+.project-overview {
+  background-color: var(--Purple-600);
+}
+
+/* Process Section */
+.process {
+  background-color: var(--dark-purple);
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.process-item {
+  font-family: var(--Body-Font);
+  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.process-item h3 {
+  font-family: var(--Body-Font);
+}
+.process-item:hover {
+  transform: translateY(-29px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.process-item h3 {
+  color: var(--Yellow500);
+}
+
+/* Brand Development */
+.brand-development {
+  background-color: var(--Purple500);
+}
+
+.brand-showcase {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.brand-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 400px;
+}
+
+.brand-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.brand-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Website Design */
+.website-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.website-design {
+  background-color: var(--Purple-800);
+}
+
+.website-showcase {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.website-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.website-item:nth-child(even) {
+  direction: rtl;
+}
+
+.website-item:nth-child(even) .website-content {
+  direction: ltr;
+}
+
+.website-image {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.website-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Results Section */
+.results {
+  background-color: var(--Purple500);
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.result-item {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+}
+
+.result-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--Yellow500);
+  margin-bottom: 1rem;
+}
+
+/* Testimonial */
+.testimonial {
+  background-color: var(--Purple-800);
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  position: relative;
+}
+
+.testimonial-content::before {
+  content: '"';
+  position: absolute;
+  top: -30px;
+  left: 30px;
+  font-size: 6rem;
+  color: var(--Yellow500);
+  opacity: 0.5;
+}
+
+.client-info {
+  margin-top: 2rem;
+}
+
+.client-name {
+  font-weight: 700;
+  color: var(--yellow);
+}
+/* footer */
+.footer-links a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .brand-showcase,
+  .results-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .website-item {
+    grid-template-columns: 1fr;
+  }
+
+  .website-item:nth-child(even) {
+    direction: ltr;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .hero::after {
+    width: 20%;
+  }
+
+  .brand-showcase,
+  .results-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  overflow: visible;
+  animation: fadeIn 1s ease forwards;
+}
+
+.delay-1 {
+  overflow: visible;
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  overflow: visible;
+  animation-delay: 0.4s;
+}
+
+.delay-3 {
+  overflow: visible;
+  animation-delay: 0.6s;
+}
+
+/* Image Gallery */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  height: 250px;
+  width: 250px;
+  image-rendering: optimizeSpeed;
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: optimize-contrast;
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Accent Sections */
+.accent-section {
+  background-color: var(--Teal500);
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.accent-section h2 {
+  color: var(--Yellow500);
+}
+.accent-section p {
+  font-family: var(--Body-Font);
+}
+
+.accent-container {
+  color: var(--light-gray);
+}
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--Yellow500);
+  color: var(--Purple-600);
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--yellow);
+  color: var(--yellow);
+}
+
+.btn-outline:hover {
+  background-color: var(--yellow);
+  color: var(--dark-purple);
+}

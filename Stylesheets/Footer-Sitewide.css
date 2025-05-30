@@ -167,8 +167,13 @@ body::-webkit-scrollbar-thumb {
 
 .TCs-links {
   text-decoration: none;
-  color: #ffffff;
+  color: var(--white);
   font-family: var(--Body-Font);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
 }
 
 /* Enhanced Media queries for responsiveness */
