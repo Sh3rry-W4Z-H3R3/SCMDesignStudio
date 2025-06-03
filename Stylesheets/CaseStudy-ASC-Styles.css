@@ -81,6 +81,7 @@ h6 {
   margin-bottom: 1rem;
   color: var(--white);
   font-family: var(--Title-Font);
+  overflow: visible;
 }
 
 /* Header */
@@ -167,7 +168,13 @@ header {
 
 /* Project Overview */
 .project-overview {
-  background-color: var(--Purple-600);
+  /* background-color: var(--Purple-600); */
+
+  background: linear-gradient(
+    -135deg,
+    var(--Purple-800) 0%,
+    var(--Purple400) 100%
+  );
 }
 
 /* Process Section */
@@ -186,7 +193,7 @@ header {
   color: var(--white);
   background-color: rgba(255, 255, 255, 0.05);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 2rem;
   transition: transform 0.3s ease;
 }
 .process-item h3 {
@@ -272,6 +279,9 @@ header {
   height: auto;
   display: block;
 }
+.website-content {
+  overflow: visible;
+}
 
 /* Results Section */
 .results {
@@ -331,6 +341,89 @@ header {
   font-weight: 700;
   color: var(--yellow);
 }
+/* CTA Section */
+.services-cta-section {
+  padding: 5rem 2rem;
+  background-color: var(--Teal900);
+  color: white;
+  text-align: center;
+  overflow: hidden; /* Added to contain CTA button hover effects */
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--Yellow500);
+}
+
+.cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2.5rem;
+  font-family: var(--Body-Font);
+}
+
+/* Modified CTA buttons container to use flex */
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  padding: 0.5rem; /* Add padding to contain hover effects */
+  font-family: var(--Body-Font);
+}
+
+/* Fixed CTA button hover effects to prevent scrollbar */
+.primary-cta-button {
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Yellow500);
+  color: var(--Purple900);
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform; /* Optimize for animations */
+  position: relative; /* Establish containing block */
+  overflow: visible !important;
+}
+
+.primary-cta-button:hover {
+  background-color: white;
+  transform: scale(1.05) translateZ(0);
+}
+
+.secondary-cta-button {
+  display: inline-flex; /* Changed to inline-flex */
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  color: white;
+  text-decoration: none;
+  padding: 0.9rem 2.4rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  border: 2px solid white;
+  transition: all 0.3s ease;
+  transform: translateZ(0); /* Force GPU acceleration */
+  will-change: transform; /* Optimize for animations */
+  position: relative; /* Establish containing block */
+  overflow: visible !important;
+}
+
+.secondary-cta-button:hover {
+  background-color: white;
+  color: var(--Purple900);
+  transform: scale(1.05) translateZ(0);
+}
+
 /* footer */
 .footer-links a {
   color: var(--white);
@@ -456,7 +549,12 @@ header {
   padding: 4rem 0;
   text-align: center;
 }
-
+.accent-container {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
 .accent-section h2 {
   color: var(--Yellow500);
 }
@@ -474,23 +572,30 @@ header {
   background-color: var(--Yellow500);
   color: var(--Purple-600);
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 1rem;
   font-weight: 700;
   transition: all 0.3s ease;
 }
 
 .btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-0.75rem);
+  transform: scale(2, 1.25, 1.25);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: var(--Yellow500);
+  background-color: var(--Teal500);
 }
 
 .btn-outline {
   background-color: transparent;
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
+  border: 2px solid var(--Yellow500);
+  color: var(--Yellow500);
 }
 
 .btn-outline:hover {
-  background-color: var(--yellow);
-  color: var(--dark-purple);
+  background-color: var(--Yellow500);
+  color: var(--Purple900);
+}
+.Discovery-Research {
+  text-align: center;
+  max-width: 800px;
 }
