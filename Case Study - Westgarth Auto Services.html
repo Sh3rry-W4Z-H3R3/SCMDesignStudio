@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westgarth Auto Services | Case Study</title>
+    <link rel="stylesheet" href="/Stylesheets/CaseStudy-ASC-Styles.css" />
+    <link rel="stylesheet" href="/Stylesheets/CaseStudy-WGA.css" />
+
+    <link rel="stylesheet" href="/Stylesheets/stylesheetA.css" />
+    <link rel="script" href="../Misc/script.js" />
+    <link rel="stylesheet" href="../Stylesheets/Footer-Sitewide.css" />
+
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta
+      property="og:title"
+      content="SCM Design Studio | Creative Design & Development Services"
+    />
+    <meta
+      property="og:description"
+      content="SCM Design Studio brings your ideas to life with expert web design, branding, graphic design, and product development services."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scmdesignstudio.com/" />
+    <meta
+      property="og:image"
+      content="../SCMDesignStudio/Assets/SCM_FullLogo.png"
+    />
+
+    <!-- Canonical URL -->
+    <meta rel="canonical" href="https://scmdesign.studio/" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <nav
+          class="NavBar"
+          id="navbar"
+          role="navigation"
+          aria-label="Main Navigation"
+        >
+          <!-- Logo -->
+          <div class="logo">
+            <a href="../index.html">
+              <img
+                loading="eager"
+                class="SCM-FullLogo-Header"
+                src="../Assets/SCM_FullLogo.png"
+                alt="SCM Studio Logo"
+              />
+            </a>
+          </div>
+
+          <!-- Navigation Links -->
+          <ul class="NavBarNav">
+            <li>
+              <button
+                id="close-sidebar-btn"
+                onclick="closeSidebar()"
+                aria-label="close sidebar"
+                aria-controls="navbar"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.71973 16.2793L16.2796 1.71943"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M16.2803 16.2793L1.7204 1.71943"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../index.html" role="menuitem">Home</a>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../About.html" role="menuitem">About</a>
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../Services.html" role="menuitem"
+                >Services</a
+              >
+            </li>
+            <li class="NavItem">
+              <a class="Nav-Link" href="../Projects.html" role="menuitem"
+                >Projects</a
+              >
+            </li>
+            <li class="NavItem">
+              <a
+                id="Contact-CTA-Hero"
+                class="Nav-Link"
+                href="../ContactPage.html"
+                role="menuitem"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button
+          id="open-sidebar-btn"
+          onclick="openSidebar() "
+          aria-label="open sidebar"
+          aria-expanded="false"
+          aria-controls="navbar"
+          aria-haspopup="true"
+        >
+          <svg
+            width="20"
+            height="10"
+            viewBox="0 0 20 10"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <line y1="1" x2="20" y2="1" stroke="white" stroke-width="2" />
+            <line y1="5" x2="20" y2="5" stroke="white" stroke-width="2" />
+            <line y1="9" x2="20" y2="9" stroke="white" stroke-width="2" />
+          </svg>
+        </button>
+
+        <!-- Overlay for mobile menu -->
+        <div id="overlay" onclick="closeSidebar() " aria-hidden="true"></div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="fade-in" class="Hero-Text">Westgarth Auto Services</h1>
+          <p class="fade-in delay-1">
+            A case study on crafting a brand identity and digital presence for a
+            local, family-owned auto repair garage in Dunfermline.
+          </p>
+          <!--TODO: 
+          Fix hover effect on this button -->
+          <a href="#project-overview" class="btn fade-in delay-2"
+            >Explore the Process</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section id="project-overview" class="section project-overview">
+      <div class="container">
+        <div class="section-title">
+          <h2>Project Overview</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-item fade-in">
+            <h3>The Client</h3>
+            <p>
+              Westgarth Auto Services is a local, family-owned, well-respected
+              garage in Dunfermline with a long-standing reputation for quality
+              service. The business was undergoing a shift in operations and
+              ownership, necessitating a refresh of their brand identity and
+              digital presence to reflect these changes while maintaining their
+              established reputation in the community.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-1">
+            <h3>The Challenge</h3>
+            <p>
+              Create a modern brand identity and business website that
+              authentically represents the garage's services while reflecting
+              its shift in operations and ownership. The challenge was to design
+              new signage for the garage and develop a website that would
+              provide a seamless user experience, clearly communicate opening
+              times, and showcase the range of services offered to customers.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-2">
+            <h3>The Approach</h3>
+            <p>
+              Develop a comprehensive brand strategy and visual identity that
+              reflects the professional yet approachable nature of Westgarth
+              Auto Services, followed by designing signage and a responsive
+              website that prioritizes key information like opening hours.
+              Additionally, produce digital assets for future marketing
+              campaigns and brand touchpoints to ensure consistency across all
+              customer interactions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Discovery & Research -->
+    <section class="section accent-section">
+      <div class="accent-container">
+        <h2>Discovery & Research</h2>
+        <p>
+          Our journey began with understanding Westgarth Auto's services, their
+          audience, and the auto repair market in Dunfermline.
+        </p>
+      </div>
+    </section>
+
+    <section class="section process">
+      <div class="container">
+        <div class="website-item">
+          <div class="website-image">
+            <!--TODO 
+            Replace images with real ones -->
+            <img
+              loading="eager"
+              src="/Images/WGA-CaseStudyImgs/Market Research Img.png"
+              alt="Research and mood boards"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Market Analysis</h3>
+            <p>
+              We conducted thorough research into the auto repair industry,
+              identifying key factors that influence customer decisions when
+              choosing a garage. Our findings revealed that customers prioritize
+              transparency, reliability, and accessibility of information when
+              selecting auto repair services.
+            </p>
+            <p>
+              Through competitor analysis, we discovered opportunities to
+              differentiate Westgarth Auto Services by highlighting their
+              family-owned heritage, personalized service approach, and
+              convenient location. The research also showed that clear
+              communication of opening hours and services was a critical factor
+              in customer decision-making.
+            </p>
+          </div>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>User Behavior Research</h3>
+            <p>
+              We analyzed user behavior patterns for auto repair websites,
+              finding that most visitors seek quick access to essential
+              information like opening hours, services offered, and contact
+              details. This insight guided our approach to prioritize these
+              elements in the website design, ensuring visitors could find what
+              they needed without frustration.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              loading="eager"
+              src="/Images/WGA-CaseStudyImgs/user_behavior_analysis.png"
+              alt="Visual research and mood boards developed by SCM Studio for Alastair Smith Ceramics. 2024"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Strategy -->
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Brand Strategy</h2>
+        <p>Establishing the foundation for all design decisions.</p>
+      </div>
+    </section>
+
+    <section id="brand-development" class="section brand-development">
+      <div class="container">
+        <div class="website-item Brand-Strategy">
+          <div class="website-content">
+            <h3>Brand Positioning</h3>
+            <p>
+              We positioned Westgarth Auto Services as a modern, family-owned
+              garage that combines professional expertise with personalized
+              service. The brand emphasizes reliability, transparency, and deep
+              roots in the local community, differentiating it from larger,
+              impersonal chain operations.
+            </p>
+            <p>
+              Core brand values identified: reliability, professionalism,
+              transparency, and local service. These values guided all
+              subsequent design decisions, ensuring consistency across all brand
+              touchpoints.
+            </p>
+            <h3>Target Audience</h3>
+            <p>
+              Our research identified two primary audience segments: local
+              residents seeking regular vehicle maintenance and repair services,
+              and commuters who value convenience and efficiency. The brand
+              strategy was crafted to appeal to both segments, emphasizing
+              reliability for regular customers and efficiency for those with
+              time constraints.
+            </p>
+          </div>
+          <!-- TODO:
+           Fix alignment of images here
+            -->
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/BrandStrat.png"
+              alt="Brand strategy documentation by SCM Design Studio for client Westgarth Auto Services. 2024."
+            />
+          </div>
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/Target Market Research.png"
+              alt="Target Market Visual by SCM Design Studio. 2024"
+            />
+          </div>
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/OldSite.png"
+              alt="Westgarth Auto Services' old website."
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Logo Development -->
+    <section class="section process">
+      <div class="container website-container">
+        <div class="section-title">
+          <h2>Logo Development</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/westgarth_auto_logo_revised.png"
+              alt="Logo concept sketches"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Concept Exploration</h3>
+            <p>
+              The logo design process focused on creating a visual identity that
+              would communicate professionalism while maintaining an
+              approachable feel that reflects the family-owned nature of the
+              business.
+            </p>
+            <p>
+              We began with sketches exploring different automotive themes,
+              focusing on elements that would convey reliability and expertise.
+              Each concept aimed to capture the essence of Westgarth Auto's
+              services while ensuring versatility across various applications.
+            </p>
+          </div>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Final Logo Design</h3>
+            <p>
+              The final logo incorporates a stylized car silhouette with clean,
+              modern typography. The design balances professional aesthetics
+              with an approachable feel, using the brand's color palette to
+              create recognition and consistency across all materials.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              src="/Images/WGA-CaseStudyImgs/PNG/WGA-FinalLogoAsset 2@2x.png"
+              alt="Final logo design"
+            />
+          </div>
+        </div>
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              src="/Images/WGA-CaseStudyImgs/PNG/WGA-LogoDesignimgsAsset 3.png"
+              alt="Logo variation 1"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/Images/WGA-CaseStudyImgs/HeroPage.png"
+              alt="Logo variation 2"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/Images/WGA-CaseStudyImgs/Graphic3.png"
+              alt="Logo variation 3"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              src="/Images/WGA-CaseStudyImgs/Poster1_Artboard 29.png"
+              alt="Logo application example"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brand Identity System -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Brand Identity System</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/SIGNAGE 1.jpg"
+              alt="Colour palette"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Colour Palette</h3>
+            <p>
+              The color palette draws from automotive themes while ensuring high
+              visibility and recognition. The primary blue creates a sense of
+              trust and reliability, while the accent red adds energy and draws
+              attention to key information like opening hours and contact
+              details.
+            </p>
+          </div>
+        </div>
+
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/garage_signage_revised.png"
+              alt="Typography system"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/Martin 2.png"
+              alt="Visual patterns"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/Graphic3.png"
+              alt="Business cards"
+            />
+          </div>
+          <div class="gallery-item">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/Reception.png"
+              alt="Product packaging"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Strategy -->
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Website Strategy & Planning</h2>
+        <p>
+          Creating a digital experience that prioritizes essential information
+          while showcasing the garage's services.
+        </p>
+      </div>
+    </section>
+
+    <section id="website-design" class="section process">
+      <div class="container">
+        <div class="website-item">
+          <div class="strategy-card">
+            <h3>Site Objectives</h3>
+            <p>
+              We identified three primary objectives for the website:
+              prominently display opening hours for quick reference, provide
+              detailed information about services offered, and build trust
+              through customer reviews and examples of work completed.
+            </p>
+            <p>
+              User journeys were mapped for different visitor types, from new
+              customers seeking basic information to existing customers looking
+              for specific services, ensuring each path led to meaningful
+              engagement and clear calls to action.
+            </p>
+          </div>
+          <div class="strategy-card">
+            <h3>Content Strategy</h3>
+            <p>
+              The content strategy focused on clarity and accessibility,
+              ensuring that essential information was immediately visible upon
+              landing on the site. At the Client's request, we prioritized
+              opening hours, contact details, and service offerings, with
+              secondary content providing deeper insights into the garage's
+              expertise and customer experiences.
+            </p>
+            <p>
+              All content was crafted to reflect the brand's professional yet
+              approachable tone, using straightforward language that avoids
+              technical jargon while still conveying expertise and reliability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Design Process -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Website Design Process</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-image">
+            <img
+              src="/Images/WGA-CaseStudyImgs/Wireframe-Group.png"
+              alt="Website wireframes"
+            />
+          </div>
+          <div class="website-content">
+            <h3>Wireframing & UI Design</h3>
+            <p>
+              We began with wireframes that established a clear visual hierarchy
+              and user flow. The structure evolved based on user needs, ensuring
+              the most important content—opening hours and contact
+              information—was prominently featured at the top of the page.
+            </p>
+            <p>
+              The UI design development emphasized creating digital elements
+              that reflect the professional nature of auto repair services while
+              maintaining an approachable, user-friendly interface. The design
+              uses a 2-column layout for desktop that transitions seamlessly to
+              a single column for mobile users, ensuring optimal viewing across
+              all devices.
+            </p>
+          </div>
+        </div>
+        <!-- TODO:
+         Fix alignment of design decsions. Make it a box or row of 5 to minimise scrolling between image -->
+        <div class="website-item-grid" class="design-decisions">
+          <div class="website-content">
+            <h3>Key Design Decisions</h3>
+            <div class="feature-wrapper">
+              <div class="feature-item">
+                <div class="feature-icon">1</div>
+                <div>
+                  <h4>Prominent Opening Hours</h4>
+                  <p>
+                    The design places opening hours front and center, using
+                    contrasting colors to ensure visibility and immediate access
+                    to this critical information.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">2</div>
+                <div>
+                  <h4>Customer Review Integration</h4>
+                  <p>
+                    A dedicated review section showcases customer testimonials,
+                    building trust and credibility for potential new customers.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">3</div>
+                <div>
+                  <h4>Image Slider for Work Showcase</h4>
+                  <p>
+                    An image slider highlights completed work, providing visual
+                    evidence of the garage's capabilities and attention to
+                    detail.
+                  </p>
+                </div>
+              </div>
+              <div class="feature-item">
+                <div class="feature-icon">4</div>
+                <div>
+                  <h4>Google Maps Integration</h4>
+                  <p>
+                    Geolocation access through Google Maps makes it easier for
+                    users to find the garage, enhancing the overall user
+                    experience. Quick access to the garage's physical location
+                    also contributes to conversion rates as customers can easily
+                    plan trips.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="design-image">
+          <img
+            loading="lazy"
+            src="/Images/WGA-CaseStudyImgs/FullSiteScreen.png"
+            alt="Westgarth Auto Website Design"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Development & Implementation -->
+    <section class="section process">
+      <div class="container">
+        <div class="section-title">
+          <h2>Development & Implementation</h2>
+        </div>
+        <div class="website-item">
+          <div class="website-content">
+            <h3>Technical Approach</h3>
+            <p>
+              The responsive design maintains the integrity of the visual story
+              across devices through thoughtful recomposition rather than mere
+              rescaling.
+            </p>
+            <p>
+              Performance optimization techniques were implemented to ensure
+              fast loading despite rich imagery, including lazy loading and
+              image compression.
+            </p>
+          </div>
+          <div class="website-image">
+            <img
+              loading="lazy"
+              src="/Images/WGA-CaseStudyImgs/RESponsivecode.png"
+              alt="Responsive design implementation"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Section
+    <section class="section accent-section">
+      <div class="container">
+        <h2>Results & Impact</h2>
+        <p>Measuring the success of our brand and website implementation.</p>
+      </div>
+    </section>
+
+    <section id="results" class="section results">
+      <div class="container">
+        <div class="results-grid">
+          <div class="result-item fade-in">
+            <div class="result-number">+215%</div>
+            <h3>Online Sales</h3>
+            <p>
+              Increase in online sales within the first three months after
+              launch.
+            </p>
+          </div>
+          <div class="result-item fade-in delay-1">
+            <div class="result-number">+180%</div>
+            <h3>Website Traffic</h3>
+            <p>
+              Growth in monthly website visitors compared to previous online
+              presence.
+            </p>
+          </div>
+          <div class="result-item fade-in delay-2">
+            <div class="result-number">4</div>
+            <h3>New Stockists</h3>
+            <p>
+              New retail partnerships established as a result of the
+              professional brand presence.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    Testimonial -->
+    <!-- <section class="section testimonial">
+      <div class="container">
+        <div class="testimonial-content fade-in">
+          <p>
+            "SCM Design Studio truly understood my vision as a craftsperson.
+            They created a brand and website that perfectly captures the balance
+            between traditional techniques and modern design that defines my
+            work. The result has transformed my business, bringing my ceramics
+            to a wider audience while maintaining the authentic connection to my
+            craft."
+          </p>
+          <div class="client-info">
+            <p class="client-name">Alastair Smith</p>
+            <p>Alastair Smith Ceramics</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+
+    <!-- Reflections -->
+    <section class="section brand-development">
+      <div class="container">
+        <div class="section-title">
+          <h2>Reflections & Learnings</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-item fade-in">
+            <h3>Key Successes</h3>
+            <p>
+              The overhaul of the previous website into a new and modern looking
+              site with updated details. A bright and welcoming signage for the
+              garage in keeping with their new website branding.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-1">
+            <h3>Challenges Overcome</h3>
+            <p>
+              Balancing the minimal yet modern needs of a brand refresh on a
+              tight budget. At SCM we were able to deliver quickly and
+              efficiently.
+            </p>
+          </div>
+          <div class="process-item fade-in delay-2">
+            <h3>Future Opportunities</h3>
+            <p>
+              Expanding the brand into offering more services and a longer
+              operating schedule however for the Westgarth family times have
+              changed and these no longer suit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="services-cta-section">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Ideas into Reality?</h2>
+        <p>
+          Let's discuss how our services can help you achieve your business
+          goals.
+        </p>
+        <div class="cta-buttons">
+          <a href="../ContactPage.html" class="primary-cta-button"
+            >Get in Touch</a
+          >
+          <a href="../Projects.html" class="secondary-cta-button"
+            >View Our Work</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="SCMfooter">
+      <div class="FooterTopRow">
+        <span class="footerlogo">
+          <img
+            class="footerlogoIMG"
+            src="../Assets/SCM_FullLogo.png"
+            alt="Image of SCM Design Studios complete logo"
+            loading="lazy"
+          />
+        </span>
+        <div class="ContactPrompt">
+          <div class="FooterContactTitle">
+            <h2>Got some thoughts?</h2>
+            <h3>Feel free to share!</h3>
+            <div class="Footer-Contact-List-Item">
+              <a href="mailto:hello@scmdesign.studio"
+                ><p>Email: hello@scmdesign.studio</p></a
+              >
+            </div>
+            <div class="Footer-Social-Links">
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.instagram.com/scm_designstudio/"
+                    ><p>Instagram</p></a
+                  >
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a
+                    class="Footer-Social-Link-Hyper"
+                    href="https://www.linkedin.com/company/scm-design-studio/?viewAsMember=true"
+                    ><p>LinkedIn</p></a
+                  >
+                </div>
+              </div>
+              <div class="Footer-Social-Link-Column">
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""><p>Spotify</p></a>
+                </div>
+                <div class="Footer-Social-Link-Item">
+                  <a class="Footer-Social-Link-Hyper" href=""
+                    ><p>Pintrest</p></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-section-services">
+        <h2 class="section-title">Core Services</h2>
+        <div class="grid-wrapper">
+          <div class="services-grid">
+            <!-- Top Row -->
+            <div class="service-column">
+              <h3>Digital</h3>
+              <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>UI Design</li>
+                <li>E-Commerce</li>
+                <li>Apps</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Product</h3>
+              <ul>
+                <li>Market Research</li>
+                <li>Product Design</li>
+                <li>Product Development</li>
+                <li>Material Research</li>
+                <li>Product Testing</li>
+              </ul>
+            </div>
+
+            <!-- Bottom Row -->
+            <div class="service-column">
+              <h3>Brand</h3>
+              <ul>
+                <li>Brand Design</li>
+                <li>Brand Strategy</li>
+                <li>Creative Assets</li>
+                <li>Art Direction</li>
+              </ul>
+            </div>
+
+            <div class="service-column">
+              <h3>Print</h3>
+              <ul>
+                <li>Graphic Design</li>
+                <li>Publications</li>
+                <li>Packaging</li>
+                <li>Signage</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Footer-boring-links">
+        <a class="TCs-links" href="">Privacy Policy</a>
+        <a href="" class="TCs-links">&copy; SCM Design Studio 2025</a>
+      </div>
+    </footer>
+  </body>
+</html>

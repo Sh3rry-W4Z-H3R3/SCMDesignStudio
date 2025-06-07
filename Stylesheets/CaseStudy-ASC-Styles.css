@@ -59,16 +59,6 @@ body::-webkit-scrollbar-thumb {
 }
 /* END - Scrollbar Styling */
 /* Base Styles */
-
-.container {
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
-  font-family: var(--Body-Font);
-  color: var(--white);
-}
-
 /* Typography */
 h1,
 h2,
@@ -84,31 +74,52 @@ h6 {
   overflow: visible;
 }
 
-/* Header */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  width: 100%;
+a {
+  text-decoration: none;
+  color: var(--white);
+  transition: all 0.3s ease;
+}
 
+a:hover {
+  color: var(--accent-red);
+}
+.container {
+  width: 100%;
+  max-width: 1400px;
   margin: 0 auto;
+  padding: 0 20px;
   font-family: var(--Body-Font);
   color: var(--white);
 }
-
-.header-content {
-  display: flex;
-  align-items: center;
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: var(--Yellow500);
+  color: var(--Purple-600);
+  text-decoration: none;
+  border-radius: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  will-change: transform;
+  border: none;
+  cursor: pointer;
 }
 
-.logo {
-  max-block-size: inherit;
+.btn:hover {
+  transform: translateY(-0.75rem);
+  transform: scale(2, 1.25, 1.25);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  color: var(--Yellow500);
+  background-color: var(--Teal500);
 }
 
 /* Hero Section */
 .hero {
   width: 100%;
-  height: 100vh;
+  padding: 10rem 0 5rem;
   display: flex;
   justify-self: center;
   align-items: center;
@@ -147,7 +158,12 @@ header {
   margin-bottom: 2rem;
   max-width: 600px;
 }
-
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  line-height: 1.8;
+}
 /* Section Styles */
 .section {
   padding: 6rem 0;
@@ -477,6 +493,27 @@ header {
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    padding: 8rem 0 4rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .hero {
+    padding-bottom: 6rem;
+  }
+  .website-container {
+    align-items: center;
+  }
+}
+
+.image-gallery {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Animation */
 @keyframes fadeIn {
@@ -564,36 +601,6 @@ header {
 
 .accent-container {
   color: var(--light-gray);
-}
-/* Button Styles */
-.btn {
-  display: inline-block;
-  padding: 1rem 2rem;
-  background-color: var(--Yellow500);
-  color: var(--Purple-600);
-  text-decoration: none;
-  border-radius: 1rem;
-  font-weight: 700;
-  transition: all 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-0.75rem);
-  transform: scale(2, 1.25, 1.25);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  color: var(--Yellow500);
-  background-color: var(--Teal500);
-}
-
-.btn-outline {
-  background-color: transparent;
-  border: 2px solid var(--Yellow500);
-  color: var(--Yellow500);
-}
-
-.btn-outline:hover {
-  background-color: var(--Yellow500);
-  color: var(--Purple900);
 }
 .Discovery-Research {
   text-align: center;
