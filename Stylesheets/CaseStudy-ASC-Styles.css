@@ -124,7 +124,6 @@ a:hover {
   justify-self: center;
   align-items: center;
   position: relative;
-  overflow: hidden;
   background: linear-gradient(
     135deg,
     var(--Purple-800) 0%,
@@ -132,9 +131,6 @@ a:hover {
   );
 }
 
-.Hero-Text {
-  overflow: hidden;
-}
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -399,12 +395,13 @@ a:hover {
   align-items: center;
   justify-content: center;
   background-color: var(--Yellow500);
-  color: var(--Purple900);
+  color: var(--Purple500);
   text-decoration: none;
   padding: 1rem 2.5rem;
   border-radius: 2rem;
+  border: var(--Yellow500);
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in;
   transform: translateZ(0); /* Force GPU acceleration */
   will-change: transform; /* Optimize for animations */
   position: relative; /* Establish containing block */
@@ -412,8 +409,11 @@ a:hover {
 }
 
 .primary-cta-button:hover {
-  background-color: white;
+  background-color: #dbad49;
+  color: var(--Purple900);
   transform: scale(1.05) translateZ(0);
+  border: var(--Yellow900);
+  border-width: 3rem;
 }
 
 .secondary-cta-button {
